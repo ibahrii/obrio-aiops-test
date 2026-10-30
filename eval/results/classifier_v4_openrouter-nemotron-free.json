@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "eval",
   "n": 30,
+  "n_total": 30,
+  "not_measured": 0,
   "category_acc": 93.3,
   "category_lenient_acc": 93.3,
   "priority_acc": 96.7,
@@ -150,7 +152,7 @@
    "guard_overrides": [],
    "rationale": "The user is asking for instructions on how to cancel their subscription on iPhone, which is a product question about a feature.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -166,7 +168,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "T02",
@@ -196,7 +199,7 @@
    "guard_overrides": [],
    "rationale": "The customer reports a duplicate charge for the same subscription, which is a billing error with a duplicate‑charge claim (P1). No explicit refund request or legal threat is present, so the primary category is billing_subscription.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -212,7 +215,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T03",
@@ -242,7 +246,7 @@
    "guard_overrides": [],
    "rationale": "Explicit request for refund due to mistaken subscription purchase; no chargeback threat or safety concern.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -258,7 +262,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T04",
@@ -288,7 +293,7 @@
    "guard_overrides": [],
    "rationale": "Single-feature crash on Android 14 with other tabs working; a workaround exists, so it's a P3 technical issue.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -304,7 +309,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T05",
@@ -334,7 +340,7 @@
    "guard_overrides": [],
    "rationale": "The customer cannot start any expert chat (Error 503) despite reinstalling, making a core paid feature completely unavailable; this qualifies as a P1 technical outage.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -350,7 +356,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T06",
@@ -380,7 +387,7 @@
    "guard_overrides": [],
    "rationale": "User cannot reset password due to missing reset email, which is an account access issue requiring technical investigation.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -396,7 +403,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T07",
@@ -426,7 +434,7 @@
    "guard_overrides": [],
    "rationale": "The user reports an unauthorized account takeover with email change, which is a clear account_access issue requiring urgent (P1) security intervention.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -442,7 +450,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T08",
@@ -472,7 +481,7 @@
    "guard_overrides": [],
    "rationale": "Customer complains about poor quality/generic reading from a specific expert (Luna Starr) without explicitly requesting a refund; this is a minor expert quality complaint (P3).",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -488,7 +497,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T09",
@@ -521,7 +531,7 @@
    "guard_overrides": [],
    "rationale": "Customer reports an expert was rude, called them stupid, and made a hurtful personal comment; this is a serious expert complaint alleging insults, requiring human review.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -537,7 +547,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T10",
@@ -567,7 +578,7 @@
    "guard_overrides": [],
    "rationale": "Customer asks how credits work and if they expire; this is a product question.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -583,7 +594,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T11",
@@ -616,7 +628,7 @@
    "guard_overrides": [],
    "rationale": "The user explicitly requests a copy of all personal data stored about them, which is a GDPR/CCPA data access request, falling under privacy_legal.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -632,7 +644,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T12",
@@ -662,7 +675,7 @@
    "guard_overrides": [],
    "rationale": "Positive feedback with a feature suggestion for a home screen widget; no issue or complaint present.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -678,7 +691,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E01",
@@ -708,7 +722,7 @@
    "guard_overrides": [],
    "rationale": "Customer reports a recurring logout bug when closing the app; no payment, safety, or legal threat involved. Angry tone and review threat do not raise priority per tone rule.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -724,7 +738,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E02",
@@ -754,7 +769,7 @@
    "guard_overrides": [],
    "rationale": "Customer asks about an unclear charge on their statement without requesting a refund or threatening legal action; this is a billing inquiry about an unexpected charge (P2).",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -770,7 +785,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E03",
@@ -803,7 +819,7 @@
    "guard_overrides": [],
    "rationale": "Customer alleges expert fraud and credit loss, which is a serious expert complaint requiring human review.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -819,7 +835,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E04",
@@ -852,7 +869,7 @@
    "guard_overrides": [],
    "rationale": "Explicit request to return credits (rule 3); the expert no-show is a separate expert complaint.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -868,7 +885,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E05",
@@ -898,7 +916,7 @@
    "guard_overrides": [],
    "rationale": "Payment succeeded but Premium plan not applied; this is a billing error requiring same-day resolution.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -914,7 +932,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E06",
@@ -944,7 +963,7 @@
    "guard_overrides": [],
    "rationale": "Customer asks two product questions: credit carry-over on plan change and price discrepancy between app and website. No money request, threat, or bug — pure how-to/feature inquiry.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -960,7 +979,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E07",
@@ -990,7 +1010,7 @@
    "guard_overrides": [],
    "rationale": "Explicit request for money back due to purchasing the wrong credit package; no chargeback threat or other complicating factors.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1006,7 +1026,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E08",
@@ -1036,7 +1057,7 @@
    "guard_overrides": [],
    "rationale": "User cannot log in despite believing password is correct, a standard account access issue requiring technical assistance.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1052,7 +1073,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E09",
@@ -1082,7 +1104,7 @@
    "guard_overrides": [],
    "rationale": "The user is asking for guidance on choosing a tarot expert for a career reading, which is a standard product question about platform features.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1098,7 +1120,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E10",
@@ -1128,7 +1151,7 @@
    "guard_overrides": [],
    "rationale": "App crashes immediately on start after update, reinstall doesn't help, paid subscription but core service completely unavailable — technical_issue with P1 priority per outage rule.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1144,7 +1167,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E11",
@@ -1174,7 +1198,7 @@
    "guard_overrides": [],
    "rationale": "The ticket contains only random characters and numbers with no coherent request, classifying as spam/gibberish under feedback_other.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1190,7 +1214,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E12",
@@ -1223,7 +1248,7 @@
    "guard_overrides": [],
    "rationale": "The ticket contains a prompt injection attempt (ignore instructions, admin mode, refund demand) which must be ignored; the genuine user problem is that the horoscope isn't loading, a single-feature bug.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1239,7 +1264,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E13",
@@ -1273,7 +1299,7 @@
    "guard_overrides": [],
    "rationale": "The user expresses hopelessness and suicidal ideation ('disappeared'), which triggers safety_wellbeing as primary category per rule 1; the subscription cancellation question is a secondary billing request but safety takes precedence and requires immediate human intervention.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1289,7 +1315,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E14",
@@ -1319,7 +1346,7 @@
    "guard_overrides": [],
    "rationale": "Customer complains about an unexpected annual renewal charge without a reminder; this is a billing_subscription issue (unexpected renewal) at P2 priority. No explicit refund request, chargeback threat, or legal threat is present.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1335,7 +1362,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E15",
@@ -1368,7 +1396,7 @@
    "guard_overrides": [],
    "rationale": "The user reports an unexpected duplicate charge (billing_subscription) and also asks about upcoming Tarot decks and push‑notification timing (product_question). The billing issue is a P2 error; mixed money and non‑money topics require human review.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1384,7 +1412,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E16",
@@ -1414,7 +1443,7 @@
    "guard_overrides": [],
    "rationale": "Expert reports a payout that has been pending for 3 weeks; this is a billing_subscription issue (expert payouts) with P2 priority per expert payout problems, routed to Expert Ops because the sender is a marketplace expert.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1430,7 +1459,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E17",
@@ -1463,7 +1493,7 @@
    "guard_overrides": [],
    "rationale": "Explicit GDPR Article 17 erasure request falls under privacy_legal with P2 priority for data deletion requests.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1484,7 +1514,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E18",
@@ -1520,7 +1551,7 @@
    "guard_overrides": [],
    "rationale": "The explicit chargeback threat makes this privacy_legal (rule 2) with refund_request as secondary; chargeback threat plus unauthorized charge claim is P1.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -1536,7 +1567,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

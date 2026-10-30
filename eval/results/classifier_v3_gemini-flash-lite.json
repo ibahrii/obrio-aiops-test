@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "eval",
   "n": 30,
+  "n_total": 30,
+  "not_measured": 0,
   "category_acc": 93.3,
   "category_lenient_acc": 96.7,
   "priority_acc": 93.3,
@@ -26,6 +28,8 @@
   "safe_defaults": 0,
   "latency_p50": 1.423,
   "latency_p95": 1.749,
+  "api_latency_p50": 0.0,
+  "api_latency_p95": 0.0,
   "avg_in_tokens": 1849.5,
   "avg_out_tokens": 170.1,
   "avg_thinking_tokens": 0,
@@ -149,11 +153,12 @@
    "guard_overrides": [],
    "rationale": "The customer is asking a straightforward how-to question regarding subscription cancellation on iOS.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.375,
+   "api_latency_s": 0.0,
    "in_tokens": 1829,
    "out_tokens": 150,
    "thinking_tokens": 0,
@@ -164,7 +169,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T02",
@@ -194,11 +200,12 @@
    "guard_overrides": [],
    "rationale": "The customer is reporting a duplicate charge, which qualifies as a billing error and a P1 priority according to the routing rules.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.434,
+   "api_latency_s": 0.0,
    "in_tokens": 1852,
    "out_tokens": 170,
    "thinking_tokens": 0,
@@ -209,7 +216,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T03",
@@ -239,11 +247,12 @@
    "guard_overrides": [],
    "rationale": "The customer explicitly asks for money back due to an accidental purchase, which classifies as a refund request.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.44,
+   "api_latency_s": 0.0,
    "in_tokens": 1838,
    "out_tokens": 157,
    "thinking_tokens": 0,
@@ -254,7 +263,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T04",
@@ -284,11 +294,12 @@
    "guard_overrides": [],
    "rationale": "Single-feature bug causing a crash on a specific tab with other parts of the app working normally.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.35,
+   "api_latency_s": 0.0,
    "in_tokens": 1836,
    "out_tokens": 153,
    "thinking_tokens": 0,
@@ -299,7 +310,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T05",
@@ -329,11 +341,12 @@
    "guard_overrides": [],
    "rationale": "A paid core service (expert chat) is completely down for this customer due to an error, making it a P1 technical issue.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.405,
+   "api_latency_s": 0.0,
    "in_tokens": 1863,
    "out_tokens": 168,
    "thinking_tokens": 0,
@@ -344,7 +357,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T06",
@@ -374,11 +388,12 @@
    "guard_overrides": [],
    "rationale": "The customer cannot log in due to a missing password reset email, which falls under account access and is set to P2 priority.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.3,
+   "api_latency_s": 0.0,
    "in_tokens": 1830,
    "out_tokens": 164,
    "thinking_tokens": 0,
@@ -389,7 +404,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T07",
@@ -421,11 +437,12 @@
    "guard_overrides": [],
    "rationale": "The customer's account was compromised and the email changed by an unauthorized party, which qualifies as a P1 account access issue.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.446,
+   "api_latency_s": 0.0,
    "in_tokens": 1844,
    "out_tokens": 186,
    "thinking_tokens": 0,
@@ -436,7 +453,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T08",
@@ -466,11 +484,12 @@
    "guard_overrides": [],
    "rationale": "The customer is complaining about the quality of a specific expert's reading, which is classified as an expert_complaint of minor severity.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.34,
+   "api_latency_s": 0.0,
    "in_tokens": 1841,
    "out_tokens": 167,
    "thinking_tokens": 0,
@@ -481,7 +500,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T09",
@@ -514,11 +534,12 @@
    "guard_overrides": [],
    "rationale": "The customer is reporting serious verbal abuse and insults from a specific expert, which qualifies as a serious expert complaint requiring human review.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.286,
+   "api_latency_s": 0.0,
    "in_tokens": 1845,
    "out_tokens": 178,
    "thinking_tokens": 0,
@@ -529,7 +550,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T10",
@@ -559,11 +581,12 @@
    "guard_overrides": [],
    "rationale": "The customer is asking a straightforward feature and rule question about how credits work and whether they expire.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.307,
+   "api_latency_s": 0.0,
    "in_tokens": 1835,
    "out_tokens": 154,
    "thinking_tokens": 0,
@@ -574,7 +597,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T11",
@@ -607,11 +631,12 @@
    "guard_overrides": [],
    "rationale": "The customer is requesting a copy of their stored personal data, which falls under privacy and legal data export requests (GDPR/CCPA).",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 2.191,
+   "api_latency_s": 0.0,
    "in_tokens": 1829,
    "out_tokens": 180,
    "thinking_tokens": 0,
@@ -622,7 +647,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T12",
@@ -652,11 +678,12 @@
    "guard_overrides": [],
    "rationale": "The customer is expressing praise for a feature and submitting a product suggestion, which classifies as feedback_other with P4 priority.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.352,
+   "api_latency_s": 0.0,
    "in_tokens": 1831,
    "out_tokens": 164,
    "thinking_tokens": 0,
@@ -667,7 +694,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E01",
@@ -697,11 +725,12 @@
    "guard_overrides": [],
    "rationale": "The customer is experiencing a persistent bug where the app logs them out upon closing, which is a technical issue. Insults and angry tone do not raise priority.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.207,
+   "api_latency_s": 0.0,
    "in_tokens": 1848,
    "out_tokens": 163,
    "thinking_tokens": 0,
@@ -712,7 +741,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E02",
@@ -742,11 +772,12 @@
    "guard_overrides": [],
    "rationale": "The customer is inquiring about an unexpected charge and demanding an explanation, which qualifies as a billing issue and demands P1 priority since an unauthorized/unclear charge is involved.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.476,
+   "api_latency_s": 0.0,
    "in_tokens": 1846,
    "out_tokens": 175,
    "thinking_tokens": 0,
@@ -757,7 +788,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E03",
@@ -792,11 +824,12 @@
    "guard_overrides": [],
    "rationale": "The customer is complaining about expert fraud and stalling behavior, which constitutes a serious expert complaint, with an implied desire for credit compensation due to the mention of spent credits.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.487,
+   "api_latency_s": 0.0,
    "in_tokens": 1849,
    "out_tokens": 200,
    "thinking_tokens": 0,
@@ -807,7 +840,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E04",
@@ -840,11 +874,12 @@
    "guard_overrides": [],
    "rationale": "The customer explicitly asks for credits back, categorizing it as a refund request, with a secondary complaint about the expert no-show.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.417,
+   "api_latency_s": 0.0,
    "in_tokens": 1847,
    "out_tokens": 193,
    "thinking_tokens": 0,
@@ -855,7 +890,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E05",
@@ -889,11 +925,12 @@
    ],
    "rationale": "Payment was successfully processed but the subscription benefits were not applied to the account, which is a billing error affecting access.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.326,
+   "api_latency_s": 0.0,
    "in_tokens": 1841,
    "out_tokens": 160,
    "thinking_tokens": 0,
@@ -904,7 +941,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E06",
@@ -937,11 +975,12 @@
    "guard_overrides": [],
    "rationale": "The user is asking a feature/policy question about plans and credits, while also bringing up a billing/pricing inconsistency across platforms.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.883,
+   "api_latency_s": 0.0,
    "in_tokens": 1850,
    "out_tokens": 182,
    "thinking_tokens": 0,
@@ -952,7 +991,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E07",
@@ -982,11 +1022,12 @@
    "guard_overrides": [],
    "rationale": "The customer is explicitly asking for a refund after buying the wrong credit package, which falls under refund_request.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.551,
+   "api_latency_s": 0.0,
    "in_tokens": 1840,
    "out_tokens": 155,
    "thinking_tokens": 0,
@@ -997,7 +1038,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E08",
@@ -1027,11 +1069,12 @@
    "guard_overrides": [],
    "rationale": "The customer is unable to log into their account despite believing the password is correct, which maps directly to account_access and P2 priority.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.525,
+   "api_latency_s": 0.0,
    "in_tokens": 1837,
    "out_tokens": 160,
    "thinking_tokens": 0,
@@ -1042,7 +1085,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E09",
@@ -1072,11 +1116,12 @@
    "guard_overrides": [],
    "rationale": "The customer is asking for guidance on how to choose a tarot reader for a career consultation, which is a standard product and feature question.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.446,
+   "api_latency_s": 0.0,
    "in_tokens": 1843,
    "out_tokens": 168,
    "thinking_tokens": 0,
@@ -1087,7 +1132,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E10",
@@ -1121,11 +1167,12 @@
    ],
    "rationale": "The app completely crashes upon startup making a paid core service entirely unavailable, which qualifies as a P1 technical issue.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.379,
+   "api_latency_s": 0.0,
    "in_tokens": 1847,
    "out_tokens": 161,
    "thinking_tokens": 0,
@@ -1136,7 +1183,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E11",
@@ -1166,11 +1214,12 @@
    "guard_overrides": [],
    "rationale": "The ticket contains only random characters and numbers without a discernible query or problem.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.372,
+   "api_latency_s": 0.0,
    "in_tokens": 1826,
    "out_tokens": 147,
    "thinking_tokens": 0,
@@ -1181,7 +1230,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E12",
@@ -1211,16 +1261,18 @@
     "model: prompt-injection attempt",
     "model: mixed topics where one is about money",
     "mixed topics involving money",
-    "prompt-injection attempt detected"
+    "prompt-injection attempt detected",
+    "low confidence 0.85 < 0.9"
    ],
    "guard_overrides": [],
    "rationale": "The customer attempted a prompt injection to force a refund, but the underlying genuine requests are a technical issue with the horoscope loading and an implied refund request.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.43,
+   "api_latency_s": 0.0,
    "in_tokens": 1860,
    "out_tokens": 192,
    "thinking_tokens": 0,
@@ -1231,7 +1283,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E13",
@@ -1265,11 +1318,12 @@
    "guard_overrides": [],
    "rationale": "The customer expresses hopelessness and suicidal ideation, which immediately triggers the safety_wellbeing category regardless of the secondary request to cancel a subscription.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.504,
+   "api_latency_s": 0.0,
    "in_tokens": 1858,
    "out_tokens": 179,
    "thinking_tokens": 0,
@@ -1280,7 +1334,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E14",
@@ -1310,11 +1365,12 @@
    "guard_overrides": [],
    "rationale": "The customer is complaining about an unexpected annual subscription renewal charge, which falls under billing errors.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.349,
+   "api_latency_s": 0.0,
    "in_tokens": 1849,
    "out_tokens": 152,
    "thinking_tokens": 0,
@@ -1325,7 +1381,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E15",
@@ -1353,16 +1410,18 @@
    "sentiment": "calm",
    "human_reasons": [
     "model: mixed topics where one is about money",
-    "privacy_legal: legal/GDPR consequences"
+    "privacy_legal: legal/GDPR consequences",
+    "low confidence 0.85 < 0.9"
    ],
    "guard_overrides": [],
    "rationale": "The customer reports an unauthorized duplicate charge while mentioning money is tight, which triggers a high-priority billing and potential dispute check, combined with general product questions about future tarot decks and notifications.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.494,
+   "api_latency_s": 0.0,
    "in_tokens": 2019,
    "out_tokens": 203,
    "thinking_tokens": 0,
@@ -1373,7 +1432,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E16",
@@ -1403,11 +1463,12 @@
    "guard_overrides": [],
    "rationale": "The sender is an expert asking about a delayed payout, which routes to Expert Ops as a P2 billing issue.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.472,
+   "api_latency_s": 0.0,
    "in_tokens": 1855,
    "out_tokens": 164,
    "thinking_tokens": 0,
@@ -1418,7 +1479,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E17",
@@ -1451,11 +1513,12 @@
    "guard_overrides": [],
    "rationale": "The customer is making a formal GDPR Article 17 data erasure request, which falls under privacy_legal and requires human intervention.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.27,
+   "api_latency_s": 0.0,
    "in_tokens": 1844,
    "out_tokens": 179,
    "thinking_tokens": 0,
@@ -1466,7 +1529,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E18",
@@ -1501,11 +1565,12 @@
    "guard_overrides": [],
    "rationale": "The customer is threatening a chargeback over an unexpected charge, which overrides billing to privacy_legal with a P1 priority.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.586,
+   "api_latency_s": 0.0,
    "in_tokens": 1853,
    "out_tokens": 178,
    "thinking_tokens": 0,
@@ -1516,7 +1581,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

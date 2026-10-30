@@ -181,7 +181,7 @@
    "act_human": true,
    "human_pass": false,
    "reasons": [
-    "model: chargeback or legal threat"
+    "model (not supported by ticket text): chargeback or legal threat"
    ],
    "summary": "Customer reports being charged twice for their monthly plan ($19.99 each time) yesterday.",
    "replies": {

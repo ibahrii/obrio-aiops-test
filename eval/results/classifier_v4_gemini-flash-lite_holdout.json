@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "holdout",
   "n": 10,
+  "n_total": 10,
+  "not_measured": 0,
   "category_acc": 100.0,
   "category_lenient_acc": 100.0,
   "priority_acc": 100.0,
@@ -166,7 +168,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H02",
@@ -212,7 +215,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H03",
@@ -261,7 +265,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H04",
@@ -309,7 +314,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H05",
@@ -355,7 +361,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H06",
@@ -404,7 +411,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H07",
@@ -450,7 +458,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H08",
@@ -499,7 +508,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H09",
@@ -550,7 +560,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H10",
@@ -596,7 +607,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

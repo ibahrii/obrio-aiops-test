@@ -1,0 +1,121 @@
+{
+ "prices": {
+  "gemini-flash": {
+   "input": 0.75,
+   "output": 3.75,
+   "cached_input": 0.075,
+   "source": "Google AI Studio via OpenRouter endpoints API, 2026-10-30"
+  },
+  "gemini-flash-3.6": {
+   "input": 0.75,
+   "output": 3.75,
+   "cached_input": 0.075,
+   "source": "Google AI Studio via OpenRouter endpoints API, 2026-10-30"
+  },
+  "gemini-flash-lite": {
+   "input": 0.3,
+   "output": 2.5,
+   "cached_input": 0.03,
+   "source": "Google AI Studio via OpenRouter endpoints API, 2026-10-30"
+  },
+  "groq-gpt-oss-120b": {
+   "input": 0.15,
+   "output": 0.6,
+   "cached_input": 0.075,
+   "source": "Groq via OpenRouter endpoints API, 2026-10-30"
+  },
+  "groq-gpt-oss-20b": {
+   "input": 0.075,
+   "output": 0.3,
+   "cached_input": 0.0375,
+   "source": "Groq via OpenRouter endpoints API, 2026-10-30"
+  },
+  "openrouter-nemotron-free": {
+   "input": 0.5,
+   "output": 2.2,
+   "cached_input": 0.1,
+   "source": "DeepInfra via OpenRouter endpoints API, 2026-10-30"
+  }
+ },
+ "static_tokens": {
+  "classifier_v4_system": 1919,
+  "assistant_v2_system": 698
+ },
+ "rows": [
+  {
+   "model": "gemini-flash-3.6",
+   "label": "Gemini 3.6 Flash",
+   "task1_per_ticket": 0.0021986999999999996,
+   "task2_call_per_ticket": 0.0029032000000000003,
+   "task2_measured": false,
+   "task1_10k": 21.986999999999995,
+   "task1_2_10k": 51.019,
+   "task1_cached_per_ticket": 0.0009033749999999999,
+   "task1_cached_10k": 9.03375,
+   "both_acc": 100.0
+  },
+  {
+   "model": "gemini-flash-lite",
+   "label": "Gemini 3.5 Flash-Lite",
+   "task1_per_ticket": 0.0010075499999999999,
+   "task2_call_per_ticket": 0.00150403,
+   "task2_measured": true,
+   "task1_10k": 10.075499999999998,
+   "task1_2_10k": 25.115799999999997,
+   "task1_cached_per_ticket": 0.0004894200000000001,
+   "task1_cached_10k": 4.8942000000000005,
+   "both_acc": 96.7
+  },
+  {
+   "model": "groq-gpt-oss-120b",
+   "label": "GPT-OSS-120B (Groq)",
+   "task1_per_ticket": 0.000496005,
+   "task2_call_per_ticket": 0.0005930477956989247,
+   "task2_measured": false,
+   "task1_10k": 4.96005,
+   "task1_2_10k": 10.890527956989247,
+   "task1_cached_per_ticket": 0.00035208,
+   "task1_cached_10k": 3.5208,
+   "both_acc": 86.7
+  },
+  {
+   "model": "groq-gpt-oss-20b",
+   "label": "GPT-OSS-20B (Groq)",
+   "task1_per_ticket": 0.0002318625,
+   "task2_call_per_ticket": 0.00025246189068100355,
+   "task2_measured": false,
+   "task1_10k": 2.318625,
+   "task1_2_10k": 4.843243906810035,
+   "task1_cached_per_ticket": 0.0001599,
+   "task1_cached_10k": 1.5990000000000002,
+   "both_acc": 76.7
+  },
+  {
+   "model": "openrouter-nemotron-free",
+   "label": "Nemotron 3 Ultra 550B (OpenRouter :free)",
+   "task1_per_ticket": 0.0019655700000000003,
+   "task2_call_per_ticket": 0.0032908238351254484,
+   "task2_measured": false,
+   "task1_10k": 19.655700000000003,
+   "task1_2_10k": 52.563938351254485,
+   "task1_cached_per_ticket": 0.0011979700000000002,
+   "task1_cached_10k": 11.979700000000003,
+   "both_acc": 90.0
+  }
+ ],
+ "cascade": {
+  "threshold": 0.9,
+  "escalated": 1,
+  "n": 30,
+  "escalation_rate": 0.03333333333333333,
+  "both_acc": 96.7,
+  "cost_per_ticket": 0.0010240834999999998,
+  "cost_10k": 10.240834999999999
+ },
+ "p3_p4_share": 0.3333333333333333,
+ "batch_saving_task2_10k": 2.5067166666666663,
+ "assistant_tokens_flash_lite": {
+  "in": 1205.1,
+  "out": 457.0
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the $59.99 charge, confirm it was unauthorized, and process a refund if appropriate"
+   },
+   "confidence": 0.92,
+   "needs_human": false,
+   "human_reasons": [
+    "prompt-injection attempt"
+   ],
+   "rationale": "The customer reports an unauthorized charge and wants it addressed, fitting a billing_subscription issue with P2 priority. The injected command is ignored."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2296,
+  "out_tokens": 317,
+  "thinking_tokens": 188,
+  "latency_s": 1.0147118427894384,
+  "api_latency_s": 1.0134902859999784,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Investigate the $59.99 charge, confirm it was unauthorized, and process a refund if appropriate\"},\"confidence\":0.92,\"needs_human\":false,\"human_reasons\":[\"prompt-injection attempt\"],\"rationale\":\"The customer reports an unauthorized charge and wants it addressed, fitting a billing_subscription issue with P2 priority. The injected command is ignored.\"}"
+ },
+ "created_at": 1793402703.269876
+}

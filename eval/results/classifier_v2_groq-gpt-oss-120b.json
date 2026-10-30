@@ -3,7 +3,10 @@
   "model": "groq-gpt-oss-120b",
   "prompt": "v2",
   "fallback": false,
+  "dataset": "eval",
   "n": 30,
+  "n_total": 30,
+  "not_measured": 0,
   "category_acc": 93.3,
   "category_lenient_acc": 93.3,
   "priority_acc": 90.0,
@@ -25,6 +28,8 @@
   "safe_defaults": 0,
   "latency_p50": 3.591,
   "latency_p95": 12.275,
+  "api_latency_p50": 0.0,
+  "api_latency_p95": 0.0,
   "avg_in_tokens": 1381.9,
   "avg_out_tokens": 237.1,
   "avg_thinking_tokens": 74.1,
@@ -148,11 +153,12 @@
    "guard_overrides": [],
    "rationale": "The user asks how to cancel their subscription, which is a billing/subscription question. No urgency or safety/legal issues are present, so it is a standard P3 ticket.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.19,
+   "api_latency_s": 0.0,
    "in_tokens": 1364,
    "out_tokens": 196,
    "thinking_tokens": 40,
@@ -163,7 +169,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T02",
@@ -195,11 +202,12 @@
    "guard_overrides": [],
    "rationale": "The user reports being charged twice for the same plan, which is a billing issue requiring immediate attention (P1) and human handling to resolve the duplicate charge.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.223,
+   "api_latency_s": 0.0,
    "in_tokens": 1382,
    "out_tokens": 292,
    "thinking_tokens": 127,
@@ -210,7 +218,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T03",
@@ -242,11 +251,12 @@
    "guard_overrides": [],
    "rationale": "The user explicitly asks for a refund of a subscription they purchased by mistake, which is a clear refund request requiring human handling.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 0.958,
+   "api_latency_s": 0.0,
    "in_tokens": 1371,
    "out_tokens": 205,
    "thinking_tokens": 52,
@@ -257,7 +267,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T04",
@@ -287,11 +298,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a crash on a specific feature, which is a technical issue. It's a bug affecting one tab, so it gets P3 priority and can be handled by the tech team without human escalation.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.175,
+   "api_latency_s": 0.0,
    "in_tokens": 1369,
    "out_tokens": 205,
    "thinking_tokens": 33,
@@ -302,7 +314,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T05",
@@ -332,11 +345,12 @@
    "guard_overrides": [],
    "rationale": "The user cannot start any expert chat and receives a 503 error, which is a technical failure of a paid core feature, warranting P1 priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.101,
+   "api_latency_s": 0.0,
    "in_tokens": 1389,
    "out_tokens": 247,
    "thinking_tokens": 89,
@@ -347,7 +361,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T06",
@@ -377,11 +392,12 @@
    "guard_overrides": [],
    "rationale": "The user cannot log in because the password reset email never arrives, which is a standard account access problem requiring tech support. No safety, legal, or billing concerns are present.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 4.503,
+   "api_latency_s": 0.0,
    "in_tokens": 1364,
    "out_tokens": 200,
    "thinking_tokens": 40,
@@ -397,7 +413,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T07",
@@ -430,11 +447,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a hacked account with email change, which is an account_access issue requiring immediate P1 attention and human intervention.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.399,
+   "api_latency_s": 0.0,
    "in_tokens": 1376,
    "out_tokens": 256,
    "thinking_tokens": 80,
@@ -450,7 +468,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T08",
@@ -480,11 +499,12 @@
    "guard_overrides": [],
    "rationale": "The user complains about the quality of a specific expert's reading, which fits the expert_complaint category. No request for refund is made, so it is a standard quality issue with P3 priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 2.68,
+   "api_latency_s": 0.0,
    "in_tokens": 1375,
    "out_tokens": 246,
    "thinking_tokens": 74,
@@ -500,7 +520,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T09",
@@ -533,11 +554,12 @@
    "guard_overrides": [],
    "rationale": "The user reports rude and insulting behavior from a specific expert, which is an expert complaint requiring human review. The severity of the insult places it at priority P2.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.743,
+   "api_latency_s": 0.0,
    "in_tokens": 1380,
    "out_tokens": 249,
    "thinking_tokens": 77,
@@ -553,7 +575,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T10",
@@ -583,11 +606,12 @@
    "guard_overrides": [],
    "rationale": "The user asks how credits work and whether they expire, which is a straightforward product usage question.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 11.507,
+   "api_latency_s": 0.0,
    "in_tokens": 1367,
    "out_tokens": 185,
    "thinking_tokens": 44,
@@ -603,7 +627,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T11",
@@ -636,11 +661,12 @@
    "guard_overrides": [],
    "rationale": "The user explicitly asks for a copy of all personal data, which is a privacy/legal request requiring human handling and is a GDPR data export (P2).",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.703,
+   "api_latency_s": 0.0,
    "in_tokens": 1363,
    "out_tokens": 221,
    "thinking_tokens": 59,
@@ -656,7 +682,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T12",
@@ -686,11 +713,12 @@
    "guard_overrides": [],
    "rationale": "The ticket is a feature suggestion (add a home screen widget) with a calm tone, fitting the feedback_other category and low priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.351,
+   "api_latency_s": 0.0,
    "in_tokens": 1365,
    "out_tokens": 186,
    "thinking_tokens": 39,
@@ -706,7 +734,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E01",
@@ -736,11 +765,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a recurring logout bug, which is a technical issue. It's a non‑critical bug without safety or legal implications, so it falls under P3 priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 11.432,
+   "api_latency_s": 0.0,
    "in_tokens": 1380,
    "out_tokens": 228,
    "thinking_tokens": 71,
@@ -756,7 +786,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E02",
@@ -786,11 +817,12 @@
    "guard_overrides": [],
    "rationale": "The user is questioning an unexpected charge, which falls under billing_subscription. The tone is angry and the issue is urgent, so it is prioritized as P1. No safety, legal, or refund request is present.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.288,
+   "api_latency_s": 0.0,
    "in_tokens": 1378,
    "out_tokens": 293,
    "thinking_tokens": 120,
@@ -801,7 +833,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E03",
@@ -834,11 +867,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a specific expert defrauding them, which is a serious expert complaint requiring human review and escalation.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 2.414,
+   "api_latency_s": 0.0,
    "in_tokens": 1381,
    "out_tokens": 224,
    "thinking_tokens": 65,
@@ -854,7 +888,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E04",
@@ -888,11 +923,12 @@
    "guard_overrides": [],
    "rationale": "The user explicitly asks for a refund of credits and wants the expert reported, triggering a refund_request primary category with an expert_complaint secondary. This requires human handling and is a P2 priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.68,
+   "api_latency_s": 0.0,
    "in_tokens": 1377,
    "out_tokens": 274,
    "thinking_tokens": 93,
@@ -908,7 +944,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E05",
@@ -938,11 +975,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a paid upgrade not being applied, which is a billing/subscription issue. Because a paid feature is unavailable, it is prioritized as P1.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 11.437,
+   "api_latency_s": 0.0,
    "in_tokens": 1375,
    "out_tokens": 228,
    "thinking_tokens": 73,
@@ -958,7 +996,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E06",
@@ -988,11 +1027,12 @@
    "guard_overrides": [],
    "rationale": "The user asks how credits work when changing plans and which price is correct, which are product usage questions. No urgency or safety/legal issues.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.745,
+   "api_latency_s": 0.0,
    "in_tokens": 1384,
    "out_tokens": 191,
    "thinking_tokens": 33,
@@ -1008,7 +1048,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E07",
@@ -1040,11 +1081,12 @@
    "guard_overrides": [],
    "rationale": "The user explicitly asks for a refund of a credit package they purchased by mistake, which is a clear refund request requiring human handling.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.061,
+   "api_latency_s": 0.0,
    "in_tokens": 1375,
    "out_tokens": 226,
    "thinking_tokens": 64,
@@ -1055,7 +1097,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E08",
@@ -1085,11 +1128,12 @@
    "guard_overrides": [],
    "rationale": "The user cannot log in and reports a password error, which is an account access issue requiring standard technical assistance.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.478,
+   "api_latency_s": 0.0,
    "in_tokens": 1372,
    "out_tokens": 204,
    "thinking_tokens": 59,
@@ -1100,7 +1144,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E09",
@@ -1130,11 +1175,12 @@
    "guard_overrides": [],
    "rationale": "The user asks how to select a tarot expert, which is a feature usage question. No safety, billing, or technical issues are present.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 2.517,
+   "api_latency_s": 0.0,
    "in_tokens": 1379,
    "out_tokens": 201,
    "thinking_tokens": 49,
@@ -1150,7 +1196,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E10",
@@ -1180,11 +1227,12 @@
    "guard_overrides": [],
    "rationale": "The user reports the app crashes on start after an update and cannot use the paid subscription, which is a technical issue requiring immediate attention (P1). No safety, legal, or refund request is present.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 10.77,
+   "api_latency_s": 0.0,
    "in_tokens": 1381,
    "out_tokens": 296,
    "thinking_tokens": 127,
@@ -1200,7 +1248,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E11",
@@ -1230,11 +1279,12 @@
    "guard_overrides": [],
    "rationale": "The message contains nonsensical text with no identifiable request, fitting the feedback_other category and low priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.083,
+   "api_latency_s": 0.0,
    "in_tokens": 1358,
    "out_tokens": 193,
    "thinking_tokens": 45,
@@ -1245,7 +1295,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E12",
@@ -1280,11 +1331,12 @@
    "guard_overrides": [],
    "rationale": "The user explicitly asks for a refund, making refund_request the primary category, and also reports a horoscope not loading, which is a technical issue as a secondary category. Refunds need human handling and are prioritized as P2.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 11.822,
+   "api_latency_s": 0.0,
    "in_tokens": 1389,
    "out_tokens": 336,
    "thinking_tokens": 144,
@@ -1300,7 +1352,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E13",
@@ -1334,11 +1387,12 @@
    "guard_overrides": [],
    "rationale": "The ticket contains explicit suicidal ideation, which overrides all other concerns and mandates a P1 safety response, while also noting a subscription cancellation request.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.333,
+   "api_latency_s": 0.0,
    "in_tokens": 1390,
    "out_tokens": 233,
    "thinking_tokens": 53,
@@ -1349,7 +1403,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E14",
@@ -1379,11 +1434,12 @@
    "guard_overrides": [],
    "rationale": "The user complains about being charged for a yearly renewal without reminder, which is a billing subscription issue. No refund request or legal threat is made, so standard billing handling applies.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 12.692,
+   "api_latency_s": 0.0,
    "in_tokens": 1381,
    "out_tokens": 238,
    "thinking_tokens": 79,
@@ -1399,7 +1455,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E15",
@@ -1433,11 +1490,12 @@
    ],
    "rationale": "The ticket reports a duplicate $34.99 charge, which is a billing issue and warrants P1 priority. It also contains a separate question about new tarot decks, set as a secondary product question.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 12.646,
+   "api_latency_s": 0.0,
    "in_tokens": 1551,
    "out_tokens": 276,
    "thinking_tokens": 112,
@@ -1453,7 +1511,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E16",
@@ -1485,11 +1544,12 @@
    ],
    "rationale": "The expert reports a delayed payout, which is a billing/subscription issue. It's a standard payout delay, so it is routed to Billing with P2 priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 11.585,
+   "api_latency_s": 0.0,
    "in_tokens": 1385,
    "out_tokens": 285,
    "thinking_tokens": 127,
@@ -1505,7 +1565,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E17",
@@ -1539,11 +1600,12 @@
    "guard_overrides": [],
    "rationale": "The ticket is a GDPR data erasure request, which falls under privacy_legal and must be handled by the legal team with high priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 2.601,
+   "api_latency_s": 0.0,
    "in_tokens": 1377,
    "out_tokens": 224,
    "thinking_tokens": 50,
@@ -1559,7 +1621,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E18",
@@ -1594,11 +1657,12 @@
    "guard_overrides": [],
    "rationale": "The user reports a charge after cancellation and explicitly threatens a chargeback, which triggers privacy_legal handling with highest priority.",
    "model_used": "groq-gpt-oss-120b",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
    "latency_s": 1.314,
+   "api_latency_s": 0.0,
    "in_tokens": 1380,
    "out_tokens": 274,
    "thinking_tokens": 104,
@@ -1609,7 +1673,8 @@
      "detail": "openai/gpt-oss-120b"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

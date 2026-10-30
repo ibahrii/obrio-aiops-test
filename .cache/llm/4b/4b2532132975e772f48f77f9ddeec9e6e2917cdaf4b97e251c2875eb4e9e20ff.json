@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Investigate the unauthorized charges and prepare a response to the customer’s lawyer, ensuring compliance with dispute procedures"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "chargeback threat"
+   ],
+   "rationale": "The customer explicitly threatens legal action and mentions a lawyer, triggering the privacy_legal category with P1 priority."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2287,
+  "out_tokens": 270,
+  "thinking_tokens": 144,
+  "latency_s": 4.542540710690446,
+  "api_latency_s": 1.1315827640000862,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens "
+   },
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"privacy_legal\",\"secondary_category\":null,\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Legal & Privacy\",\"action\":\"Investigate the unauthorized charges and prepare a response to the customer’s lawyer, ensuring compliance with dispute procedures\"},\"confidence\":0.95,\"needs_human\":true,\"human_reasons\":[\"chargeback threat\"],\"rationale\":\"The customer explicitly threatens legal action and mentions a lawyer, triggering the privacy_legal category with P1 priority.\"}"
+ },
+ "created_at": 1793402708.7971628
+}

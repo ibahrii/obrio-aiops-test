@@ -99,7 +99,7 @@ with tab_cls:
     if "cls_result" in st.session_state:
         _, r = st.session_state["cls_result"]
         c1, c2, c3, c4 = st.columns(4)
-        c1.metric("Category", r.category, help=f"secondary: {r.secondary_category}")
+        c1.markdown(f"Category  \n**`{r.category}`**" + (f"  \n+ `{r.secondary_category}`" if r.secondary_category else ""))
         c2.metric("Priority", r.priority)
         c3.metric("Route to", r.next_step.route_to)
         c4.metric("Requester", r.requester_type)

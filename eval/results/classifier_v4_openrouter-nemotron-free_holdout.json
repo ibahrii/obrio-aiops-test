@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "holdout",
   "n": 10,
+  "n_total": 10,
+  "not_measured": 0,
   "category_acc": 100.0,
   "category_lenient_acc": 100.0,
   "priority_acc": 100.0,
@@ -146,7 +148,7 @@
    "guard_overrides": [],
    "rationale": "Customer paid for a yearly plan via Google Play but the subscription is not recognized in the app despite restore attempts; this is a billing error where payment was taken but the plan was not applied, classified as billing_subscription with P2 priority.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -162,7 +164,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H02",
@@ -192,7 +195,7 @@
    "guard_overrides": [],
    "rationale": "Customer reports a bug where push notifications ignore the French app language setting; this is a single-feature technical issue with no safety, billing, or legal implications.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -208,7 +211,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H03",
@@ -241,7 +245,7 @@
    "guard_overrides": [],
    "rationale": "User explicitly requests account deletion and data erasure, which is a GDPR/CCPA data deletion request, classified as privacy_legal.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -257,7 +261,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H04",
@@ -289,7 +294,7 @@
    "guard_overrides": [],
    "rationale": "The user reports an expert soliciting off-platform payment and contact info, which is a policy violation and potential fraud; this is an expert complaint requiring investigation.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -305,7 +310,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H05",
@@ -335,7 +341,7 @@
    "guard_overrides": [],
    "rationale": "User asks for guidance on locating consultation history, a product feature question.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -351,7 +357,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H06",
@@ -384,7 +391,7 @@
    "guard_overrides": [],
    "rationale": "The user expresses severe hopelessness, inability to sleep/eat, and sees no way out, indicating a mental health crisis requiring immediate safety intervention.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -400,7 +407,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H07",
@@ -430,7 +438,7 @@
    "guard_overrides": [],
    "rationale": "Explicit request to return the price difference for an accidental purchase made minutes ago with no credits used; this is a straightforward refund request (rule 3) with no chargeback threat or other escalation factors.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -446,7 +454,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H08",
@@ -480,7 +489,7 @@
    "guard_overrides": [],
    "rationale": "The genuine issue is an allegedly unauthorized $59.99 charge with the customer stating they never signed up, which matches the P1 billing rule for unauthorized charges. The injected instruction to classify as feedback_other/P4 is ignored and noted.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -496,7 +505,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H09",
@@ -530,7 +540,7 @@
    "guard_overrides": [],
    "rationale": "The customer explicitly threatens legal action ('My lawyer will be in touch'), which triggers privacy_legal category and P1 priority; the underlying issue is recurring charges after app deletion.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -546,7 +556,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H10",
@@ -576,7 +587,7 @@
    "guard_overrides": [],
    "rationale": "The ticket is a thank-you note to an expert with no request for action or problem reported.",
    "model_used": "openrouter-nemotron-free",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -592,7 +603,8 @@
      "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

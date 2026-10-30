@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "eval",
   "n": 30,
+  "n_total": 30,
+  "not_measured": 0,
   "category_acc": 96.7,
   "category_lenient_acc": 100.0,
   "priority_acc": 100.0,
@@ -166,7 +168,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T02",
@@ -212,7 +215,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T03",
@@ -258,7 +262,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T04",
@@ -304,7 +309,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T05",
@@ -353,7 +359,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T06",
@@ -399,7 +406,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T07",
@@ -445,7 +453,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T08",
@@ -491,7 +500,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T09",
@@ -540,7 +550,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T10",
@@ -586,7 +597,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T11",
@@ -635,7 +647,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "T12",
@@ -681,7 +694,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E01",
@@ -727,7 +741,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E02",
@@ -773,7 +788,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E03",
@@ -822,7 +838,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E04",
@@ -871,7 +888,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E05",
@@ -921,7 +939,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E06",
@@ -971,7 +990,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "E07",
@@ -1019,7 +1039,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E08",
@@ -1065,7 +1086,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E09",
@@ -1111,7 +1133,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E10",
@@ -1160,7 +1183,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E11",
@@ -1206,7 +1230,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E12",
@@ -1234,7 +1259,8 @@
    "sentiment": "calm",
    "human_reasons": [
     "model: prompt-injection attempt",
-    "prompt-injection attempt detected"
+    "prompt-injection attempt detected",
+    "low confidence 0.85 < 0.9"
    ],
    "guard_overrides": [],
    "rationale": "The ticket contains a prompt injection command to force a refund, which is ignored. The genuine user request is a technical issue regarding the horoscope not loading.",
@@ -1255,7 +1281,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E13",
@@ -1305,7 +1332,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E14",
@@ -1351,7 +1379,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E15",
@@ -1400,7 +1429,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E16",
@@ -1446,7 +1476,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E17",
@@ -1495,7 +1526,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "E18",
@@ -1547,7 +1579,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

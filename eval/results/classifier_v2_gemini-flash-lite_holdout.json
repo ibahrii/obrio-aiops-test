@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "holdout",
   "n": 10,
+  "n_total": 10,
+  "not_measured": 0,
   "category_acc": 90.0,
   "category_lenient_acc": 100.0,
   "priority_acc": 90.0,
@@ -150,7 +152,7 @@
    "guard_overrides": [],
    "rationale": "The user paid for a yearly subscription via Google Play but cannot access it, which qualifies as a billing error and an unauthorized/unrecognized payment issue requiring P1 priority and human agent review.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -166,7 +168,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "H02",
@@ -196,7 +199,7 @@
    "guard_overrides": [],
    "rationale": "The user is reporting a localization bug where push notifications are received in English instead of French, which is a technical issue affecting one specific feature.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -212,7 +215,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H03",
@@ -245,7 +249,7 @@
    "guard_overrides": [],
    "rationale": "The user is requesting the deletion of their account and all personal data, which falls under privacy_legal (GDPR/CCPA) and requires manual or specialized legal handling.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -261,7 +265,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H04",
@@ -293,7 +298,7 @@
    "guard_overrides": [],
    "rationale": "The customer is reporting an expert soliciting off-platform payments for services, which is a serious policy violation. This requires human review by the Expert Quality team.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -309,7 +314,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H05",
@@ -339,7 +345,7 @@
    "guard_overrides": [],
    "rationale": "The user is asking a straightforward how-to question about finding their consultation history in the app.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -355,7 +361,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H06",
@@ -388,7 +395,7 @@
    "guard_overrides": [],
    "rationale": "The customer is expressing explicit signs of crisis and severe distress, which takes immediate priority over all other categories.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -404,7 +411,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H07",
@@ -434,7 +442,7 @@
    "guard_overrides": [],
    "rationale": "The customer is explicitly asking for a partial refund on an accidental credit purchase made recently and unused, which falls under a standard refund request.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -450,7 +458,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H08",
@@ -483,7 +492,7 @@
    "guard_overrides": [],
    "rationale": "The user is reporting an unauthorized charge of $59.99 for a subscription they claim they never signed up for, which constitutes an unauthorized charge requiring P1 priority and human review despite the prompt injection attempt.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -499,7 +508,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H09",
@@ -536,7 +546,7 @@
    ],
    "rationale": "The customer is threatening legal action over continued subscription charges after deleting the app, which elevates the priority to P1 and requires routing to Legal & Privacy due to the lawyer threat.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -552,7 +562,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false
+   "both_pass": false,
+   "measured": true
   },
   {
    "id": "H10",
@@ -582,7 +593,7 @@
    "guard_overrides": [],
    "rationale": "The ticket is purely positive feedback for a specific expert and requires no action beyond logging or forwarding.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -598,7 +609,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

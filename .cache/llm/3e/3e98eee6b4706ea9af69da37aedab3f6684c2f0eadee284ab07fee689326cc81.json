@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the purchase, calculate the difference, and issue a refund for the excess credits"
+   },
+   "confidence": 0.92,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user explicitly requests a refund for the difference between two credit packs, which is a refund_request with a secondary billing_subscription issue."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2298,
+  "out_tokens": 179,
+  "thinking_tokens": 58,
+  "latency_s": 0.8790269300966429,
+  "api_latency_s": 0.8780139340001369,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"refund_request\",\"secondary_category\":\"billing_subscription\",\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Verify the purchase, calculate the difference, and issue a refund for the excess credits\"},\"confidence\":0.92,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user explicitly requests a refund for the difference between two credit packs, which is a refund_request with a secondary billing_subscription issue.\"}"
+ },
+ "created_at": 1793402701.1333985
+}

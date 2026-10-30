@@ -5,6 +5,8 @@
   "fallback": false,
   "dataset": "holdout",
   "n": 10,
+  "n_total": 10,
+  "not_measured": 0,
   "category_acc": 100.0,
   "category_lenient_acc": 100.0,
   "priority_acc": 100.0,
@@ -150,7 +152,7 @@
    ],
    "rationale": "The customer paid for a subscription but the app fails to recognize it, which is classified as a billing error and technical sync issue.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -166,7 +168,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H02",
@@ -196,7 +199,7 @@
    "guard_overrides": [],
    "rationale": "The customer is reporting a bug regarding push notification localization, which falls under technical issues and is appropriately prioritized as P3.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -212,7 +215,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H03",
@@ -245,7 +249,7 @@
    "guard_overrides": [],
    "rationale": "The customer is requesting complete account deletion and removal of all personal data, which triggers privacy_legal routing under data deletion requests.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -261,7 +265,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H04",
@@ -293,7 +298,7 @@
    "guard_overrides": [],
    "rationale": "The customer is reporting an expert for soliciting off-platform transactions and services, which is a serious policy violation.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -309,7 +314,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H05",
@@ -339,7 +345,7 @@
    "guard_overrides": [],
    "rationale": "The customer is asking how to find a feature (consultation history) within the app, which is a standard product question.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -355,7 +361,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H06",
@@ -388,7 +395,7 @@
    "guard_overrides": [],
    "rationale": "The customer expresses severe distress, hopelessness, and signs of a crisis, triggering the highest priority safety protocol.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -404,7 +411,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H07",
@@ -434,7 +442,7 @@
    "guard_overrides": [],
    "rationale": "The customer explicitly asks for money back for an accidental purchase, which triggers the refund_request category with a billing secondary context.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -450,7 +458,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H08",
@@ -483,7 +492,7 @@
    "guard_overrides": [],
    "rationale": "The ticket contains a prompt injection attempt, which is ignored. The customer's genuine problem is an unexpected and unauthorized charge.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -499,7 +508,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H09",
@@ -534,7 +544,7 @@
    "guard_overrides": [],
    "rationale": "The explicit lawyer threat triggers privacy_legal as the primary category, while ongoing unwanted charges constitute a billing dispute making it high priority P1.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -550,7 +560,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   },
   {
    "id": "H10",
@@ -580,7 +591,7 @@
    "guard_overrides": [],
    "rationale": "The customer is leaving positive praise for a specific expert without any issues or requests.",
    "model_used": "gemini-flash-lite",
-   "from_cache": false,
+   "from_cache": true,
    "fallback_used": false,
    "valid_first_try": true,
    "strict_json_first_try": true,
@@ -596,7 +607,8 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": true
+   "both_pass": true,
+   "measured": true
   }
  ]
 }

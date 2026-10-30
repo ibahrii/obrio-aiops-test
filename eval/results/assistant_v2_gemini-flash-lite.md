@@ -43,7 +43,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Citations:** `kb-005` ✅ “A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge.”; `kb-005` ✅ “Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement.”
 
-**Reasons:** ['model: chargeback or legal threat']
+**Reasons:** ['model (not supported by ticket text): chargeback or legal threat']
 
 ### A03 — refund inside policy, non-English
 

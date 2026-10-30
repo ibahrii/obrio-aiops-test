@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Escalate to Trust & Safety for immediate support and provide self‑help resources"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "self-harm threat"
+   ],
+   "rationale": "The customer expresses a self‑harm threat, which triggers the safety_wellbeing category and P1 priority, overriding the subscription cancellation request."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2308,
+  "out_tokens": 248,
+  "thinking_tokens": 117,
+  "latency_s": 17.413303194769014,
+  "api_latency_s": 1.01287003599964,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens "
+   },
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"safety_wellbeing\",\"secondary_category\":null,\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"distressed\",\"next_step\":{\"route_to\":\"Trust & Safety\",\"action\":\"Escalate to Trust & Safety for immediate support and provide self‑help resources\"},\"confidence\":0.95,\"needs_human\":true,\"human_reasons\":[\"self-harm threat\"],\"rationale\":\"The customer expresses a self‑harm threat, which triggers the safety_wellbeing category and P1 priority, overriding the subscription cancellation request.\"}"
+ },
+ "created_at": 1793402519.0327578
+}
