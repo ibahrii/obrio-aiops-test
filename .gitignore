@@ -1,0 +1,15 @@
+# secrets
+.env
+.streamlit/secrets.toml
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# runtime logs (aggregated stats are exported to eval/results/)
+logs/
+
+# corrections collected via the Review queue at runtime
+data/corrections.jsonl

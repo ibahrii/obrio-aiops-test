@@ -1,0 +1,519 @@
+{
+  "fetched_at": "2026-10-30T22:45:25.980341+00:00",
+  "source": "https://openrouter.ai/api/v1/models/{id}/endpoints",
+  "models": {
+    "google/gemini-3.8-flash": {
+      "billing_tag": "google-ai-studio",
+      "chosen": {
+        "provider": "Google AI Studio",
+        "tag": "google-ai-studio",
+        "input_per_1m": 0.75,
+        "output_per_1m": 3.75,
+        "cached_input_per_1m": 0.075
+      },
+      "all_endpoints": [
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/flex",
+          "input_per_1m": 0.375,
+          "output_per_1m": 1.875,
+          "cached_input_per_1m": 0.0375
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/flex",
+          "input_per_1m": 0.375,
+          "output_per_1m": 1.875,
+          "cached_input_per_1m": 0.0375
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/us",
+          "input_per_1m": 0.825,
+          "output_per_1m": 4.125,
+          "cached_input_per_1m": 0.0825
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/priority",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cached_input_per_1m": 0.135
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/priority",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cached_input_per_1m": 0.135
+        }
+      ]
+    },
+    "google/gemini-3.6-flash": {
+      "billing_tag": "google-ai-studio",
+      "chosen": {
+        "provider": "Google AI Studio",
+        "tag": "google-ai-studio",
+        "input_per_1m": 0.75,
+        "output_per_1m": 3.75,
+        "cached_input_per_1m": 0.075
+      },
+      "all_endpoints": [
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/flex",
+          "input_per_1m": 0.375,
+          "output_per_1m": 1.875,
+          "cached_input_per_1m": 0.0375
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/flex",
+          "input_per_1m": 0.375,
+          "output_per_1m": 1.875,
+          "cached_input_per_1m": 0.0375
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global",
+          "input_per_1m": 0.75,
+          "output_per_1m": 3.75,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/us",
+          "input_per_1m": 0.825,
+          "output_per_1m": 4.125,
+          "cached_input_per_1m": 0.0825
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/priority",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cached_input_per_1m": 0.135
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/priority",
+          "input_per_1m": 1.35,
+          "output_per_1m": 6.75,
+          "cached_input_per_1m": 0.135
+        }
+      ]
+    },
+    "google/gemini-3.5-flash-lite": {
+      "billing_tag": "google-ai-studio",
+      "chosen": {
+        "provider": "Google AI Studio",
+        "tag": "google-ai-studio",
+        "input_per_1m": 0.3,
+        "output_per_1m": 2.5,
+        "cached_input_per_1m": 0.03
+      },
+      "all_endpoints": [
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/flex",
+          "input_per_1m": 0.15,
+          "output_per_1m": 1.25,
+          "cached_input_per_1m": 0.015
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/flex",
+          "input_per_1m": 0.15,
+          "output_per_1m": 1.25,
+          "cached_input_per_1m": 0.015
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio",
+          "input_per_1m": 0.3,
+          "output_per_1m": 2.5,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global",
+          "input_per_1m": 0.3,
+          "output_per_1m": 2.5,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/eu",
+          "input_per_1m": 0.33,
+          "output_per_1m": 2.75,
+          "cached_input_per_1m": 0.033
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/us",
+          "input_per_1m": 0.33,
+          "output_per_1m": 2.75,
+          "cached_input_per_1m": 0.033
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global/priority",
+          "input_per_1m": 0.54,
+          "output_per_1m": 4.5,
+          "cached_input_per_1m": 0.054
+        },
+        {
+          "provider": "Google AI Studio",
+          "tag": "google-ai-studio/priority",
+          "input_per_1m": 0.54,
+          "output_per_1m": 4.5,
+          "cached_input_per_1m": 0.054
+        }
+      ]
+    },
+    "openai/gpt-oss-120b": {
+      "billing_tag": "groq",
+      "chosen": {
+        "provider": "Groq",
+        "tag": "groq",
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.6,
+        "cached_input_per_1m": 0.075
+      },
+      "all_endpoints": [
+        {
+          "provider": "Near AI",
+          "tag": "near-ai/fp4",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.15,
+          "cached_input_per_1m": 0.015
+        },
+        {
+          "provider": "Venice",
+          "tag": "venice/int4",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.15,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "CoreWeave",
+          "tag": "coreweave/fp4",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.17,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "DekaLLM",
+          "tag": "dekallm/bf16",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.18,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "AkashML",
+          "tag": "akashml/bf16",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.187,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "DeepInfra",
+          "tag": "deepinfra/bf16",
+          "input_per_1m": 0.037,
+          "output_per_1m": 0.17,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Crusoe",
+          "tag": "crusoe/bf16",
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.25,
+          "cached_input_per_1m": 0.05
+        },
+        {
+          "provider": "Mancer 2",
+          "tag": "mancer/fp8",
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.25,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Novita",
+          "tag": "novita/fp4",
+          "input_per_1m": 0.05,
+          "output_per_1m": 0.25,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Sail Research",
+          "tag": "sail-research/fp4",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.4,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "DigitalOcean",
+          "tag": "digitalocean",
+          "input_per_1m": 0.06,
+          "output_per_1m": 0.42,
+          "cached_input_per_1m": 0.012
+        },
+        {
+          "provider": "Google",
+          "tag": "google-vertex/global",
+          "input_per_1m": 0.09,
+          "output_per_1m": 0.36,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "BaseTen",
+          "tag": "baseten/fp4/us",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cached_input_per_1m": 0.1
+        },
+        {
+          "provider": "BaseTen",
+          "tag": "baseten/fp4",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.5,
+          "cached_input_per_1m": 0.1
+        },
+        {
+          "provider": "Parasail",
+          "tag": "parasail/fp4",
+          "input_per_1m": 0.1,
+          "output_per_1m": 0.75,
+          "cached_input_per_1m": 0.055
+        },
+        {
+          "provider": "SambaNova",
+          "tag": "sambanova",
+          "input_per_1m": 0.14,
+          "output_per_1m": 0.95,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Amazon Bedrock",
+          "tag": "amazon-bedrock/eu-west-1",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Nebius",
+          "tag": "nebius/fp4",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.1
+        },
+        {
+          "provider": "Amazon Bedrock",
+          "tag": "amazon-bedrock",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "SiliconFlow",
+          "tag": "siliconflow/fp8",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Phala",
+          "tag": "phala",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Together",
+          "tag": "together",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Groq",
+          "tag": "groq",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.6,
+          "cached_input_per_1m": 0.075
+        },
+        {
+          "provider": "Mara",
+          "tag": "mara",
+          "input_per_1m": 0.15,
+          "output_per_1m": 0.75,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "DeepInfra",
+          "tag": "deepinfra/fp8",
+          "input_per_1m": 0.2,
+          "output_per_1m": 0.95,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Cerebras",
+          "tag": "cerebras/fp16",
+          "input_per_1m": 0.35,
+          "output_per_1m": 0.75,
+          "cached_input_per_1m": 0.35
+        }
+      ]
+    },
+    "openai/gpt-oss-20b": {
+      "billing_tag": "groq",
+      "chosen": {
+        "provider": "Groq",
+        "tag": "groq",
+        "input_per_1m": 0.075,
+        "output_per_1m": 0.3,
+        "cached_input_per_1m": 0.0375
+      },
+      "all_endpoints": [
+        {
+          "provider": "Darkbloom",
+          "tag": "darkbloom/fp8",
+          "input_per_1m": 0.018,
+          "output_per_1m": 0.09,
+          "cached_input_per_1m": 0.009
+        },
+        {
+          "provider": "AkashML",
+          "tag": "akashml/fp4",
+          "input_per_1m": 0.02,
+          "output_per_1m": 0.1,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "DekaLLM",
+          "tag": "dekallm/bf16",
+          "input_per_1m": 0.029,
+          "output_per_1m": 0.14,
+          "cached_input_per_1m": 0.029
+        },
+        {
+          "provider": "CoreWeave",
+          "tag": "coreweave/fp4",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.13,
+          "cached_input_per_1m": 0.03
+        },
+        {
+          "provider": "DeepInfra",
+          "tag": "deepinfra/bf16",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.14,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Parasail",
+          "tag": "parasail/fp4",
+          "input_per_1m": 0.03,
+          "output_per_1m": 0.15,
+          "cached_input_per_1m": 0.02
+        },
+        {
+          "provider": "SiliconFlow",
+          "tag": "siliconflow/fp8",
+          "input_per_1m": 0.04,
+          "output_per_1m": 0.18,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Amazon Bedrock",
+          "tag": "amazon-bedrock/eu-west-1",
+          "input_per_1m": 0.07,
+          "output_per_1m": 0.15,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Amazon Bedrock",
+          "tag": "amazon-bedrock",
+          "input_per_1m": 0.07,
+          "output_per_1m": 0.15,
+          "cached_input_per_1m": 0.0
+        },
+        {
+          "provider": "Groq",
+          "tag": "groq",
+          "input_per_1m": 0.075,
+          "output_per_1m": 0.3,
+          "cached_input_per_1m": 0.0375
+        }
+      ]
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b": {
+      "billing_tag": "deepinfra/fp4",
+      "chosen": {
+        "provider": "DeepInfra",
+        "tag": "deepinfra/fp4",
+        "input_per_1m": 0.5,
+        "output_per_1m": 2.2,
+        "cached_input_per_1m": 0.1
+      },
+      "all_endpoints": [
+        {
+          "provider": "DeepInfra",
+          "tag": "deepinfra/fp4/flex",
+          "input_per_1m": 0.4,
+          "output_per_1m": 1.76,
+          "cached_input_per_1m": 0.08
+        },
+        {
+          "provider": "DeepInfra",
+          "tag": "deepinfra/fp4",
+          "input_per_1m": 0.5,
+          "output_per_1m": 2.2,
+          "cached_input_per_1m": 0.1
+        },
+        {
+          "provider": "BaseTen",
+          "tag": "baseten/fp4/us",
+          "input_per_1m": 0.6,
+          "output_per_1m": 2.4,
+          "cached_input_per_1m": 0.12
+        },
+        {
+          "provider": "BaseTen",
+          "tag": "baseten/fp4",
+          "input_per_1m": 0.6,
+          "output_per_1m": 2.4,
+          "cached_input_per_1m": 0.12
+        },
+        {
+          "provider": "Venice",
+          "tag": "venice/fp8",
+          "input_per_1m": 0.625,
+          "output_per_1m": 3.125,
+          "cached_input_per_1m": 0.1875
+        }
+      ]
+    }
+  }
+}
