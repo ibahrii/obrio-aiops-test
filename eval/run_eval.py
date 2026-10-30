@@ -19,7 +19,7 @@ from collections import Counter, defaultdict
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src import classifier, config, cost  # noqa: E402
+from src import classifier, config, cost, llm  # noqa: E402
 
 EVAL_PATH = config.DATA_DIR / "tickets_eval.jsonl"
 
@@ -74,6 +74,7 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
             "thinking_tokens": m.get("thinking_tokens", 0), "attempts": m.get("attempts", []),
         }
         row["both_pass"] = row["category_pass"] and row["priority_pass"]
+        row["measured"] = not any(a.get("event") == "not_measured" for a in row["attempts"])
         rows.append(row)
         if verbose:
             flag = "OK " if row["both_pass"] else "ERR"
@@ -81,6 +82,8 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
                   f"act={r.category}/{r.priority} nh={r.needs_human} conf={r.confidence:.2f} "
                   f"{'cache' if m.get('from_cache') else str(m.get('latency_s')) + 's'}", flush=True)
 
+    n_total = len(rows)
+    rows_all, rows = rows, [r for r in rows if r["measured"]]  # metrics only on tickets that actually got an answer attempt
     edge = [r for r in rows if r["edge_case_type"] != "none"]
     regular = [r for r in rows if r["edge_case_type"] == "none"]
     exp_h = [r for r in rows if r["exp_needs_human"]]
@@ -107,6 +110,7 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
     cost_per_ticket = [cost.call_cost(r["model_used"] or model, r["in_tokens"], r["out_tokens"], prices) for r in answered]
     summary = {
         "model": model, "prompt": prompt, "fallback": fallback, "dataset": dataset, "n": len(rows),
+        "n_total": n_total, "not_measured": n_total - len(rows),
         "category_acc": pct([r["category_pass"] for r in rows]),
         "category_lenient_acc": pct([r["category_lenient_pass"] for r in rows]),
         "priority_acc": pct([r["priority_pass"] for r in rows]),
@@ -137,6 +141,7 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
     }
     tag = f"classifier_{prompt}_{model}" + ("_fb" if fallback else "") + ("" if dataset == "eval" else f"_{dataset}")
     config.RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    rows = rows_all
     (config.RESULTS_DIR / f"{tag}.json").write_text(json.dumps({"summary": summary, "rows": rows}, indent=1, ensure_ascii=False))
     (config.RESULTS_DIR / f"{tag}.md").write_text(to_markdown(summary, rows), encoding="utf-8")
     return {"summary": summary, "rows": rows}
@@ -145,6 +150,8 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
 def to_markdown(s: dict, rows: list[dict]) -> str:
     yn = lambda b: "✅" if b else "❌"  # noqa: E731
     out = [f"# Classifier eval ({s.get('dataset', 'eval')}) — prompt `{s['prompt']}`, model `{s['model']}`{' (fallback on)' if s['fallback'] else ''}", ""]
+    if s.get("not_measured"):
+        out.append(f"**Not measured: {s['not_measured']} of {s['n_total']} tickets** (free-tier daily quota exhausted); metrics below use the measured {s['n']}.")
     out.append(f"n={s['n']} · category **{s['category_acc']}%** (lenient {s['category_lenient_acc']}%) · "
                f"priority **{s['priority_acc']}%** · both **{s['both_acc']}%** · needs_human {s['needs_human_acc']}% "
                f"(recall {s['needs_human_recall']}%, precision {s['needs_human_precision']}%)")
@@ -174,8 +181,10 @@ if __name__ == "__main__":
     ap.add_argument("--model", default=config.DEFAULT_MODEL, choices=list(config.MODELS))
     ap.add_argument("--prompt", default=config.CLASSIFIER_PROMPT_VERSION)
     ap.add_argument("--fallback", action="store_true")
-    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout"])
+    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout", "corrections"])
+    ap.add_argument("--cache-only", action="store_true", help="no API calls; cache misses reported as not measured")
     a = ap.parse_args()
+    llm.CACHE_ONLY = a.cache_only
     res = evaluate(a.model, a.prompt, a.fallback, dataset=a.dataset)
     s = res["summary"]
     print(json.dumps({k: v for k, v in s.items() if k not in ("confusion", "confidence_sweep")}, indent=1))

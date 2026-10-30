@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate duplicate charge and issue a refund if necessary"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Duplicate charge on the same plan is a billing error; no threat or refund request, so P2."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2300,
+  "out_tokens": 144,
+  "thinking_tokens": 35,
+  "latency_s": 0.8301541867467677,
+  "api_latency_s": 0.8292938189997585,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Investigate duplicate charge and issue a refund if necessary\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"Duplicate charge on the same plan is a billing error; no threat or refund request, so P2.\"}"
+ },
+ "created_at": 1793402161.3067148
+}

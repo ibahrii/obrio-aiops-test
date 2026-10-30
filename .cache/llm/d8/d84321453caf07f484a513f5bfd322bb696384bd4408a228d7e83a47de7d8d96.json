@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Acknowledge receipt and ask for clarification"
+   },
+   "confidence": 0.8,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket contains no meaningful content, so it is treated as a generic feedback/suggestion with no actionable issue."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2277,
+  "out_tokens": 139,
+  "thinking_tokens": 36,
+  "latency_s": 17.10566458483345,
+  "api_latency_s": 0.7448889160000363,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens "
+   },
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"feedback_other\",\"priority\":\"P4\",\"requester_type\":\"unknown\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"General Support\",\"action\":\"Acknowledge receipt and ask for clarification\"},\"confidence\":0.8,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The ticket contains no meaningful content, so it is treated as a generic feedback/suggestion with no actionable issue.\"}"
+ },
+ "created_at": 1793402482.0092576
+}

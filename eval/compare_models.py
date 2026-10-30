@@ -16,7 +16,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src import config, cost  # noqa: E402
+from src import config, cost, llm  # noqa: E402
 from eval.run_eval import evaluate  # noqa: E402
 
 MODELS = ["gemini-flash", "gemini-flash-3.6", "gemini-flash-lite", "groq-gpt-oss-120b", "groq-gpt-oss-20b",
@@ -36,9 +36,14 @@ def aggregate(prompt: str) -> list[dict]:
         s, h = load(prompt, m, "eval"), load(prompt, m, "holdout")
         if not s:
             continue
+        if s["n"] == 0:
+            rows.append({"model": m, "label": config.MODELS[m].label, "api_id": config.MODELS[m].api_id, "n": 0,
+                         "n_total": s.get("n_total", 30), "price_in_per_1m": prices[m]["input"], "price_out_per_1m": prices[m]["output"]})
+            continue
         per_ticket = cost.call_cost(m, s["avg_in_tokens"], s["avg_out_tokens"], prices)
         rows.append({
             "model": m, "label": config.MODELS[m].label, "api_id": config.MODELS[m].api_id, "n": s["n"],
+            "n_total": s.get("n_total", s["n"]), "holdout_n": h["n"] if h else 0,
             "category_acc": s["category_acc"], "priority_acc": s["priority_acc"], "both_acc": s["both_acc"],
             "needs_human_acc": s["needs_human_acc"], "needs_human_recall": s["needs_human_recall"],
             "edge_both": None, "holdout_both_acc": h["both_acc"] if h else None,
@@ -56,12 +61,15 @@ def aggregate(prompt: str) -> list[dict]:
 
 def to_markdown(rows: list[dict], prompt: str) -> str:
     out = [f"# Model comparison — classifier prompt `{prompt}` (fallback off)", "",
-           "| model | category | priority | both | holdout both | needs_human | valid JSON 1st try | API p50 / p95, s | wall p50 / p95, s | tokens in / out | $/ticket | $/10k |",
-           "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+           "| model | measured | category | priority | both | holdout both | needs_human | valid JSON 1st try | API p50 / p95, s | wall p50 / p95, s | tokens in / out | $/ticket | $/10k |",
+           "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
+        if r["n"] == 0:
+            out.append(f"| {r['label']} | 0/{r['n_total']} | не виміряно: free tier 20 запитів/добу вичерпано таймаутами | | | | | | | | | | |")
+            continue
         out.append(
-            f"| {r['label']} | {r['category_acc']}% | {r['priority_acc']}% | {r['both_acc']}% | "
-            f"{r['holdout_both_acc'] if r['holdout_both_acc'] is not None else '—'}% | {r['needs_human_acc']}% | "
+            f"| {r['label']} | {r['n']}/{r['n_total']} | {r['category_acc']}% | {r['priority_acc']}% | {r['both_acc']}% | "
+            f"{str(r['holdout_both_acc']) + '%' if r['holdout_both_acc'] is not None and r['holdout_n'] else '—'} | {r['needs_human_acc']}% | "
             f"{r['valid_json_first_try']}% | {r['api_latency_p50']} / {r['api_latency_p95']} | "
             f"{r['wall_latency_p50']} / {r['wall_latency_p95']} | {r['avg_in_tokens']:.0f} / {r['avg_out_tokens']:.0f} | "
             f"{r['cost_per_ticket_usd']:.6f} | {r['cost_10k_usd']:.2f} |")
@@ -85,5 +93,7 @@ if __name__ == "__main__":
             evaluate(m, a.prompt, fallback=False, dataset="holdout")
     rows = aggregate(a.prompt)
     (config.RESULTS_DIR / "model_comparison.json").write_text(json.dumps(rows, indent=1))
+    # snapshot of real provider failures seen during the eval runs (logs/ is not committed)
+    (config.RESULTS_DIR / "failure_stats.json").write_text(json.dumps(llm.failure_stats(), indent=1))
     (config.RESULTS_DIR / "model_comparison.md").write_text(to_markdown(rows, a.prompt), encoding="utf-8")
     print(to_markdown(rows, a.prompt))

@@ -15,7 +15,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src import assistant, classifier, config, retrieval  # noqa: E402
+from src import assistant, classifier, config, llm, retrieval  # noqa: E402
 
 EVAL_PATH = config.DATA_DIR / "assistant_eval.jsonl"
 
@@ -116,6 +116,8 @@ if __name__ == "__main__":
     ap.add_argument("--model", default=config.DEFAULT_MODEL, choices=list(config.MODELS))
     ap.add_argument("--prompt", default=config.ASSISTANT_PROMPT_VERSION)
     ap.add_argument("--classifier-model", default=None)
+    ap.add_argument("--cache-only", action="store_true")
     a = ap.parse_args()
+    llm.CACHE_ONLY = a.cache_only
     res = evaluate(a.model, a.prompt, a.classifier_model)
     print(json.dumps(res["summary"], indent=1, ensure_ascii=False))

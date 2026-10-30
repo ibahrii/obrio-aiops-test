@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "es",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the purchase details and process a refund for the incorrect credit package"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "explicit request to return money"
+   ],
+   "rationale": "The customer explicitly asks for a refund for a mistakenly purchased credit package, fitting the refund_request category with P2 priority."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2293,
+  "out_tokens": 205,
+  "thinking_tokens": 84,
+  "latency_s": 0.969170146608576,
+  "api_latency_s": 0.9681239510000523,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"refund_request\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"es\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Verify the purchase details and process a refund for the incorrect credit package\"},\"confidence\":0.9,\"needs_human\":true,\"human_reasons\":[\"explicit request to return money\"],\"rationale\":\"The customer explicitly asks for a refund for a mistakenly purchased credit package, fitting the refund_request category with P2 priority.\"}"
+ },
+ "created_at": 1793402407.7102342
+}

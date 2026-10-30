@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the plan activation and unlock premium readings for the user"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports a payment succeeded but the subscription status is not updated, which is a billing_subscription error. No other separate issue is present, so no secondary category. The situation warrants a P2 response."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2293,
+  "out_tokens": 208,
+  "thinking_tokens": 81,
+  "latency_s": 0.9678764322238749,
+  "api_latency_s": 0.9649682080003004,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Verify the plan activation and unlock premium readings for the user\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user reports a payment succeeded but the subscription status is not updated, which is a billing_subscription error. No other separate issue is present, so no secondary category. The situation warrants a P2 response.\"}"
+ },
+ "created_at": 1793402401.7060037
+}

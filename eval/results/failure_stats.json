@@ -1,0 +1,23 @@
+{
+ "rate_limit": {
+  "gemini-flash-lite": 1,
+  "groq-gpt-oss-120b": 70,
+  "gemini-flash-3.6": 19,
+  "gemini-flash": 20,
+  "groq-gpt-oss-20b": 8
+ },
+ "timeout": {
+  "gemini-flash-lite": 1,
+  "gemini-flash": 8,
+  "gemini-flash-3.6": 2
+ },
+ "server_error": {
+  "gemini-flash": 5,
+  "gemini-flash-3.6": 3,
+  "openrouter-nemotron-free": 1
+ },
+ "chain_exhausted": {
+  "gemini-flash": 10,
+  "gemini-flash-3.6": 4
+ }
+}

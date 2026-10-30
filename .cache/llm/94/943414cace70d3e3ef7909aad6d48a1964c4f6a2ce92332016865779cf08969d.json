@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Investigate the expert’s session logs and review the user’s feedback for potential quality issues"
+   },
+   "confidence": 0.9,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user complains about the expert’s performance and lack of value, fitting the expert_complaint category with a P3 priority for a non‑urgent quality issue."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2299,
+  "out_tokens": 196,
+  "thinking_tokens": 69,
+  "latency_s": 17.279050592631393,
+  "api_latency_s": 0.921938111000145,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens "
+   },
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"expert_complaint\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Expert Quality\",\"action\":\"Investigate the expert’s session logs and review the user’s feedback for potential quality issues\"},\"confidence\":0.9,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user complains about the expert’s performance and lack of value, fitting the expert_complaint category with a P3 priority for a non‑urgent quality issue.\"}"
+ },
+ "created_at": 1793402379.2733774
+}

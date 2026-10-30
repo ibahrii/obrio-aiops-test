@@ -32,7 +32,7 @@ RATE_LIMIT_RETRIES = 2       # extra attempts after 429, honouring Retry-After
 MAX_RETRY_AFTER_S = 30.0     # never sleep longer than this on a single 429
 CACHE_TTL_S = 30 * 24 * 3600  # eval cache; in prod this would be hours, see REPORT.md
 
-CONFIDENCE_THRESHOLD = 0.7   # chosen on eval data, see REPORT.md section 9
+CONFIDENCE_THRESHOLD = 0.9   # chosen on eval data (threshold sweep), see REPORT.md section 9
 
 
 @dataclass(frozen=True)

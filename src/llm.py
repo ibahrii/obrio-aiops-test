@@ -99,6 +99,7 @@ class StructuredResult:
 # Test hook: if set, called instead of real HTTP -> (spec, system, messages, schema) -> RawResponse
 TRANSPORT_OVERRIDE: Optional[Callable[..., RawResponse]] = None
 SLEEP: Callable[[float], None] = time.sleep  # patched in tests to keep them fast
+CACHE_ONLY = False  # eval reporting mode: never call the API, cache misses are reported as "not_measured"
 
 _last_call: dict[str, float] = {}
 _pace_lock = threading.Lock()
@@ -344,6 +345,8 @@ def call_structured(
             r.from_cache = True
             return r
 
+    if CACHE_ONLY:
+        return StructuredResult(ok=False, requested_model=model_key, attempts=[{"model": model_key, "event": "not_measured", "detail": "cache miss in cache-only mode"}])
     chain = [model_key] + (config.FALLBACK_CHAIN.get(model_key, []) if use_fallback else [])
     res = StructuredResult(ok=False, requested_model=model_key)
     t_start = time.perf_counter()
