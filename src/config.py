@@ -21,7 +21,7 @@ CORRECTIONS_PATH = DATA_DIR / "corrections.jsonl"
 PRICING_SNAPSHOT = RESULTS_DIR / "pricing_snapshot.json"
 
 # Versions are part of every cache key: bumping any of them invalidates cached answers.
-CLASSIFIER_PROMPT_VERSION = os.getenv("CLASSIFIER_PROMPT_VERSION", "v3")
+CLASSIFIER_PROMPT_VERSION = os.getenv("CLASSIFIER_PROMPT_VERSION", "v4")
 ASSISTANT_PROMPT_VERSION = os.getenv("ASSISTANT_PROMPT_VERSION", "v2")
 TAXONOMY_VERSION = "2026-10-30"
 KB_VERSION = "kb-2026-10-30"

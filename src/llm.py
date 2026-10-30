@@ -80,7 +80,8 @@ class StructuredResult:
     in_tokens: int = 0
     out_tokens: int = 0
     thinking_tokens: int = 0
-    latency_s: float = 0.0                  # wall time of all attempts (original, if cached)
+    latency_s: float = 0.0                  # wall time of all attempts incl. retry waits (original, if cached)
+    api_latency_s: float = 0.0              # HTTP time of the successful call only (model speed)
     attempts: list[dict] = field(default_factory=list)
     raw_text: str = ""
 
@@ -90,7 +91,8 @@ class StructuredResult:
             "fallback_used": self.fallback_used, "valid_first_try": self.valid_first_try,
             "strict_json_first_try": self.strict_json_first_try,
             "in_tokens": self.in_tokens, "out_tokens": self.out_tokens, "thinking_tokens": self.thinking_tokens,
-            "latency_s": round(self.latency_s, 3), "attempts": self.attempts,
+            "latency_s": round(self.latency_s, 3), "api_latency_s": round(self.api_latency_s, 3),
+            "attempts": self.attempts,
         }
 
 
@@ -100,6 +102,7 @@ SLEEP: Callable[[float], None] = time.sleep  # patched in tests to keep them fas
 
 _last_call: dict[str, float] = {}
 _pace_lock = threading.Lock()
+_paced = threading.local()  # seconds spent in free-tier pacing; excluded from reported latency
 
 
 # --------------------------------------------------------------------------- logging
@@ -187,6 +190,7 @@ def _pace(spec: config.ModelSpec) -> None:
         wait = spec.min_interval_s - (time.time() - _last_call.get(spec.key, 0))
         if wait > 0 and TRANSPORT_OVERRIDE is None:
             time.sleep(wait)
+            _paced.total = getattr(_paced, "total", 0.0) + wait
         _last_call[spec.key] = time.time()
 
 
@@ -343,6 +347,7 @@ def call_structured(
     chain = [model_key] + (config.FALLBACK_CHAIN.get(model_key, []) if use_fallback else [])
     res = StructuredResult(ok=False, requested_model=model_key)
     t_start = time.perf_counter()
+    _paced.total = 0.0
 
     for idx, mkey in enumerate(chain):
         spec = config.MODELS[mkey]
@@ -363,6 +368,7 @@ def call_structured(
                     if idx == 0 and repair_round == 0:
                         res.valid_first_try, res.strict_json_first_try = True, strict
                     res.ok, res.data, res.model = True, validated.model_dump(), mkey
+                    res.api_latency_s = raw.latency_s
                     res.attempts.append({"model": mkey, "event": "ok" if repair_round == 0 else "ok_after_repair",
                                          "detail": raw.model_version})
                     break
@@ -387,7 +393,7 @@ def call_structured(
                 res.valid_first_try = False
                 res.strict_json_first_try = False
 
-    res.latency_s = time.perf_counter() - t_start
+    res.latency_s = time.perf_counter() - t_start - getattr(_paced, "total", 0.0)
     if not res.ok:
         log_failure(model_key, "chain_exhausted", f"tried {chain}", stage="final")
     elif key:
