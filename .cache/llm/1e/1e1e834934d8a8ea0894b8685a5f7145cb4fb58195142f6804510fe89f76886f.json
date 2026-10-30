@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "refund_request",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Check user account for duplicate transactions on Oct 12 and process a refund for the extra charge if confirmed."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "Requires financial verification and potential manual refund processing."
+   ],
+   "rationale": "The user is reporting a double charge for their subscription plan and wants an investigation, which falls directly under billing and requires support intervention."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 235,
+  "out_tokens": 188,
+  "thinking_tokens": 0,
+  "latency_s": 2.2104664118091932,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Check user account for duplicate transactions on Oct 12 and process a refund for the extra charge if confirmed.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Requires financial verification and potential manual refund processing.\"\n  ],\n  \"rationale\": \"The user is reporting a double charge for their subscription plan and wants an investigation, which falls directly under billing and requires support intervention.\"\n}"
+ },
+ "created_at": 1793400686.069669
+}

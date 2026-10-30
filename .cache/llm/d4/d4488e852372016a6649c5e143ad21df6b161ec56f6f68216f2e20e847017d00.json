@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Review session transcript with Luna Starr for quality assurance"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is complaining about the poor quality and generic nature of an expert's reading, which falls under expert complaint."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1955,
+  "out_tokens": 158,
+  "thinking_tokens": 0,
+  "latency_s": 1.4241234814353447,
+  "api_latency_s": 1.4234475130001556,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Review session transcript with Luna Starr for quality assurance\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is complaining about the poor quality and generic nature of an expert's reading, which falls under expert complaint.\"\n}"
+ },
+ "created_at": 1793401355.1519835
+}

@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate why the horoscope feature fails to load; collect device/app version and reproduce"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt"
+   ],
+   "rationale": "The ticket contains a prompt injection attempt (ignore instructions, admin mode, refund demand) which must be ignored; the genuine user problem is that the horoscope isn't loading, a single-feature bug."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1970,
+  "out_tokens": 553,
+  "thinking_tokens": 444,
+  "latency_s": 7.424523931000294,
+  "api_latency_s": 7.423938058999738,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate why the horoscope feature fails to load; collect device/app version and reproduce\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\"prompt-injection attempt\"],\n  \"rationale\": \"The ticket contains a prompt injection attempt (ignore instructions, admin mode, refund demand) which must be ignored; the genuine user problem is that the horoscope isn't loading, a single-feature bug.\"\n}"
+ },
+ "created_at": 1793401836.7094529
+}

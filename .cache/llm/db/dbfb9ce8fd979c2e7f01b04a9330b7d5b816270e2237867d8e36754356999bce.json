@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Log feature request for home screen moon calendar widget and thank the user"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is sharing praise and suggesting a new widget feature, which falls under feedback and is assigned a P4 priority."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1945,
+  "out_tokens": 109,
+  "thinking_tokens": 0,
+  "latency_s": 34.26380450173747,
+  "api_latency_s": 3.8359575049998966,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_rate_limit",
+    "detail": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this e"
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"feedback_other\",\"secondary_category\":null,\"priority\":\"P4\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"General Support\",\"action\":\"Log feature request for home screen moon calendar widget and thank the user\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user is sharing praise and suggesting a new widget feature, which falls under feedback and is assigned a P4 priority.\"}"
+ },
+ "created_at": 1793401787.974221
+}

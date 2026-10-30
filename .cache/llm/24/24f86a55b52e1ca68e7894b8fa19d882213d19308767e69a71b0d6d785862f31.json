@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Log the feature request for the product team to consider adding a home screen widget."
+   },
+   "confidence": 0.97,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket is a positive suggestion for a new feature (home screen widget) with calm sentiment and no urgency, fitting the feedback_other category."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 638,
+  "out_tokens": 211,
+  "thinking_tokens": 53,
+  "latency_s": 0.9249976503904236,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Log the feature request for the product team to consider adding a home screen widget.\"\n  },\n  \"confidence\": 0.97,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The ticket is a positive suggestion for a new feature (home screen widget) with calm sentiment and no urgency, fitting the feedback_other category.\"\n}"
+ },
+ "created_at": 1793400905.7340193
+}

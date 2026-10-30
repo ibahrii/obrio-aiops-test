@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Process data export request per GDPR/CCPA and confirm identity"
+   },
+   "confidence": 0.96,
+   "needs_human": true,
+   "human_reasons": [
+    "privacy_legal request"
+   ],
+   "rationale": "The customer explicitly asks for a copy of all personal data, which falls under privacy/legal category. GDPR/CCPA requests are prioritized as P2 and require human handling."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2281,
+  "out_tokens": 210,
+  "thinking_tokens": 45,
+  "latency_s": 17.33603256092738,
+  "api_latency_s": 0.9531739789999847,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Process data export request per GDPR/CCPA and confirm identity\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": true,\n  \"human_reasons\": [\"privacy_legal request\"],\n  \"rationale\": \"The customer explicitly asks for a copy of all personal data, which falls under privacy/legal category. GDPR/CCPA requests are prioritized as P2 and require human handling.\"\n}"
+ },
+ "created_at": 1793401785.966053
+}

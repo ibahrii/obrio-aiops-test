@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate session persistence bug causing logout on app close"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is experiencing a persistent bug where they are logged out every time the app closes, which classifies as a technical issue. The angry tone and threat of a bad review do not escalate the priority or category."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1962,
+  "out_tokens": 122,
+  "thinking_tokens": 0,
+  "latency_s": 1.318796681155618,
+  "api_latency_s": 1.317790038000112,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\"category\":\"technical_issue\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Investigate session persistence bug causing logout on app close\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The customer is experiencing a persistent bug where they are logged out every time the app closes, which classifies as a technical issue. The angry tone and threat of a bad review do not escalate the priority or category.\"}"
+ },
+ "created_at": 1793401377.5608568
+}

@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "und",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "No action needed; ticket is gibberish/spam"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket contains only random characters and numbers with no coherent request, classifying as spam/gibberish under feedback_other."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1940,
+  "out_tokens": 289,
+  "thinking_tokens": 136,
+  "latency_s": 4.388347630000226,
+  "api_latency_s": 4.387821687000269,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"unknown\",\n  \"language\": \"und\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"No action needed; ticket is gibberish/spam\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The ticket contains only random characters and numbers with no coherent request, classifying as spam/gibberish under feedback_other.\"\n}"
+ },
+ "created_at": 1793401829.2830386
+}

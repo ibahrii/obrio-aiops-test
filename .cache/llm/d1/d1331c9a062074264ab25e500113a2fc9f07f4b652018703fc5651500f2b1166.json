@@ -1,0 +1,47 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer bought a credit pack by mistake 3 days ago, has not used it, and is asking for a refund.",
+   "replies": {
+    "formal": "Hola. Entendemos que desea solicitar un reembolso por un paquete de créditos adquirido por error hace tres días que aún no ha sido utilizado. Para poder revisar su solicitud y verificar los detalles de la compra, por favor comparta con nosotros la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Nuestro equipo revisará el caso y se comunicará con usted. Atentamente, Nebula Support Team",
+    "empathetic": "Comprendemos perfectamente que haya adquirido el paquete de créditos por error y que desee solicitar su reembolso. Para poder ayudarle a revisar su solicitud de manera adecuada, por favor envíenos los detalles de la transacción, incluyendo la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Evaluaremos su caso y le informaremos los siguientes pasos a seguir. Atentamente, Nebula Support Team",
+    "short": "Para revisar la solicitud de reembolso de su paquete de créditos no utilizado, por favor envíenos la fecha, el monto y los últimos 4 dígitos de su tarjeta o una captura del extracto bancario. El equipo verificará los detalles y se pondrá en contacto con usted. Nebula Support Team"
+   },
+   "citations": [
+    {
+     "article_id": "kb-004",
+     "quote": "Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used."
+    },
+    {
+     "article_id": "kb-005",
+     "quote": "Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement."
+    }
+   ],
+   "reply_language": "es",
+   "kb_has_answer": true,
+   "human_decision_required": false,
+   "reasons": []
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1232,
+  "out_tokens": 461,
+  "thinking_tokens": 0,
+  "latency_s": 2.3827030587913214,
+  "api_latency_s": 2.3818085630000496,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer bought a credit pack by mistake 3 days ago, has not used it, and is asking for a refund.\",\n  \"replies\": {\n    \"formal\": \"Hola. Entendemos que desea solicitar un reembolso por un paquete de créditos adquirido por error hace tres días que aún no ha sido utilizado. Para poder revisar su solicitud y verificar los detalles de la compra, por favor comparta con nosotros la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Nuestro equipo revisará el caso y se comunicará con usted. Atentamente, Nebula Support Team\",\n    \"empathetic\": \"Comprendemos perfectamente que haya adquirido el paquete de créditos por error y que desee solicitar su reembolso. Para poder ayudarle a revisar su solicitud de manera adecuada, por favor envíenos los detalles de la transacción, incluyendo la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Evaluaremos su caso y le informaremos los siguientes pasos a seguir. Atentamente, Nebula Support Team\",\n    \"short\": \"Para revisar la solicitud de reembolso de su paquete de créditos no utilizado, por favor envíenos la fecha, el monto y los últimos 4 dígitos de su tarjeta o una captura del extracto bancario. El equipo verificará los detalles y se pondrá en contacto con usted. Nebula Support Team\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-004\",\n      \"quote\": \"Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used.\"\n    },\n    {\n      \"article_id\": \"kb-005\",\n      \"quote\": \"Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement.\"\n    }\n  ],\n  \"reply_language\": \"es\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": false\n}"
+ },
+ "created_at": 1793402050.63677
+}

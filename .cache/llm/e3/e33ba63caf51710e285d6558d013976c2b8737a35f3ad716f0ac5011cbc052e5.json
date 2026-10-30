@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Secure the account immediately, revert the unauthorized email change, investigate the login activity, and assist the user in regaining control"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports an unauthorized account takeover with email change, which is a clear account_access issue requiring urgent (P1) security intervention."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1954,
+  "out_tokens": 506,
+  "thinking_tokens": 373,
+  "latency_s": 7.437947122999958,
+  "api_latency_s": 7.437425093000002,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Secure the account immediately, revert the unauthorized email change, investigate the login activity, and assist the user in regaining control\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports an unauthorized account takeover with email change, which is a clear account_access issue requiring urgent (P1) security intervention.\"\n}"
+ },
+ "created_at": 1793401699.230897
+}

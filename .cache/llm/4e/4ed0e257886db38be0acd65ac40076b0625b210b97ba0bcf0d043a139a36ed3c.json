@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the double charge of $49.99 on October 12 and process a refund or credit if confirmed."
+   },
+   "confidence": 0.99,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is reporting a double charge for their subscription, which falls under billing_subscription. Per the priority rules, an unauthorized or double charge is classified as P1."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1004,
+  "out_tokens": 182,
+  "thinking_tokens": 0,
+  "latency_s": 6.761760417673258,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the double charge of $49.99 on October 12 and process a refund or credit if confirmed.\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is reporting a double charge for their subscription, which falls under billing_subscription. Per the priority rules, an unauthorized or double charge is classified as P1.\"\n}"
+ },
+ "created_at": 1793400915.990172
+}

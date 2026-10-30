@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "refund_request",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Investigate the disputed subscription charge and process the refund before a chargeback is filed"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "chargeback threat"
+   ],
+   "rationale": "The customer is threatening a chargeback over an unexpected charge, which overrides billing to privacy_legal with a P1 priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1853,
+  "out_tokens": 178,
+  "thinking_tokens": 0,
+  "latency_s": 1.5857323229040503,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Investigate the disputed subscription charge and process the refund before a chargeback is filed\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"chargeback threat\"\n  ],\n  \"rationale\": \"The customer is threatening a chargeback over an unexpected charge, which overrides billing to privacy_legal with a P1 priority.\"\n}"
+ },
+ "created_at": 1793401270.8857644
+}

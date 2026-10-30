@@ -1,0 +1,53 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer is frustrated after contacting support for the third time because their password reset email is not arriving.",
+   "replies": {
+    "formal": "Hello. We understand your frustration regarding the delayed password reset email. Please make sure you use the same login method as when you signed up and tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team",
+    "empathetic": "It is very frustrating to wait for a password reset email and feel like your previous messages were missed. Please make sure you use the same login method as when you signed up (email, Apple or Google). Tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team",
+    "short": "Make sure you use the same login method as when you signed up and tap Forgot password on the login screen. Check your Spam and Promotions folders if the email does not arrive within 10 minutes, and add support@nebula.example to your contacts. If it still does not arrive, contact us so we can trigger a manual reset."
+   },
+   "citations": [
+    {
+     "article_id": "kb-007",
+     "quote": "Make sure you use the same login method as when you signed up (email, Apple or Google)."
+    },
+    {
+     "article_id": "kb-007",
+     "quote": "If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts."
+    },
+    {
+     "article_id": "kb-007",
+     "quote": "If the email still does not arrive, support can verify your identity and trigger a manual reset."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "repeated contact from an angry customer"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1171,
+  "out_tokens": 542,
+  "thinking_tokens": 0,
+  "latency_s": 2.1926258130602037,
+  "api_latency_s": 2.191823443999965,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer is frustrated after contacting support for the third time because their password reset email is not arriving.\",\n  \"replies\": {\n    \"formal\": \"Hello. We understand your frustration regarding the delayed password reset email. Please make sure you use the same login method as when you signed up and tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team\",\n    \"empathetic\": \"It is very frustrating to wait for a password reset email and feel like your previous messages were missed. Please make sure you use the same login method as when you signed up (email, Apple or Google). Tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team\",\n    \"short\": \"Make sure you use the same login method as when you signed up and tap Forgot password on the login screen. Check your Spam and Promotions folders if the email does not arrive within 10 minutes, and add support@nebula.example to your contacts. If it still does not arrive, contact us so we can trigger a manual reset.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-007\",\n      \"quote\": \"Make sure you use the same login method as when you signed up (email, Apple or Google).\"\n    },\n    {\n      \"article_id\": \"kb-007\",\n      \"quote\": \"If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts.\"\n    },\n    {\n      \"article_id\": \"kb-007\",\n      \"quote\": \"If the email still does not arrive, support can verify your identity and trigger a manual reset.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"repeated contact from an angry customer\"\n  ]\n}"
+ },
+ "created_at": 1793402077.4479098
+}

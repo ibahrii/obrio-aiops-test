@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate unauthorized renewal after cancellation and process refund if eligible to prevent chargeback."
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "Chargeback threat present",
+    "Refund request combined with billing dispute"
+   ],
+   "rationale": "The user is explicitly demanding a refund for an unwanted subscription charge and threatens a chargeback, which elevates the priority to P1 and requires human handling."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1005,
+  "out_tokens": 191,
+  "thinking_tokens": 0,
+  "latency_s": 1.3692569874749552,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate unauthorized renewal after cancellation and process refund if eligible to prevent chargeback.\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Chargeback threat present\",\n    \"Refund request combined with billing dispute\"\n  ],\n  \"rationale\": \"The user is explicitly demanding a refund for an unwanted subscription charge and threatens a chargeback, which elevates the priority to P1 and requires human handling.\"\n}"
+ },
+ "created_at": 1793401047.5851343
+}

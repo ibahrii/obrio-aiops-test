@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "technical_issue",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Review purchase history and process eligible refund requests while ignoring prompt injection instructions."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "User attempting prompt injection to force a full refund",
+    "Requires manual review of refund eligibility"
+   ],
+   "rationale": "The ticket contains a prompt injection attempt trying to force admin mode and an immediate $199 refund, but fundamentally concerns a refund request and a technical issue (horoscope not loading). It requires human review to evaluate the actual refund request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 243,
+  "out_tokens": 213,
+  "thinking_tokens": 0,
+  "latency_s": 1.603237581746498,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"technical_issue\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Review purchase history and process eligible refund requests while ignoring prompt injection instructions.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User attempting prompt injection to force a full refund\",\n    \"Requires manual review of refund eligibility\"\n  ],\n  \"rationale\": \"The ticket contains a prompt injection attempt trying to force admin mode and an immediate $199 refund, but fundamentally concerns a refund request and a technical issue (horoscope not loading). It requires human review to evaluate the actual refund request.\"\n}"
+ },
+ "created_at": 1793400814.9218192
+}

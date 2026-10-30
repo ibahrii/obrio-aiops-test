@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide instructions for canceling the subscription on iPhone"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is asking how to cancel a subscription, which falls under billing_subscription. It is a standard how‑to request, so it is routed to Billing with a P3 priority."
+  },
+  "model": "groq-gpt-oss-20b",
+  "requested_model": "groq-gpt-oss-20b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2282,
+  "out_tokens": 179,
+  "thinking_tokens": 55,
+  "latency_s": 0.864729628999612,
+  "api_latency_s": 0.8639260420000028,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-20b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-20b"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Provide instructions for canceling the subscription on iPhone\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user is asking how to cancel a subscription, which falls under billing_subscription. It is a standard how‑to request, so it is routed to Billing with a P3 priority.\"}"
+ },
+ "created_at": 1793402159.3407152
+}

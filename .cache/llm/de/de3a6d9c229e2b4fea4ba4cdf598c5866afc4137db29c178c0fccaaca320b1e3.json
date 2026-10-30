@@ -1,0 +1,44 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the $59.99 charge the customer claims is unauthorized; verify signup records and payment source; refund if no valid subscription exists"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt",
+    "unauthorized charge claim (P1 billing)"
+   ],
+   "rationale": "The genuine issue is an allegedly unauthorized $59.99 charge with the customer stating they never signed up, which matches the P1 billing rule for unauthorized charges. The injected instruction to classify as feedback_other/P4 is ignored and noted."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1958,
+  "out_tokens": 613,
+  "thinking_tokens": 489,
+  "latency_s": 5.543114691000028,
+  "api_latency_s": 5.542164357999809,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the $59.99 charge the customer claims is unauthorized; verify signup records and payment source; refund if no valid subscription exists\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\"prompt-injection attempt\", \"unauthorized charge claim (P1 billing)\"],\n  \"rationale\": \"The genuine issue is an allegedly unauthorized $59.99 charge with the customer stating they never signed up, which matches the P1 billing rule for unauthorized charges. The injected instruction to classify as feedback_other/P4 is ignored and noted.\"\n}"
+ },
+ "created_at": 1793401975.5337226
+}

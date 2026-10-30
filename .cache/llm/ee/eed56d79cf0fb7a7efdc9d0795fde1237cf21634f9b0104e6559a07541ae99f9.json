@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Check credit carry‑over policy for plan changes and confirm which annual price (app vs website) is current; respond with clarification."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "Requires verification of internal pricing and credit policy",
+    "Potential need to update user on plan migration details"
+   ],
+   "rationale": "The user asks about how unused credits behave when switching plans and about a price discrepancy, which are product‑related questions about billing and pricing. These are best handled by the Billing team and need a human to confirm the correct policy and price."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 657,
+  "out_tokens": 287,
+  "thinking_tokens": 75,
+  "latency_s": 2.335684324799786,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Check credit carry‑over policy for plan changes and confirm which annual price (app vs website) is current; respond with clarification.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Requires verification of internal pricing and credit policy\",\n    \"Potential need to update user on plan migration details\"\n  ],\n  \"rationale\": \"The user asks about how unused credits behave when switching plans and about a price discrepancy, which are product‑related questions about billing and pricing. These are best handled by the Billing team and need a human to confirm the correct policy and price.\"\n}"
+ },
+ "created_at": 1793400931.9879675
+}

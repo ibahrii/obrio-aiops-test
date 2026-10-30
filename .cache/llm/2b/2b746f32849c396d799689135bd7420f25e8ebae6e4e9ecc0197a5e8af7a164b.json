@@ -1,0 +1,47 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Investigate the astrologer's session, verify credit usage, and process a possible refund or credit compensation."
+   },
+   "confidence": 0.96,
+   "needs_human": true,
+   "human_reasons": [
+    "The user is accusing an expert of fraud and demanding action, requiring human judgment and possible escalation."
+   ],
+   "rationale": "The ticket complains about an astrologer’s conduct and the loss of credits, which fits the expert_complaint category. The tone is angry, indicating high urgency (P1). A human is needed to investigate the expert and handle potential refunds."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 654,
+  "out_tokens": 279,
+  "thinking_tokens": 71,
+  "latency_s": 3.709342575652954,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"The user is accusing an expert of fraud and demanding action, requiring human judgment and possible escalation.\"\n  ],\n  \"confidence\": 0.96,\n  \"rationale\": \"The ticket complains about an astrologer’s conduct and the loss of credits, which fits the expert_complaint category. The tone is angry, indicating high urgency (P1). A human is needed to investigate the expert and handle potential refunds.\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Investigate the astrologer's session, verify credit usage, and process a possible refund or credit compensation.\"\n  }\n}"
+ },
+ "created_at": 1793400914.518903
+}

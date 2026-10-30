@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "fr",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate push notification localization bug for French language settings"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is reporting a bug regarding push notification localization, which falls under technical issues and is appropriately prioritized as P3."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1837,
+  "out_tokens": 156,
+  "thinking_tokens": 0,
+  "latency_s": 1.5567896322145316,
+  "api_latency_s": 1.5558524850002868,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"fr\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate push notification localization bug for French language settings\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is reporting a bug regarding push notification localization, which falls under technical issues and is appropriately prioritized as P3.\"\n}"
+ },
+ "created_at": 1793401520.6464136
+}

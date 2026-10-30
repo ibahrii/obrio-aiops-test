@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Escalate to legal team and investigate unauthorized charge"
+   },
+   "confidence": 0.97,
+   "needs_human": true,
+   "human_reasons": [
+    "Threat of chargeback/legal action",
+    "Unauthorized double charge"
+   ],
+   "rationale": "The user reports a charge after cancellation and explicitly threatens a chargeback, which triggers privacy_legal handling with highest priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1380,
+  "out_tokens": 274,
+  "thinking_tokens": 104,
+  "latency_s": 1.3140867456577325,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Escalate to legal team and investigate unauthorized charge\"\n  },\n  \"confidence\": 0.97,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Threat of chargeback/legal action\",\n    \"Unauthorized double charge\"\n  ],\n  \"rationale\": \"The user reports a charge after cancellation and explicitly threatens a chargeback, which triggers privacy_legal handling with highest priority.\"\n}"
+ },
+ "created_at": 1793401288.222064
+}

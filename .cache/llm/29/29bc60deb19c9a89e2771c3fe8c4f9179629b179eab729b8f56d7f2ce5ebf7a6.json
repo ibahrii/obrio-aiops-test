@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "pt",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Help user reset password and regain account access"
+   },
+   "confidence": 0.99,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user cannot log in and reports a password error, which is an account access issue requiring standard technical assistance."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1372,
+  "out_tokens": 204,
+  "thinking_tokens": 59,
+  "latency_s": 1.47825935080823,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"pt\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Help user reset password and regain account access\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user cannot log in and reports a password error, which is an account access issue requiring standard technical assistance.\"\n}"
+ },
+ "created_at": 1793401211.4012437
+}

@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Mark as unclear gibberish; request clarification from the user"
+   },
+   "confidence": 0.55,
+   "needs_human": true,
+   "human_reasons": [
+    "low confidence due to unreadable content"
+   ],
+   "rationale": "The ticket contains nonsensical text with no identifiable issue, so it is classified as feedback_other and routed to General Support for clarification."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2277,
+  "out_tokens": 246,
+  "thinking_tokens": 80,
+  "latency_s": 18.524064497046766,
+  "api_latency_s": 1.0729149520002466,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"unknown\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Mark as unclear gibberish; request clarification from the user\"\n  },\n  \"confidence\": 0.55,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"low confidence due to unreadable content\"\n  ],\n  \"rationale\": \"The ticket contains nonsensical text with no identifiable issue, so it is classified as feedback_other and routed to General Support for clarification.\"\n}"
+ },
+ "created_at": 1793401922.4019186
+}

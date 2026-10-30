@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate session persistence issue and collect app version/device details"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is experiencing a technical bug where the app logs them out every time it closes. Threatening a 1-star review and using angry language does not raise priority or trigger human routing rules."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1962,
+  "out_tokens": 122,
+  "thinking_tokens": 0,
+  "latency_s": 33.81438884212366,
+  "api_latency_s": 3.385424982999666,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_rate_limit",
+    "detail": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this e"
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"technical_issue\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Investigate session persistence issue and collect app version/device details\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user is experiencing a technical bug where the app logs them out every time it closes. Threatening a 1-star review and using angry language does not raise priority or trigger human routing rules.\"}"
+ },
+ "created_at": 1793401824.9520779
+}

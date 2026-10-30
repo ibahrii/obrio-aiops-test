@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Initiate GDPR data deletion process, remove account and all personal data, and send confirmation to the user"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "privacy_legal request"
+   ],
+   "rationale": "The user explicitly asks for account and data deletion, which falls under privacy/legal category and requires human handling with a P2 priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2282,
+  "out_tokens": 260,
+  "thinking_tokens": 88,
+  "latency_s": 18.684612933464905,
+  "api_latency_s": 1.2791334369999277,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"de\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Initiate GDPR data deletion process, remove account and all personal data, and send confirmation to the user\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"privacy_legal request\"\n  ],\n  \"rationale\": \"The user explicitly asks for account and data deletion, which falls under privacy/legal category and requires human handling with a P2 priority.\"\n}"
+ },
+ "created_at": 1793402069.845377
+}

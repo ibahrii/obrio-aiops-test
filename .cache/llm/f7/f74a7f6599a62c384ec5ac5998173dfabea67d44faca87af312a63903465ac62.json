@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Review the unexpected annual charge, confirm subscription status, and initiate a refund or credit as appropriate while communicating with the user."
+   },
+   "confidence": 0.96,
+   "needs_human": true,
+   "human_reasons": [
+    "User is upset about an unexpected charge and likely expects a refund or explanation.",
+    "Potential billing error requires manual verification."
+   ],
+   "rationale": "The ticket expresses frustration over an unannounced annual renewal charge, indicating a request for a refund or billing correction. This falls under the refund_request category and should be handled by Billing with human oversight."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 654,
+  "out_tokens": 272,
+  "thinking_tokens": 67,
+  "latency_s": 2.637841885488342,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Review the unexpected annual charge, confirm subscription status, and initiate a refund or credit as appropriate while communicating with the user.\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User is upset about an unexpected charge and likely expects a refund or explanation.\",\n    \"Potential billing error requires manual verification.\"\n  ],\n  \"rationale\": \"The ticket expresses frustration over an unannounced annual renewal charge, indicating a request for a refund or billing correction. This falls under the refund_request category and should be handled by Billing with human oversight.\"\n}"
+ },
+ "created_at": 1793400975.3318887
+}

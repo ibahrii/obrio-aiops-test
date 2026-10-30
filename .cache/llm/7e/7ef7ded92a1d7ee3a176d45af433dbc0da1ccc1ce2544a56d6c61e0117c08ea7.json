@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Immediately provide crisis resources (e.g., 988 Suicide & Crisis Lifeline in US, local helplines) and flag for urgent human follow-up; also note the subscription cancellation request for Billing after safety is addressed"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The user expresses hopelessness and suicidal ideation ('disappeared'), which triggers safety_wellbeing as primary category per rule 1; the subscription cancellation question is a secondary billing request but safety takes precedence and requires immediate human intervention."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1968,
+  "out_tokens": 345,
+  "thinking_tokens": 155,
+  "latency_s": 6.038067845000114,
+  "api_latency_s": 6.037731906999852,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Immediately provide crisis resources (e.g., 988 Suicide & Crisis Lifeline in US, local helplines) and flag for urgent human follow-up; also note the subscription cancellation request for Billing after safety is addressed\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\"safety_wellbeing\"],\n  \"rationale\": \"The user expresses hopelessness and suicidal ideation ('disappeared'), which triggers safety_wellbeing as primary category per rule 1; the subscription cancellation question is a secondary billing request but safety takes precedence and requires immediate human intervention.\"\n}"
+ },
+ "created_at": 1793401842.7493615
+}

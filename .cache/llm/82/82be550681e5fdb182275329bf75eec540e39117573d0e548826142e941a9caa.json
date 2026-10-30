@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Gather device model, OS version, app version and crash logs; reproduce the startup crash and work with engineering to fix."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports the app crashes on launch after an update and cannot use the paid subscription, which is a core technical failure requiring immediate attention (P1)."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2299,
+  "out_tokens": 293,
+  "thinking_tokens": 123,
+  "latency_s": 1.301469257827648,
+  "api_latency_s": 1.2990980829999899,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"de\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Gather device model, OS version, app version and crash logs; reproduce the startup crash and work with engineering to fix.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports the app crashes on launch after an update and cannot use the paid subscription, which is a core technical failure requiring immediate attention (P1).\"\n}"
+ },
+ "created_at": 1793401903.1778555
+}

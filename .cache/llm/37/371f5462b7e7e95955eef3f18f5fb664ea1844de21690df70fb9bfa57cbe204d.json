@@ -1,0 +1,44 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Review the account status, billing history, and lawyer threat immediately."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "privacy_legal",
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The explicit mention of a lawyer triggers the privacy_legal category, while ongoing unwanted charges provide a billing secondary category and warrant P1 priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1949,
+  "out_tokens": 188,
+  "thinking_tokens": 0,
+  "latency_s": 1.5752569290038991,
+  "api_latency_s": 1.574356035999699,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Review the account status, billing history, and lawyer threat immediately.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"privacy_legal\",\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The explicit mention of a lawyer triggers the privacy_legal category, while ongoing unwanted charges provide a billing secondary category and warrant P1 priority.\"\n}"
+ },
+ "created_at": 1793401594.2852592
+}

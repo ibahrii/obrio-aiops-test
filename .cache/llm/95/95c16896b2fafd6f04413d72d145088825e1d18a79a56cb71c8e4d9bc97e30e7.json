@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "product_question",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Investigate the duplicate $34.99 charges on October 3rd and issue a refund or correction before escalating"
+   },
+   "confidence": 0.85,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer reports an unauthorized duplicate charge while mentioning money is tight, which triggers a high-priority billing and potential dispute check, combined with general product questions about future tarot decks and notifications."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2019,
+  "out_tokens": 203,
+  "thinking_tokens": 0,
+  "latency_s": 1.494225273536813,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"product_question\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Investigate the duplicate $34.99 charges on October 3rd and issue a refund or correction before escalating\"\n  },\n  \"confidence\": 0.85,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer reports an unauthorized duplicate charge while mentioning money is tight, which triggers a high-priority billing and potential dispute check, combined with general product questions about future tarot decks and notifications.\"\n}"
+ },
+ "created_at": 1793401257.29349
+}

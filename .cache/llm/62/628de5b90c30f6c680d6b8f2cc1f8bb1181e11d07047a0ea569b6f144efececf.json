@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate 503 error preventing chat initiation and restore credit usage"
+   },
+   "confidence": 0.97,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user cannot start any expert chat and receives a 503 error, which is a technical failure of a paid core feature, warranting P1 priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1389,
+  "out_tokens": 247,
+  "thinking_tokens": 89,
+  "latency_s": 1.1006053949297439,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate 503 error preventing chat initiation and restore credit usage\"\n  },\n  \"confidence\": 0.97,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user cannot start any expert chat and receives a 503 error, which is a technical failure of a paid core feature, warranting P1 priority.\"\n}"
+ },
+ "created_at": 1793401085.8836756
+}

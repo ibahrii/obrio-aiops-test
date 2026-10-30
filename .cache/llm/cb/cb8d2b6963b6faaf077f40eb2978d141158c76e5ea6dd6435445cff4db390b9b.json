@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": "safety_wellbeing",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Investigate expert conduct, review chat logs, and take disciplinary action."
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "Severe verbal abuse and harassment by an expert requires immediate human review."
+   ],
+   "rationale": "The user is reporting extreme unprofessionalism, verbal abuse, and insulting behavior from an expert named 'Mystic Oleg'. This requires urgent attention from Expert Quality."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 228,
+  "out_tokens": 191,
+  "thinking_tokens": 0,
+  "latency_s": 1.5865508538136055,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": \"safety_wellbeing\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Investigate expert conduct, review chat logs, and take disciplinary action.\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Severe verbal abuse and harassment by an expert requires immediate human review.\"\n  ],\n  \"rationale\": \"The user is reporting extreme unprofessionalism, verbal abuse, and insulting behavior from an expert named 'Mystic Oleg'. This requires urgent attention from Expert Quality.\"\n}"
+ },
+ "created_at": 1793400716.9476316
+}

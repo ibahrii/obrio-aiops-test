@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": "technical_issue",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Check email delivery logs for the password reset mail and assist user with resetting password"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer cannot log in due to a password reset email not arriving, which is an account access issue with an underlying deliverability/technical problem."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1944,
+  "out_tokens": 170,
+  "thinking_tokens": 0,
+  "latency_s": 16.478465173197947,
+  "api_latency_s": 13.068672217999847,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_server_error",
+    "detail": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again "
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": \"technical_issue\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Check email delivery logs for the password reset mail and assist user with resetting password\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer cannot log in due to a password reset email not arriving, which is an account access issue with an underlying deliverability/technical problem.\"\n}"
+ },
+ "created_at": 1793401711.7070634
+}

@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "technical_issue",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the payment receipt and manually restore or provision the user's premium status."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "Paid service completely unavailable or paid but not received"
+   ],
+   "rationale": "The customer paid for a subscription upgrade but did not receive access, representing a payment synchronization error which is classified as P1."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 993,
+  "out_tokens": 182,
+  "thinking_tokens": 0,
+  "latency_s": 1.367029768964585,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"technical_issue\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Verify the payment receipt and manually restore or provision the user's premium status.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Paid service completely unavailable or paid but not received\"\n  ],\n  \"rationale\": \"The customer paid for a subscription upgrade but did not receive access, representing a payment synchronization error which is classified as P1.\"\n}"
+ },
+ "created_at": 1793400980.3618095
+}

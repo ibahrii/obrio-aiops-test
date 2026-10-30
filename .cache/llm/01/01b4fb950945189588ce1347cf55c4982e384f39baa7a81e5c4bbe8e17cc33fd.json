@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Escalate to security team to verify account activity, lock account, and initiate email recovery process."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "Potential account compromise requires manual verification and security actions."
+   ],
+   "rationale": "The user reports unauthorized login and email change, indicating a security breach. This is an urgent account access issue that must be handled by a human security specialist."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 649,
+  "out_tokens": 251,
+  "thinking_tokens": 71,
+  "latency_s": 1.1887118740301048,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Escalate to security team to verify account activity, lock account, and initiate email recovery process.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Potential account compromise requires manual verification and security actions.\"\n  ],\n  \"rationale\": \"The user reports unauthorized login and email change, indicating a security breach. This is an urgent account access issue that must be handled by a human security specialist.\"\n}"
+ },
+ "created_at": 1793400895.996512
+}

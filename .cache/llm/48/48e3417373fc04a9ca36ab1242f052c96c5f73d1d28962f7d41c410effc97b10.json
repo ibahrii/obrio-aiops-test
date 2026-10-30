@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": "refund_request",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Investigate expert no-show, review credit refund, and handle expert report."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "Expert complaint involving service failure (no-show) and a request for credits refund."
+   ],
+   "rationale": "The customer is complaining about a specific expert not showing up while still being charged credits, and explicitly asks for a refund and to report the expert."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 999,
+  "out_tokens": 196,
+  "thinking_tokens": 0,
+  "latency_s": 1.4478937192295689,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Investigate expert no-show, review credit refund, and handle expert report.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Expert complaint involving service failure (no-show) and a request for credits refund.\"\n  ],\n  \"rationale\": \"The customer is complaining about a specific expert not showing up while still being charged credits, and explicitly asks for a refund and to report the expert.\"\n}"
+ },
+ "created_at": 1793400975.942478
+}

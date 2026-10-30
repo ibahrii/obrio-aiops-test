@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Document the rude behavior, review the expert's conduct, and initiate appropriate disciplinary action or apology to the user"
+   },
+   "confidence": 0.96,
+   "needs_human": true,
+   "human_reasons": [
+    "expert complaint alleging harassment"
+   ],
+   "rationale": "The user reports abusive behavior from an expert, which is an expert_complaint and requires human review; it is serious but not a safety issue, so priority P2."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2298,
+  "out_tokens": 228,
+  "thinking_tokens": 50,
+  "latency_s": 19.59346493895464,
+  "api_latency_s": 1.2218313140001555,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Document the rude behavior, review the expert's conduct, and initiate appropriate disciplinary action or apology to the user\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": true,\n  \"human_reasons\": [\"expert complaint alleging harassment\"],\n  \"rationale\": \"The user reports abusive behavior from an expert, which is an expert_complaint and requires human review; it is serious but not a safety issue, so priority P2.\"\n}"
+ },
+ "created_at": 1793401749.3682137
+}

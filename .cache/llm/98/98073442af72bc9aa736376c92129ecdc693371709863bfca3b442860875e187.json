@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Immediately provide crisis support resources and flag for urgent human review."
+   },
+   "confidence": 1.0,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The customer shows signs of hopelessness and distress regarding living, which triggers the safety_wellbeing category and P1 priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1965,
+  "out_tokens": 171,
+  "thinking_tokens": 0,
+  "latency_s": 1.414672818503277,
+  "api_latency_s": 1.4138743960002103,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Immediately provide crisis support resources and flag for urgent human review.\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"safety_wellbeing\"\n  ],\n  \"rationale\": \"The customer shows signs of hopelessness and distress regarding living, which triggers the safety_wellbeing category and P1 priority.\"\n}"
+ },
+ "created_at": 1793401580.6225283
+}

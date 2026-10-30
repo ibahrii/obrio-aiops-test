@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide cancellation instructions for iOS subscription"
+   },
+   "confidence": 0.99,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user asks how to cancel their subscription, which is a billing/subscription question. No urgency or safety/legal issues are present, so it is a standard P3 ticket."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1364,
+  "out_tokens": 196,
+  "thinking_tokens": 40,
+  "latency_s": 1.1900097190000452,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Provide cancellation instructions for iOS subscription\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user asks how to cancel their subscription, which is a billing/subscription question. No urgency or safety/legal issues are present, so it is a standard P3 ticket.\"\n}"
+ },
+ "created_at": 1793401077.9724665
+}

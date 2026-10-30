@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "expert_complaint",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the no-show in session logs and return the 120 credits; pass expert case to Expert Quality"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "Explicit request to return credits (rule 3); the expert no-show is a separate expert complaint."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1958,
+  "out_tokens": 442,
+  "thinking_tokens": 311,
+  "latency_s": 10.486100766000163,
+  "api_latency_s": 10.48542689199985,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"expert_complaint\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Verify the no-show in session logs and return the 120 credits; pass expert case to Expert Quality\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\"mixed topics where one is about money\"],\n  \"rationale\": \"Explicit request to return credits (rule 3); the expert no-show is a separate expert complaint.\"\n}"
+ },
+ "created_at": 1793401764.0247204
+}

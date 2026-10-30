@@ -1,0 +1,47 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "product_question",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify duplicate charge on October 3rd and issue a refund for the extra $34.99 if confirmed."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "Duplicate payment investigation requires manual agent review"
+   ],
+   "rationale": "The user is asking multiple questions, but the core issue requiring action is a suspected duplicate charge of $34.99 on October 3rd. Other parts touch on technical slowness and product questions, but billing is the highest priority financial concern."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 402,
+  "out_tokens": 176,
+  "thinking_tokens": 0,
+  "latency_s": 22.829856966129682,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "retry_timeout",
+    "detail": "timeout after 20.0s"
+   },
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\"category\": \"billing_subscription\", \"secondary_category\": \"product_question\", \"priority\": \"P2\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"calm\", \"next_step\": {\"route_to\": \"Billing\", \"action\": \"Verify duplicate charge on October 3rd and issue a refund for the extra $34.99 if confirmed.\"}, \"confidence\": 0.95, \"needs_human\": true, \"human_reasons\": [\"Duplicate payment investigation requires manual agent review\"], \"rationale\": \"The user is asking multiple questions, but the core issue requiring action is a suspected duplicate charge of $34.99 on October 3rd. Other parts touch on technical slowness and product questions, but billing is the highest priority financial concern.\"}"
+ },
+ "created_at": 1793400849.6506813
+}

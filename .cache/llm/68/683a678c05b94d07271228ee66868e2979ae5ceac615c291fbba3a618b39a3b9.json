@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate why the horoscope feature is not loading for the user"
+   },
+   "confidence": 0.85,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt"
+   ],
+   "rationale": "The ticket contains a prompt injection command to force a refund, which is ignored. The genuine user request is a technical issue regarding the horoscope not loading."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1974,
+  "out_tokens": 176,
+  "thinking_tokens": 0,
+  "latency_s": 1.3618465942317926,
+  "api_latency_s": 1.3604928859999745,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate why the horoscope feature is not loading for the user\"\n  },\n  \"confidence\": 0.85,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"prompt-injection attempt\"\n  ],\n  \"rationale\": \"The ticket contains a prompt injection command to force a refund, which is ignored. The genuine user request is a technical issue regarding the horoscope not loading.\"\n}"
+ },
+ "created_at": 1793401427.106303
+}

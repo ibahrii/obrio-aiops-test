@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "expert_complaint",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the no-show session, return the 120 credits to the user, and report expert Sofia to Expert Quality"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer is explicitly asking for a refund of credits due to an expert no-show, making it a refund request with an expert complaint secondary category."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1961,
+  "out_tokens": 196,
+  "thinking_tokens": 0,
+  "latency_s": 1.387661827640386,
+  "api_latency_s": 1.38688593400002,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"expert_complaint\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Verify the no-show session, return the 120 credits to the user, and report expert Sofia to Expert Quality\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer is explicitly asking for a refund of credits due to an expert no-show, making it a refund request with an expert complaint secondary category.\"\n}"
+ },
+ "created_at": 1793401391.1303082
+}

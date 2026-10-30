@@ -61,6 +61,11 @@ MONEY_PROMISE_PATTERNS = [
     r"\b(?:refund|compensation|credits?) (?:has|have) been (?:issued|processed|added|approved)",
     r"\bfree (?:month|credits?|reading|session)\b",
     r"\bas a (?:gesture|goodwill)\b",
+    r"\b(?:you are|you're) eligible for (?:a |the )?(?:full |partial )?refund",
+    r"\bes elegible para (?:un |el )?reembolso", r"\ble devolveremos\b", r"\bvamos a reembolsar",
+    r"\bé elegível para (?:o |um )?reembolso", r"\bvamos reembolsar",
+    r"\bhaben anspruch auf (?:eine )?(?:rückerstattung|erstattung)", r"\bwir erstatten ihnen\b",
+    r"маєте право на повернення", r"ми повернемо (?:вам )?(?:кошти|гроші)",
 ]
 
 

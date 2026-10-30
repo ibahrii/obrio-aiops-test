@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Review chat logs with Mystic Oleg and process the complaint regarding abusive behavior."
+   },
+   "confidence": 1.0,
+   "needs_human": true,
+   "human_reasons": [
+    "expert complaint alleging insults and severe misconduct"
+   ],
+   "rationale": "The customer is complaining about a specific expert being rude and insulting, which falls under expert_complaint and requires human review due to the severity of the insults."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 997,
+  "out_tokens": 182,
+  "thinking_tokens": 0,
+  "latency_s": 1.297141521706635,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Review chat logs with Mystic Oleg and process the complaint regarding abusive behavior.\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"expert complaint alleging insults and severe misconduct\"\n  ],\n  \"rationale\": \"The customer is complaining about a specific expert being rude and insulting, which falls under expert_complaint and requires human review due to the severity of the insults.\"\n}"
+ },
+ "created_at": 1793400944.2902868
+}

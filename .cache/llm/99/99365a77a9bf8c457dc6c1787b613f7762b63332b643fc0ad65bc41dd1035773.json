@@ -1,0 +1,49 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer reports being charged twice for their monthly plan ($19.99 each time) yesterday.",
+   "replies": {
+    "formal": "Hello. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. To help us investigate this for you, please provide the date, amount, and the last 4 digits of your card, or send a screenshot of your bank statement. Nebula Support Team",
+    "empathetic": "It is understandably stressful to notice unexpected duplicate charges on your account. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check this for you. Nebula Support Team",
+    "short": "Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check the double charge. Nebula Support Team"
+   },
+   "citations": [
+    {
+     "article_id": "kb-005",
+     "quote": "A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge."
+    },
+    {
+     "article_id": "kb-005",
+     "quote": "Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "chargeback or legal threat"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1243,
+  "out_tokens": 448,
+  "thinking_tokens": 0,
+  "latency_s": 1.9759368804106998,
+  "api_latency_s": 1.9751733490002152,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer reports being charged twice for their monthly plan ($19.99 each time) yesterday.\",\n  \"replies\": {\n    \"formal\": \"Hello. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. To help us investigate this for you, please provide the date, amount, and the last 4 digits of your card, or send a screenshot of your bank statement. Nebula Support Team\",\n    \"empathetic\": \"It is understandably stressful to notice unexpected duplicate charges on your account. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check this for you. Nebula Support Team\",\n    \"short\": \"Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check the double charge. Nebula Support Team\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-005\",\n      \"quote\": \"A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge.\"\n    },\n    {\n      \"article_id\": \"kb-005\",\n      \"quote\": \"Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"chargeback or legal threat\"\n  ]\n}"
+ },
+ "created_at": 1793402045.7297256
+}

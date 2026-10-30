@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Process GDPR Article 17 erasure request for account and personal data deletion"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "GDPR/data request"
+   ],
+   "rationale": "Explicit GDPR Article 17 erasure request falls under privacy_legal with P2 priority for data deletion requests."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1957,
+  "out_tokens": 289,
+  "thinking_tokens": 177,
+  "latency_s": 9.658926954457456,
+  "api_latency_s": 8.245408494999992,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "retry_server_error",
+    "detail": "502: {\"error\":{\"message\":\"Provider returned error\",\"code\":502,\"metadata\":{\"raw\":\"error code: 502\\n\",\"provider_name\":\"Nvidia\",\"is_byok\":false}},\"user_id\":\"user_3"
+   },
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\":\"privacy_legal\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"Legal & Privacy\",\"action\":\"Process GDPR Article 17 erasure request for account and personal data deletion\"},\"confidence\":0.95,\"needs_human\":true,\"human_reasons\":[\"GDPR/data request\"],\"rationale\":\"Explicit GDPR Article 17 erasure request falls under privacy_legal with P2 priority for data deletion requests.\"}"
+ },
+ "created_at": 1793401894.4024935
+}

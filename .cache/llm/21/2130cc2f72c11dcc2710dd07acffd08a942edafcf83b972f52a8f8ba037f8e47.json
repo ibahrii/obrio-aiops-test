@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Process partial refund for the credit pack difference"
+   },
+   "confidence": 0.98,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is explicitly asking for a partial refund on an accidental credit purchase made recently and unused, which falls under a standard refund request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1002,
+  "out_tokens": 161,
+  "thinking_tokens": 0,
+  "latency_s": 1.3771015000806983,
+  "api_latency_s": 1.3761947610000789,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Process partial refund for the credit pack difference\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is explicitly asking for a partial refund on an accidental credit purchase made recently and unused, which falls under a standard refund request.\"\n}"
+ },
+ "created_at": 1793401491.1990352
+}

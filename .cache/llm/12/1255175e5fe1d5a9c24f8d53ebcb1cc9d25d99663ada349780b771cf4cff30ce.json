@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Lock the compromised account, revert the email change, and guide the user through identity verification and password reset"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports an unauthorized login and email change (account takeover), which is classified as P1 account access issue."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1958,
+  "out_tokens": 321,
+  "thinking_tokens": 207,
+  "latency_s": 7.145212514994455,
+  "api_latency_s": 4.2206546540001,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_server_error",
+    "detail": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again "
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"account_access\",\"secondary_category\":null,\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"distressed\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Lock the compromised account, revert the email change, and guide the user through identity verification and password reset\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user reports an unauthorized login and email change (account takeover), which is classified as P1 account access issue.\"}"
+ },
+ "created_at": 1793401722.9307399
+}

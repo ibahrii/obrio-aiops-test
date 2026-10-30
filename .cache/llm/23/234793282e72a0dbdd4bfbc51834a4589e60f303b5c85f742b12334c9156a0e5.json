@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Investigate expert for off-platform solicitation and policy violation; inform user of platform rules"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "expert complaint alleging fraud"
+   ],
+   "rationale": "The user reports an expert soliciting off-platform payment and contact info, which is a policy violation and potential fraud; this is an expert complaint requiring investigation."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1959,
+  "out_tokens": 876,
+  "thinking_tokens": 845,
+  "latency_s": 11.105937184999675,
+  "api_latency_s": 11.105211206999684,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Investigate expert for off-platform solicitation and policy violation; inform user of platform rules\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\"expert complaint alleging fraud\"],\n  \"rationale\": \"The user reports an expert soliciting off-platform payment and contact info, which is a policy violation and potential fraud; this is an expert complaint requiring investigation.\"\n}"
+ },
+ "created_at": 1793401931.3365176
+}

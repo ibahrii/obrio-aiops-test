@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Escalate to technical team to investigate Error 503 on chat start, request device logs and confirm account credit balance."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "User cannot access core product functionality (live chat) and credits are at stake.",
+    "Error 503 indicates server-side issue requiring investigation."
+   ],
+   "rationale": "The user reports a consistent server error when attempting to start a chat, despite reinstalling the app. This is a technical problem affecting service access and credit usage, warranting human escalation."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 662,
+  "out_tokens": 262,
+  "thinking_tokens": 55,
+  "latency_s": 1.0216232084787862,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Escalate to technical team to investigate Error 503 on chat start, request device logs and confirm account credit balance.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User cannot access core product functionality (live chat) and credits are at stake.\",\n    \"Error 503 indicates server-side issue requiring investigation.\"\n  ],\n  \"rationale\": \"The user reports a consistent server error when attempting to start a chat, despite reinstalling the app. This is a technical problem affecting service access and credit usage, warranting human escalation.\"\n}"
+ },
+ "created_at": 1793400891.828993
+}

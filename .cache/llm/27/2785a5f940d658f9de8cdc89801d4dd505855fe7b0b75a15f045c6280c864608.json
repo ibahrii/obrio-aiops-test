@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate the localization of push notifications and ensure they respect the app's language setting"
+   },
+   "confidence": 0.94,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports a bug where push notifications are in the wrong language, which is a technical issue; the tone is angry but does not affect priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2291,
+  "out_tokens": 226,
+  "thinking_tokens": 66,
+  "latency_s": 16.55380198365947,
+  "api_latency_s": 1.098315945000195,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate the localization of push notifications and ensure they respect the app's language setting\"\n  },\n  \"confidence\": 0.94,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports a bug where push notifications are in the wrong language, which is a technical issue; the tone is angry but does not affect priority.\"\n}"
+ },
+ "created_at": 1793402050.2596836
+}

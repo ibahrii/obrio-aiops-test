@@ -1,0 +1,53 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer reports that the app crashes on every startup despite reinstalling, and needs further troubleshooting steps and escalation info.",
+   "replies": {
+    "formal": "Guten Tag, danke, dass Sie uns kontaktieren. Um das Problem mit den Abstürzen zu beheben, starten Sie bitte Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Falls das nicht hilft, teilen Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version mit, damit wir das Anliegen an unser Technikteam weiterleiten können. Nebula Support Team",
+    "empathetic": "Es ist ärgerlich, dass die App bei jedem Start abstürzt, obwohl Sie sie bereits neu installiert haben. Bitte versuchen Sie als Nächstes, Ihr Gerät neu zu starten und sicherzustellen, dass Sie die aktuellste Version der App verwenden. Wenn das Problem weiterhin besteht, senden Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version, damit wir den Fall an unser Technikteam weiterleiten können. Nebula Support Team",
+    "short": "Bitte starten Sie Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Wenn das nicht hilft, senden Sie uns bitte Ihr Gerätemodell, die Betriebssystemversion und die App-Version."
+   },
+   "citations": [
+    {
+     "article_id": "kb-013",
+     "quote": "1. Restart your device."
+    },
+    {
+     "article_id": "kb-013",
+     "quote": "2. Update the app to the latest version."
+    },
+    {
+     "article_id": "kb-013",
+     "quote": "If the app is completely unusable for a paying customer after these steps, support escalates the case to the Tech team as P1 and collects device model, OS version and app version."
+    }
+   ],
+   "reply_language": "de",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "App crashes on launch for a paying customer require P1 escalation to the Tech team."
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1205,
+  "out_tokens": 488,
+  "thinking_tokens": 0,
+  "latency_s": 2.3476971728778153,
+  "api_latency_s": 2.3463904029999867,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer reports that the app crashes on every startup despite reinstalling, and needs further troubleshooting steps and escalation info.\",\n  \"replies\": {\n    \"formal\": \"Guten Tag, danke, dass Sie uns kontaktieren. Um das Problem mit den Abstürzen zu beheben, starten Sie bitte Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Falls das nicht hilft, teilen Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version mit, damit wir das Anliegen an unser Technikteam weiterleiten können. Nebula Support Team\",\n    \"empathetic\": \"Es ist ärgerlich, dass die App bei jedem Start abstürzt, obwohl Sie sie bereits neu installiert haben. Bitte versuchen Sie als Nächstes, Ihr Gerät neu zu starten und sicherzustellen, dass Sie die aktuellste Version der App verwenden. Wenn das Problem weiterhin besteht, senden Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version, damit wir den Fall an unser Technikteam weiterleiten können. Nebula Support Team\",\n    \"short\": \"Bitte starten Sie Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Wenn das nicht hilft, senden Sie uns bitte Ihr Gerätemodell, die Betriebssystemversion und die App-Version.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-013\",\n      \"quote\": \"1. Restart your device.\"\n    },\n    {\n      \"article_id\": \"kb-013\",\n      \"quote\": \"2. Update the app to the latest version.\"\n    },\n    {\n      \"article_id\": \"kb-013\",\n      \"quote\": \"If the app is completely unusable for a paying customer after these steps, support escalates the case to the Tech team as P1 and collects device model, OS version and app version.\"\n    }\n  ],\n  \"reply_language\": \"de\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"App crashes on launch for a paying customer require P1 escalation to the Tech team.\"\n  ]\n}"
+ },
+ "created_at": 1793402082.1031413
+}

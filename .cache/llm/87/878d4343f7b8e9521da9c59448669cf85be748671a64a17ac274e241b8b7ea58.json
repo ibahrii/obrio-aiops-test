@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Secure the account, verify the unauthorized email change, and restore access for the legitimate owner"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "hacked or taken-over account requires P1 and human review"
+   ],
+   "rationale": "The customer's account was compromised and the email changed by an unauthorized party, which qualifies as a P1 account access issue."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1844,
+  "out_tokens": 186,
+  "thinking_tokens": 0,
+  "latency_s": 1.4464615582298848,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Secure the account, verify the unauthorized email change, and restore access for the legitimate owner\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"hacked or taken-over account requires P1 and human review\"\n  ],\n  \"rationale\": \"The customer's account was compromised and the email changed by an unauthorized party, which qualifies as a P1 account access issue.\"\n}"
+ },
+ "created_at": 1793401167.2411385
+}

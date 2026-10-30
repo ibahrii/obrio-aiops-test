@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate $49.99 charges on Oct 12 and provide a resolution or refund if appropriate"
+   },
+   "confidence": 0.94,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports duplicate charges and asks for investigation, which fits billing_subscription; no threat or legal language, so priority is P2."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2300,
+  "out_tokens": 242,
+  "thinking_tokens": 79,
+  "latency_s": 1.2325351202516686,
+  "api_latency_s": 1.2317271060001076,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate $49.99 charges on Oct 12 and provide a resolution or refund if appropriate\"\n  },\n  \"confidence\": 0.94,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports duplicate charges and asks for investigation, which fits billing_subscription; no threat or legal language, so priority is P2.\"\n}"
+ },
+ "created_at": 1793401652.9650166
+}

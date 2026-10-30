@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the $14.99 Nebula Credits charge and provide clarification or correction"
+   },
+   "confidence": 0.97,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is questioning an unexpected charge, which falls under billing_subscription. The tone is angry and the issue is urgent, so it is prioritized as P1. No safety, legal, or refund request is present."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1378,
+  "out_tokens": 293,
+  "thinking_tokens": 120,
+  "latency_s": 1.2878456637815816,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the $14.99 Nebula Credits charge and provide clarification or correction\"\n  },\n  \"confidence\": 0.97,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user is questioning an unexpected charge, which falls under billing_subscription. The tone is angry and the issue is urgent, so it is prioritized as P1. No safety, legal, or refund request is present.\"\n}"
+ },
+ "created_at": 1793401168.0752716
+}

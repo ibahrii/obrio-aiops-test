@@ -1,0 +1,890 @@
+{
+ "summary": {
+  "model": "gemini-flash-lite",
+  "prompt": "v2",
+  "n": 10,
+  "hit3": 100.0,
+  "ablation_hit3": {
+   "ticket_only": 55.6,
+   "plus_boost": 88.9,
+   "plus_boost_expansion": 100.0
+  },
+  "citation_validity": 100.0,
+  "tickets_with_valid_citation": 100.0,
+  "kb_has_answer_acc": 100.0,
+  "language_acc": 100.0,
+  "length_ok": {
+   "formal": 100.0,
+   "empathetic": 100.0,
+   "short": 90.0
+  },
+  "avg_words": {
+   "formal": 61.5,
+   "empathetic": 73.5,
+   "short": 37.5
+  },
+  "human_acc": 80.0,
+  "human_recall": 100.0,
+  "avg_in_tokens": 1205.1,
+  "avg_out_tokens": 457.0
+ },
+ "rows": [
+  {
+   "id": "A01",
+   "scenario": "routine how-to",
+   "language": "en",
+   "input": "How do I cancel my subscription? I'm on Android.",
+   "expected_articles": [
+    "kb-002"
+   ],
+   "retrieved": [
+    "kb-002",
+    "kb-001",
+    "kb-003"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": true,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-002",
+     "kb-006",
+     "kb-001"
+    ],
+    "plus_boost": [
+     "kb-002",
+     "kb-001",
+     "kb-003"
+    ],
+    "plus_boost_expansion": [
+     "kb-002",
+     "kb-001",
+     "kb-003"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-002",
+     "quote": "Subscriptions bought on Android are managed by Google Play.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 1,
+   "citations_total": 1,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 49,
+    "empathetic": 64,
+    "short": 28
+   },
+   "exp_human": false,
+   "act_human": false,
+   "human_pass": true,
+   "reasons": [],
+   "summary": "The customer is asking how to cancel their Android subscription. The knowledge base article provides the steps via Google Play Store.",
+   "replies": {
+    "formal": "Hello. To cancel your Android subscription, please follow these steps: 1. Open the Google Play Store app. 2. Tap your profile icon, then Payments & subscriptions, then Subscriptions. 3. Select Nebula and tap Cancel subscription. Please note that deleting the app does not cancel your subscription. Nebula Support Team",
+    "empathetic": "It can sometimes be confusing to figure out how to manage app subscriptions, but we are here to help. To cancel your subscription on Android, open the Google Play Store app, tap your profile icon followed by Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription. Please keep in mind that deleting the app does not cancel your subscription. Nebula Support Team",
+    "short": "To cancel your Android subscription, open the Google Play Store app, tap your profile icon, go to Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription."
+   },
+   "classification": "billing_subscription/P3",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1210,
+   "out_tokens": 314,
+   "latency_s": 1.776,
+   "api_latency_s": 1.776
+  },
+  {
+   "id": "A02",
+   "scenario": "double charge",
+   "language": "en",
+   "input": "I was charged twice for my monthly plan yesterday, $19.99 two times. What's goin",
+   "expected_articles": [
+    "kb-005"
+   ],
+   "retrieved": [
+    "kb-005",
+    "kb-002",
+    "kb-001"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": true,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-005",
+     "kb-002",
+     "kb-015"
+    ],
+    "plus_boost": [
+     "kb-005",
+     "kb-002",
+     "kb-015"
+    ],
+    "plus_boost_expansion": [
+     "kb-005",
+     "kb-002",
+     "kb-001"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-005",
+     "quote": "A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-005",
+     "quote": "Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 2,
+   "citations_total": 2,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 67,
+    "empathetic": 77,
+    "short": 30
+   },
+   "exp_human": false,
+   "act_human": true,
+   "human_pass": false,
+   "reasons": [
+    "model: chargeback or legal threat"
+   ],
+   "summary": "Customer reports being charged twice for their monthly plan ($19.99 each time) yesterday.",
+   "replies": {
+    "formal": "Hello. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. To help us investigate this for you, please provide the date, amount, and the last 4 digits of your card, or send a screenshot of your bank statement. Nebula Support Team",
+    "empathetic": "It is understandably stressful to notice unexpected duplicate charges on your account. A second charge usually has one of three causes: a temporary authorization hold that disappears within 3–5 business days; two separate purchases (for example a subscription and a credit pack); or a genuine duplicate charge. Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check this for you. Nebula Support Team",
+    "short": "Please share the date, amount, and the last 4 digits of your card, or a screenshot of your bank statement so we can check the double charge. Nebula Support Team"
+   },
+   "classification": "billing_subscription/P1",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1243,
+   "out_tokens": 448,
+   "latency_s": 1.976,
+   "api_latency_s": 1.975
+  },
+  {
+   "id": "A03",
+   "scenario": "refund inside policy, non-English",
+   "language": "es",
+   "input": "Compré un paquete de créditos por error hace 3 días y todavía no lo he usado. ¿M",
+   "expected_articles": [
+    "kb-004"
+   ],
+   "retrieved": [
+    "kb-004",
+    "kb-005",
+    "kb-013"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": false,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [],
+    "plus_boost": [
+     "kb-004"
+    ],
+    "plus_boost_expansion": [
+     "kb-004",
+     "kb-005",
+     "kb-013"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-004",
+     "quote": "Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-005",
+     "quote": "Ask for the date, amount and the last 4 digits of the card, or a screenshot of the bank statement.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 2,
+   "citations_total": 2,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 75,
+    "empathetic": 71,
+    "short": 49
+   },
+   "exp_human": false,
+   "act_human": false,
+   "human_pass": true,
+   "reasons": [],
+   "summary": "Customer bought a credit pack by mistake 3 days ago, has not used it, and is asking for a refund.",
+   "replies": {
+    "formal": "Hola. Entendemos que desea solicitar un reembolso por un paquete de créditos adquirido por error hace tres días que aún no ha sido utilizado. Para poder revisar su solicitud y verificar los detalles de la compra, por favor comparta con nosotros la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Nuestro equipo revisará el caso y se comunicará con usted. Atentamente, Nebula Support Team",
+    "empathetic": "Comprendemos perfectamente que haya adquirido el paquete de créditos por error y que desee solicitar su reembolso. Para poder ayudarle a revisar su solicitud de manera adecuada, por favor envíenos los detalles de la transacción, incluyendo la fecha, el monto y los últimos 4 dígitos de su tarjeta, o una captura de pantalla del extracto bancario. Evaluaremos su caso y le informaremos los siguientes pasos a seguir. Atentamente, Nebula Support Team",
+    "short": "Para revisar la solicitud de reembolso de su paquete de créditos no utilizado, por favor envíenos la fecha, el monto y los últimos 4 dígitos de su tarjeta o una captura del extracto bancario. El equipo verificará los detalles y se pondrá en contacto con usted. Nebula Support Team"
+   },
+   "classification": "refund_request/P2",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1232,
+   "out_tokens": 461,
+   "latency_s": 2.383,
+   "api_latency_s": 2.382
+  },
+  {
+   "id": "A04",
+   "scenario": "refund outside policy",
+   "language": "en",
+   "input": "I bought credits 2 months ago and I want my money back, I just don't like the re",
+   "expected_articles": [
+    "kb-004"
+   ],
+   "retrieved": [
+    "kb-004",
+    "kb-005",
+    "kb-012"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": false,
+    "plus_boost": false,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-018",
+     "kb-009",
+     "kb-012"
+    ],
+    "plus_boost": [
+     "kb-018",
+     "kb-009",
+     "kb-012"
+    ],
+    "plus_boost_expansion": [
+     "kb-004",
+     "kb-005",
+     "kb-012"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-004",
+     "quote": "Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 1,
+   "citations_total": 1,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 37,
+    "empathetic": 84,
+    "short": 37
+   },
+   "exp_human": true,
+   "act_human": true,
+   "human_pass": true,
+   "reasons": [
+    "model: refund outside policy",
+    "classifier: model: refund clearly outside a 14-day window",
+    "classifier: refund possibly outside 14-day policy"
+   ],
+   "summary": "Customer bought credits 2 months ago and is requesting a refund because they do not like the readings. This request is outside the 14-day policy window and involves used services, so it requires individual review by a support specialist.",
+   "replies": {
+    "formal": "Hello. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your request for review and inform you of the outcome. Nebula Support Team",
+    "empathetic": "It is completely understandable that you want to be satisfied with your readings. Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your details for review and will let you know once we have an update. Nebula Support Team",
+    "short": "Web purchases can be refunded within 14 days if unused. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will submit your request for review."
+   },
+   "classification": "refund_request/P2",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1252,
+   "out_tokens": 391,
+   "latency_s": 1.852,
+   "api_latency_s": 1.851
+  },
+  {
+   "id": "A05",
+   "scenario": "expert no-show",
+   "language": "en",
+   "input": "The expert didn't show up to my booked session yesterday. Where are my credits?",
+   "expected_articles": [
+    "kb-011"
+   ],
+   "retrieved": [
+    "kb-011",
+    "kb-010",
+    "kb-014"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": true,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-011",
+     "kb-014",
+     "kb-010"
+    ],
+    "plus_boost": [
+     "kb-011",
+     "kb-010",
+     "kb-014"
+    ],
+    "plus_boost_expansion": [
+     "kb-011",
+     "kb-010",
+     "kb-014"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-011",
+     "quote": "If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-011",
+     "quote": "If the credits were not returned after 24 hours, support can return them manually after checking the session log.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 2,
+   "citations_total": 2,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 56,
+    "empathetic": 59,
+    "short": 40
+   },
+   "exp_human": false,
+   "act_human": false,
+   "human_pass": true,
+   "reasons": [],
+   "summary": "The customer states that their booked expert did not show up for a session yesterday and is asking about their credits.",
+   "replies": {
+    "formal": "Hello. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Please let us know if you need further assistance with your account. Nebula Support Team",
+    "empathetic": "We understand it is frustrating when an expert does not show up for your scheduled session. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Nebula Support Team",
+    "short": "If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log."
+   },
+   "classification": "refund_request/P2",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1153,
+   "out_tokens": 384,
+   "latency_s": 1.673,
+   "api_latency_s": 1.672
+  },
+  {
+   "id": "A06",
+   "scenario": "crisis",
+   "language": "en",
+   "input": "I feel like there's no reason to keep going anymore. Nothing in my life works, n",
+   "expected_articles": [
+    "kb-016"
+   ],
+   "retrieved": [
+    "kb-016",
+    "kb-018",
+    "kb-015"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": false,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-015",
+     "kb-006",
+     "kb-009"
+    ],
+    "plus_boost": [
+     "kb-015",
+     "kb-006",
+     "kb-016"
+    ],
+    "plus_boost_expansion": [
+     "kb-016",
+     "kb-018",
+     "kb-015"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-016",
+     "quote": "If a customer mentions self-harm, suicidal thoughts, or being in danger, the agent must respond with care, must not give astrological or tarot advice about the situation, and must encourage the customer to contact local emergency services or a crisis line immediately.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-016",
+     "quote": "International directories of crisis lines are available at findahelpline.com.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-016",
+     "quote": "In the United States, people can call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, Samaritans are available on 116 123.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 3,
+   "citations_total": 3,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 81,
+    "empathetic": 88,
+    "short": 47
+   },
+   "exp_human": true,
+   "act_human": true,
+   "human_pass": true,
+   "reasons": [
+    "model: crisis or safety risk",
+    "classifier: model: safety_wellbeing",
+    "classifier: safety_wellbeing: possible vulnerable user"
+   ],
+   "summary": "Customer expressed suicidal thoughts and mentioned that nothing in their life works, including readings. The agent must respond with care following safety guidelines, provide crisis hotline resources, and escalate the case.",
+   "replies": {
+    "formal": "We are very sorry to hear that you are going through such a difficult time. Please know that you are not alone and support is available right now. We strongly encourage you to contact local emergency services or a crisis line immediately. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 for the Suicide & Crisis Lifeline. In the UK and Ireland, Samaritans are available on 116 123. Nebula Support Team",
+    "empathetic": "It sounds like you are carrying a very heavy burden right now, and we are so sorry you are feeling this way. Your well-being is important, and support is available to help you through this. Please consider reaching out to local emergency services or a crisis line right away. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 (Suicide & Crisis Lifeline), and in the UK and Ireland, you can contact Samaritans on 116 123. Nebula Support Team",
+    "short": "We are very sorry you are going through this. Please reach out to local emergency services or a crisis line immediately. In the US, call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, contact Samaritans on 116 123. International directories are at findahelpline.com."
+   },
+   "classification": "safety_wellbeing/P1",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1188,
+   "out_tokens": 619,
+   "latency_s": 2.338,
+   "api_latency_s": 2.338
+  },
+  {
+   "id": "A07",
+   "scenario": "GDPR deletion, non-English",
+   "language": "uk",
+   "input": "Хочу видалити свій акаунт і всі мої дані назавжди.",
+   "expected_articles": [
+    "kb-009"
+   ],
+   "retrieved": [
+    "kb-009",
+    "kb-010",
+    "kb-004"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": false,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [],
+    "plus_boost": [
+     "kb-009"
+    ],
+    "plus_boost_expansion": [
+     "kb-009",
+     "kb-010",
+     "kb-004"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-009",
+     "quote": "You can request deletion of your account and personal data at any time.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-009",
+     "quote": "Before deletion, active subscriptions must be cancelled; deleting the account does not cancel an App Store or Google Play subscription.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-009",
+     "quote": "Support agents do not delete data themselves. They confirm the request, verify the account owner and forward the case to the Privacy team.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 3,
+   "citations_total": 3,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 73,
+    "empathetic": 88,
+    "short": 32
+   },
+   "exp_human": true,
+   "act_human": true,
+   "human_pass": true,
+   "reasons": [
+    "model: data deletion/export (GDPR)",
+    "classifier: model: privacy_legal",
+    "classifier: privacy_legal: legal/GDPR consequences"
+   ],
+   "summary": "The customer wants to permanently delete their account and all personal data.",
+   "replies": {
+    "formal": "Вітаю. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зверніть увагу, що перед видаленням необхідно самостійно скасувати активні підписки в App Store чи Google Play, оскільки видалення акаунта їх не скасовує. Служба підтримки не видаляє дані самостійно: ми підтверджуємо запит, перевіряємо власника акаунта та передаємо справу команді з питань конфіденційності. Запити опрацьовуються протягом 30 днів. Будь ласка, підтвердьте вашу електронну пошту, прив'язану до акаунта. Nebula Support Team",
+    "empathetic": "Розумію ваше бажання видалити акаунт та всі особисті дані назавжди. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зауважте, що перед видаленням обов'язково потрібно скасувати активні підписки, оскільки видалення акаунта не скасовує підписку App Store або Google Play. Агенти служби підтримки не видаляють дані самостійно, а підтверджують запит, перевіряють власника акаунта та передають справу команді з питань конфіденційності (такі запити виконуються протягом 30 днів). Будь ласка, надішліть нам поштову адресу, пов'язану з вашим акаунтом, щоб ми могли розпочати процес. Nebula Support Team",
+    "short": "Будь ласка, підтвердьте електронну пошту вашого акаунта. Перед видаленням обов'язково скасуйте активні підписки (App Store / Google Play). Ми передамо запит команді з питань конфіденційності, і його буде виконано протягом 30 днів."
+   },
+   "classification": "privacy_legal/P2",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1232,
+   "out_tokens": 676,
+   "latency_s": 2.573,
+   "api_latency_s": 2.572
+  },
+  {
+   "id": "A08",
+   "scenario": "no answer in KB",
+   "language": "en",
+   "input": "Can I gift a subscription to my friend for her birthday?",
+   "expected_articles": [],
+   "retrieved": [
+    "kb-016",
+    "kb-018",
+    "kb-014"
+   ],
+   "hit3": null,
+   "ablation": {
+    "ticket_only": null,
+    "plus_boost": null,
+    "plus_boost_expansion": null
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-002",
+     "kb-001",
+     "kb-003"
+    ],
+    "plus_boost": [
+     "kb-002",
+     "kb-001",
+     "kb-003"
+    ],
+    "plus_boost_expansion": [
+     "kb-016",
+     "kb-018",
+     "kb-014"
+    ]
+   },
+   "citations": [],
+   "citations_valid": 0,
+   "citations_total": 0,
+   "kb_has_answer": false,
+   "kb_answer_expected": false,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 38,
+    "empathetic": 47,
+    "short": 25
+   },
+   "exp_human": true,
+   "act_human": true,
+   "human_pass": true,
+   "reasons": [
+    "model: the KB does not answer",
+    "no source in the knowledge base for this answer"
+   ],
+   "summary": "The customer is asking if they can gift a subscription to a friend for her birthday. The provided knowledge base articles do not contain information about gifting subscriptions.",
+   "replies": {
+    "formal": "Hello. Thank you for contacting us regarding our subscription options. We have received your inquiry about gifting a subscription to your friend, and our team will check this information and come back to you shortly. Nebula Support Team",
+    "empathetic": "It is so kind of you to want to give your friend a birthday gift through Nebula. We have received your question about whether subscriptions can be gifted, and our team will check the details and get back to you as soon as possible. Nebula Support Team",
+    "short": "Thank you for your question. We have received your inquiry about gifting a subscription, and our team will check and come back to you shortly."
+   },
+   "classification": "product_question/P3",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1165,
+   "out_tokens": 247,
+   "latency_s": 1.837,
+   "api_latency_s": 1.836
+  },
+  {
+   "id": "A09",
+   "scenario": "repeat contact, angry",
+   "language": "en",
+   "input": "This is the THIRD time I'm writing!!! My password reset email never comes and no",
+   "expected_articles": [
+    "kb-007"
+   ],
+   "retrieved": [
+    "kb-007",
+    "kb-008",
+    "kb-003"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": true,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-007",
+     "kb-008",
+     "kb-003"
+    ],
+    "plus_boost": [
+     "kb-007",
+     "kb-008",
+     "kb-003"
+    ],
+    "plus_boost_expansion": [
+     "kb-007",
+     "kb-008",
+     "kb-003"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-007",
+     "quote": "Make sure you use the same login method as when you signed up (email, Apple or Google).",
+     "valid": true
+    },
+    {
+     "article_id": "kb-007",
+     "quote": "If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-007",
+     "quote": "If the email still does not arrive, support can verify your identity and trigger a manual reset.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 3,
+   "citations_total": 3,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": false
+   },
+   "words": {
+    "formal": 81,
+    "empathetic": 92,
+    "short": 57
+   },
+   "exp_human": true,
+   "act_human": true,
+   "human_pass": true,
+   "reasons": [
+    "model: repeated contact from an angry customer",
+    "repeated contact from an angry customer"
+   ],
+   "summary": "Customer is frustrated after contacting support for the third time because their password reset email is not arriving.",
+   "replies": {
+    "formal": "Hello. We understand your frustration regarding the delayed password reset email. Please make sure you use the same login method as when you signed up and tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team",
+    "empathetic": "It is very frustrating to wait for a password reset email and feel like your previous messages were missed. Please make sure you use the same login method as when you signed up (email, Apple or Google). Tap Forgot password on the login screen. If the reset email does not arrive within 10 minutes, check the Spam and Promotions folders and add support@nebula.example to your contacts. If the email still does not arrive, support can verify your identity and trigger a manual reset. Support never asks for your password. Nebula Support Team",
+    "short": "Make sure you use the same login method as when you signed up and tap Forgot password on the login screen. Check your Spam and Promotions folders if the email does not arrive within 10 minutes, and add support@nebula.example to your contacts. If it still does not arrive, contact us so we can trigger a manual reset."
+   },
+   "classification": "account_access/P2",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1171,
+   "out_tokens": 542,
+   "latency_s": 2.193,
+   "api_latency_s": 2.192
+  },
+  {
+   "id": "A10",
+   "scenario": "tech, non-English",
+   "language": "de",
+   "input": "Die App stürzt bei jedem Start ab, ich habe sie schon neu installiert.",
+   "expected_articles": [
+    "kb-013"
+   ],
+   "retrieved": [
+    "kb-013",
+    "kb-012",
+    "kb-006"
+   ],
+   "hit3": true,
+   "ablation": {
+    "ticket_only": true,
+    "plus_boost": true,
+    "plus_boost_expansion": true
+   },
+   "ablation_ids": {
+    "ticket_only": [
+     "kb-006",
+     "kb-012",
+     "kb-013"
+    ],
+    "plus_boost": [
+     "kb-012",
+     "kb-006",
+     "kb-013"
+    ],
+    "plus_boost_expansion": [
+     "kb-013",
+     "kb-012",
+     "kb-006"
+    ]
+   },
+   "citations": [
+    {
+     "article_id": "kb-013",
+     "quote": "1. Restart your device.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-013",
+     "quote": "2. Update the app to the latest version.",
+     "valid": true
+    },
+    {
+     "article_id": "kb-013",
+     "quote": "If the app is completely unusable for a paying customer after these steps, support escalates the case to the Tech team as P1 and collects device model, OS version and app version.",
+     "valid": true
+    }
+   ],
+   "citations_valid": 3,
+   "citations_total": 3,
+   "kb_has_answer": true,
+   "kb_answer_expected": true,
+   "language_ok": true,
+   "language_per_tone": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "length_ok": {
+    "formal": true,
+    "empathetic": true,
+    "short": true
+   },
+   "words": {
+    "formal": 58,
+    "empathetic": 65,
+    "short": 30
+   },
+   "exp_human": false,
+   "act_human": true,
+   "human_pass": false,
+   "reasons": [
+    "model: App crashes on launch for a paying customer require P1 escalation to the Tech team."
+   ],
+   "summary": "Customer reports that the app crashes on every startup despite reinstalling, and needs further troubleshooting steps and escalation info.",
+   "replies": {
+    "formal": "Guten Tag, danke, dass Sie uns kontaktieren. Um das Problem mit den Abstürzen zu beheben, starten Sie bitte Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Falls das nicht hilft, teilen Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version mit, damit wir das Anliegen an unser Technikteam weiterleiten können. Nebula Support Team",
+    "empathetic": "Es ist ärgerlich, dass die App bei jedem Start abstürzt, obwohl Sie sie bereits neu installiert haben. Bitte versuchen Sie als Nächstes, Ihr Gerät neu zu starten und sicherzustellen, dass Sie die aktuellste Version der App verwenden. Wenn das Problem weiterhin besteht, senden Sie uns bitte Ihr Gerätemodell, Ihre Betriebssystemversion und die App-Version, damit wir den Fall an unser Technikteam weiterleiten können. Nebula Support Team",
+    "short": "Bitte starten Sie Ihr Gerät neu und aktualisieren Sie die App auf die neueste Version. Wenn das nicht hilft, senden Sie uns bitte Ihr Gerätemodell, die Betriebssystemversion und die App-Version."
+   },
+   "classification": "technical_issue/P1",
+   "model_used": "gemini-flash-lite",
+   "in_tokens": 1205,
+   "out_tokens": 488,
+   "latency_s": 2.348,
+   "api_latency_s": 2.346
+  }
+ ]
+}

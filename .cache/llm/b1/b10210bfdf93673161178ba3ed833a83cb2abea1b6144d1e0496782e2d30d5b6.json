@@ -1,0 +1,47 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Open a refund investigation, verify cancellation status, and process a refund promptly while communicating the timeline to the user."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "User is demanding a refund and threatening a chargeback, requires manual review and approval."
+   ],
+   "rationale": "The user reports an unexpected charge after cancelling a subscription and demands a refund within a short timeframe, which is a classic refund request tied to billing. The tone is angry, making it high priority and needing human intervention."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 653,
+  "out_tokens": 281,
+  "thinking_tokens": 80,
+  "latency_s": 5.596317371484474,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User is demanding a refund and threatening a chargeback, requires manual review and approval.\"\n  ],\n  \"confidence\": 0.98,\n  \"rationale\": \"The user reports an unexpected charge after cancelling a subscription and demands a refund within a short timeframe, which is a classic refund request tied to billing. The tone is angry, making it high priority and needing human intervention.\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Open a refund investigation, verify cancellation status, and process a refund promptly while communicating the timeline to the user.\"\n  }\n}"
+ },
+ "created_at": 1793401003.968198
+}

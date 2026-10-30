@@ -1,0 +1,45 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer bought credits 2 months ago and is requesting a refund because they do not like the readings. This request is outside the 14-day policy window and involves used services, so it requires individual review by a support specialist.",
+   "replies": {
+    "formal": "Hello. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your request for review and inform you of the outcome. Nebula Support Team",
+    "empathetic": "It is completely understandable that you want to be satisfied with your readings. Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your details for review and will let you know once we have an update. Nebula Support Team",
+    "short": "Web purchases can be refunded within 14 days if unused. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will submit your request for review."
+   },
+   "citations": [
+    {
+     "article_id": "kb-004",
+     "quote": "Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "refund outside policy"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1252,
+  "out_tokens": 391,
+  "thinking_tokens": 0,
+  "latency_s": 1.8518274195134836,
+  "api_latency_s": 1.8509726950001095,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer bought credits 2 months ago and is requesting a refund because they do not like the readings. This request is outside the 14-day policy window and involves used services, so it requires individual review by a support specialist.\",\n  \"replies\": {\n    \"formal\": \"Hello. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your request for review and inform you of the outcome. Nebula Support Team\",\n    \"empathetic\": \"It is completely understandable that you want to be satisfied with your readings. Web purchases (subscriptions and credit packs bought on the Nebula website) can be refunded within 14 days of the charge if the purchased credits or premium features have not been used. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will forward your details for review and will let you know once we have an update. Nebula Support Team\",\n    \"short\": \"Web purchases can be refunded within 14 days if unused. Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed. We will submit your request for review.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-004\",\n      \"quote\": \"Requests outside the 14-day window, or for used services, are reviewed individually by a support specialist and are not guaranteed.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"refund outside policy\"\n  ]\n}"
+ },
+ "created_at": 1793402054.6060672
+}

@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "es",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify the recent credit purchase and process the requested refund."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is explicitly asking for a refund after buying the wrong credit package, which falls under refund_request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1840,
+  "out_tokens": 155,
+  "thinking_tokens": 0,
+  "latency_s": 1.5505466622021231,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"es\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Verify the recent credit purchase and process the requested refund.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is explicitly asking for a refund after buying the wrong credit package, which falls under refund_request.\"\n}"
+ },
+ "created_at": 1793401221.3482196
+}

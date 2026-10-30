@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": "product_question",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Escalate to crisis intervention team and provide immediate support resources"
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "User expresses suicidal thoughts",
+    "Immediate safety risk requires human intervention"
+   ],
+   "rationale": "The ticket contains explicit suicidal ideation, which overrides all other concerns and mandates a P1 safety response, while also noting a subscription cancellation request."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1390,
+  "out_tokens": 233,
+  "thinking_tokens": 53,
+  "latency_s": 1.333279343151844,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": \"product_question\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Escalate to crisis intervention team and provide immediate support resources\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User expresses suicidal thoughts\",\n    \"Immediate safety risk requires human intervention\"\n  ],\n  \"rationale\": \"The ticket contains explicit suicidal ideation, which overrides all other concerns and mandates a P1 safety response, while also noting a subscription cancellation request.\"\n}"
+ },
+ "created_at": 1793401243.0602539
+}

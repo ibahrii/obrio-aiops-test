@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Immediate safety response: provide crisis helpline resources, escalate to specialized safety team for urgent outreach, and monitor for follow-up."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The user expresses severe hopelessness, inability to sleep/eat, and sees no way out, indicating a mental health crisis requiring immediate safety intervention."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1959,
+  "out_tokens": 394,
+  "thinking_tokens": 239,
+  "latency_s": 18.61685149699997,
+  "api_latency_s": 18.61637317099985,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Immediate safety response: provide crisis helpline resources, escalate to specialized safety team for urgent outreach, and monitor for follow-up.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\"safety_wellbeing\"],\n  \"rationale\": \"The user expresses severe hopelessness, inability to sleep/eat, and sees no way out, indicating a mental health crisis requiring immediate safety intervention.\"\n}"
+ },
+ "created_at": 1793401959.1423626
+}

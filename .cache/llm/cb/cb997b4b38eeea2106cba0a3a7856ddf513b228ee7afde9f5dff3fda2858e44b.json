@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": "safety_wellbeing",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Secure the account, verify identity, and revert unauthorized email changes."
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "Potential account takeover requires immediate manual security intervention."
+   ],
+   "rationale": "The user reports unauthorized access to their account and an email change at an odd hour, indicating a security breach requiring Trust & Safety review."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 227,
+  "out_tokens": 183,
+  "thinking_tokens": 0,
+  "latency_s": 1.4737311927749488,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": \"safety_wellbeing\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Secure the account, verify identity, and revert unauthorized email changes.\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Potential account takeover requires immediate manual security intervention.\"\n  ],\n  \"rationale\": \"The user reports unauthorized access to their account and an email change at an odd hour, indicating a security breach requiring Trust & Safety review.\"\n}"
+ },
+ "created_at": 1793400707.834381
+}

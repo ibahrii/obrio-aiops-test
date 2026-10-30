@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "es",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Process refund request for the mistaken credit package purchase"
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "explicit request for money to be returned"
+   ],
+   "rationale": "The user explicitly asks for a refund of a credit package they purchased by mistake, which is a clear refund request requiring human handling."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1375,
+  "out_tokens": 226,
+  "thinking_tokens": 64,
+  "latency_s": 1.0607414668172623,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"es\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Process refund request for the mistaken credit package purchase\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"explicit request for money to be returned\"\n  ],\n  \"rationale\": \"The user explicitly asks for a refund of a credit package they purchased by mistake, which is a clear refund request requiring human handling.\"\n}"
+ },
+ "created_at": 1793401208.9803927
+}

@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide instructions on how to cancel an iOS subscription through device settings"
+   },
+   "confidence": 1.0,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is asking a straightforward how-to question regarding subscription cancellation on iOS."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1829,
+  "out_tokens": 150,
+  "thinking_tokens": 0,
+  "latency_s": 1.3753699840001445,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Provide instructions on how to cancel an iOS subscription through device settings\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is asking a straightforward how-to question regarding subscription cancellation on iOS.\"\n}"
+ },
+ "created_at": 1793401140.1689446
+}

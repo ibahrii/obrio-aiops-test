@@ -1,0 +1,53 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "The customer wants to permanently delete their account and all personal data.",
+   "replies": {
+    "formal": "Вітаю. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зверніть увагу, що перед видаленням необхідно самостійно скасувати активні підписки в App Store чи Google Play, оскільки видалення акаунта їх не скасовує. Служба підтримки не видаляє дані самостійно: ми підтверджуємо запит, перевіряємо власника акаунта та передаємо справу команді з питань конфіденційності. Запити опрацьовуються протягом 30 днів. Будь ласка, підтвердьте вашу електронну пошту, прив'язану до акаунта. Nebula Support Team",
+    "empathetic": "Розумію ваше бажання видалити акаунт та всі особисті дані назавжди. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зауважте, що перед видаленням обов'язково потрібно скасувати активні підписки, оскільки видалення акаунта не скасовує підписку App Store або Google Play. Агенти служби підтримки не видаляють дані самостійно, а підтверджують запит, перевіряють власника акаунта та передають справу команді з питань конфіденційності (такі запити виконуються протягом 30 днів). Будь ласка, надішліть нам поштову адресу, пов'язану з вашим акаунтом, щоб ми могли розпочати процес. Nebula Support Team",
+    "short": "Будь ласка, підтвердьте електронну пошту вашого акаунта. Перед видаленням обов'язково скасуйте активні підписки (App Store / Google Play). Ми передамо запит команді з питань конфіденційності, і його буде виконано протягом 30 днів."
+   },
+   "citations": [
+    {
+     "article_id": "kb-009",
+     "quote": "You can request deletion of your account and personal data at any time."
+    },
+    {
+     "article_id": "kb-009",
+     "quote": "Before deletion, active subscriptions must be cancelled; deleting the account does not cancel an App Store or Google Play subscription."
+    },
+    {
+     "article_id": "kb-009",
+     "quote": "Support agents do not delete data themselves. They confirm the request, verify the account owner and forward the case to the Privacy team."
+    }
+   ],
+   "reply_language": "uk",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "data deletion/export (GDPR)"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1232,
+  "out_tokens": 676,
+  "thinking_tokens": 0,
+  "latency_s": 2.57256532282463,
+  "api_latency_s": 2.571970892000081,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"The customer wants to permanently delete their account and all personal data.\",\n  \"replies\": {\n    \"formal\": \"Вітаю. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зверніть увагу, що перед видаленням необхідно самостійно скасувати активні підписки в App Store чи Google Play, оскільки видалення акаунта їх не скасовує. Служба підтримки не видаляє дані самостійно: ми підтверджуємо запит, перевіряємо власника акаунта та передаємо справу команді з питань конфіденційності. Запити опрацьовуються протягом 30 днів. Будь ласка, підтвердьте вашу електронну пошту, прив'язану до акаунта. Nebula Support Team\",\n    \"empathetic\": \"Розумію ваше бажання видалити акаунт та всі особисті дані назавжди. Ви можете надіслати запит на видалення свого акаунта та персональних даних у будь-який час. Зауважте, що перед видаленням обов'язково потрібно скасувати активні підписки, оскільки видалення акаунта не скасовує підписку App Store або Google Play. Агенти служби підтримки не видаляють дані самостійно, а підтверджують запит, перевіряють власника акаунта та передають справу команді з питань конфіденційності (такі запити виконуються протягом 30 днів). Будь ласка, надішліть нам поштову адресу, пов'язану з вашим акаунтом, щоб ми могли розпочати процес. Nebula Support Team\",\n    \"short\": \"Будь ласка, підтвердьте електронну пошту вашого акаунта. Перед видаленням обов'язково скасуйте активні підписки (App Store / Google Play). Ми передамо запит команді з питань конфіденційності, і його буде виконано протягом 30 днів.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-009\",\n      \"quote\": \"You can request deletion of your account and personal data at any time.\"\n    },\n    {\n      \"article_id\": \"kb-009\",\n      \"quote\": \"Before deletion, active subscriptions must be cancelled; deleting the account does not cancel an App Store or Google Play subscription.\"\n    },\n    {\n      \"article_id\": \"kb-009\",\n      \"quote\": \"Support agents do not delete data themselves. They confirm the request, verify the account owner and forward the case to the Privacy team.\"\n    }\n  ],\n  \"reply_language\": \"uk\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"data deletion/export (GDPR)\"\n  ]\n}"
+ },
+ "created_at": 1793402068.8274865
+}

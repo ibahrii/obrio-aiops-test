@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Review the session transcript and expert Luna Starr's response quality; consider credit compensation if quality standards were not met"
+   },
+   "confidence": 0.9,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Customer complains about poor quality/generic reading from a specific expert (Luna Starr) without explicitly requesting a refund; this is a minor expert quality complaint (P3)."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1953,
+  "out_tokens": 220,
+  "thinking_tokens": 104,
+  "latency_s": 10.08770094600004,
+  "api_latency_s": 10.087170375999904,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\":\"expert_complaint\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Expert Quality\",\"action\":\"Review the session transcript and expert Luna Starr's response quality; consider credit compensation if quality standards were not met\"},\"confidence\":0.9,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"Customer complains about poor quality/generic reading from a specific expert (Luna Starr) without explicitly requesting a refund; this is a minor expert quality complaint (P3).\"}"
+ },
+ "created_at": 1793401709.320637
+}

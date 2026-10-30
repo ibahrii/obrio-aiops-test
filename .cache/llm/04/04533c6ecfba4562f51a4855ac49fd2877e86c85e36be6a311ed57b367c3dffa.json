@@ -1,0 +1,53 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "Customer expressed suicidal thoughts and mentioned that nothing in their life works, including readings. The agent must respond with care following safety guidelines, provide crisis hotline resources, and escalate the case.",
+   "replies": {
+    "formal": "We are very sorry to hear that you are going through such a difficult time. Please know that you are not alone and support is available right now. We strongly encourage you to contact local emergency services or a crisis line immediately. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 for the Suicide & Crisis Lifeline. In the UK and Ireland, Samaritans are available on 116 123. Nebula Support Team",
+    "empathetic": "It sounds like you are carrying a very heavy burden right now, and we are so sorry you are feeling this way. Your well-being is important, and support is available to help you through this. Please consider reaching out to local emergency services or a crisis line right away. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 (Suicide & Crisis Lifeline), and in the UK and Ireland, you can contact Samaritans on 116 123. Nebula Support Team",
+    "short": "We are very sorry you are going through this. Please reach out to local emergency services or a crisis line immediately. In the US, call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, contact Samaritans on 116 123. International directories are at findahelpline.com."
+   },
+   "citations": [
+    {
+     "article_id": "kb-016",
+     "quote": "If a customer mentions self-harm, suicidal thoughts, or being in danger, the agent must respond with care, must not give astrological or tarot advice about the situation, and must encourage the customer to contact local emergency services or a crisis line immediately."
+    },
+    {
+     "article_id": "kb-016",
+     "quote": "International directories of crisis lines are available at findahelpline.com."
+    },
+    {
+     "article_id": "kb-016",
+     "quote": "In the United States, people can call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, Samaritans are available on 116 123."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": true,
+   "reasons": [
+    "crisis or safety risk"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1188,
+  "out_tokens": 619,
+  "thinking_tokens": 0,
+  "latency_s": 2.3384830576715103,
+  "api_latency_s": 2.337630373999673,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"Customer expressed suicidal thoughts and mentioned that nothing in their life works, including readings. The agent must respond with care following safety guidelines, provide crisis hotline resources, and escalate the case.\",\n  \"replies\": {\n    \"formal\": \"We are very sorry to hear that you are going through such a difficult time. Please know that you are not alone and support is available right now. We strongly encourage you to contact local emergency services or a crisis line immediately. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 for the Suicide & Crisis Lifeline. In the UK and Ireland, Samaritans are available on 116 123. Nebula Support Team\",\n    \"empathetic\": \"It sounds like you are carrying a very heavy burden right now, and we are so sorry you are feeling this way. Your well-being is important, and support is available to help you through this. Please consider reaching out to local emergency services or a crisis line right away. International directories of crisis lines are available at findahelpline.com. In the United States, you can call or text 988 (Suicide & Crisis Lifeline), and in the UK and Ireland, you can contact Samaritans on 116 123. Nebula Support Team\",\n    \"short\": \"We are very sorry you are going through this. Please reach out to local emergency services or a crisis line immediately. In the US, call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, contact Samaritans on 116 123. International directories are at findahelpline.com.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-016\",\n      \"quote\": \"If a customer mentions self-harm, suicidal thoughts, or being in danger, the agent must respond with care, must not give astrological or tarot advice about the situation, and must encourage the customer to contact local emergency services or a crisis line immediately.\"\n    },\n    {\n      \"article_id\": \"kb-016\",\n      \"quote\": \"International directories of crisis lines are available at findahelpline.com.\"\n    },\n    {\n      \"article_id\": \"kb-016\",\n      \"quote\": \"In the United States, people can call or text 988 (Suicide & Crisis Lifeline). In the UK and Ireland, Samaritans are available on 116 123.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"crisis or safety risk\"\n  ]\n}"
+ },
+ "created_at": 1793402064.0930967
+}

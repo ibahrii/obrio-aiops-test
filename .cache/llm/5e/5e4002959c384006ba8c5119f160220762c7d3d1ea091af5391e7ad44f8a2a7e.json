@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Handle crisis response protocol immediately and then assist with subscription cancellation."
+   },
+   "confidence": 1.0,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The user exhibits signs of suicidal ideation and crisis, which immediately triggers the safety_wellbeing category and P1 priority. A secondary request about subscription cancellation is also present."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1010,
+  "out_tokens": 183,
+  "thinking_tokens": 0,
+  "latency_s": 1.246048062863565,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Handle crisis response protocol immediately and then assist with subscription cancellation.\"\n  },\n  \"confidence\": 1,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"safety_wellbeing\"\n  ],\n  \"rationale\": \"The user exhibits signs of suicidal ideation and crisis, which immediately triggers the safety_wellbeing category and P1 priority. A secondary request about subscription cancellation is also present.\"\n}"
+ },
+ "created_at": 1793401024.9604185
+}

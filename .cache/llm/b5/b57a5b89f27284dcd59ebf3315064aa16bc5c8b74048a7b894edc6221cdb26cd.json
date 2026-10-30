@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "expert",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Expert Ops",
+    "action": "Investigate the pending September payout for expert Venus Ray and resolve the delay"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Expert reports a payout that has been pending for 3 weeks; this is a billing_subscription issue (expert payouts) with P2 priority per expert payout problems, routed to Expert Ops because the sender is a marketplace expert."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1966,
+  "out_tokens": 689,
+  "thinking_tokens": 535,
+  "latency_s": 11.995288872999936,
+  "api_latency_s": 11.994666129000052,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"expert\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Expert Ops\",\n    \"action\": \"Investigate the pending September payout for expert Venus Ray and resolve the delay\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"Expert reports a payout that has been pending for 3 weeks; this is a billing_subscription issue (expert payouts) with P2 priority per expert payout problems, routed to Expert Ops because the sender is a marketplace expert.\"\n}"
+ },
+ "created_at": 1793401882.1539488
+}

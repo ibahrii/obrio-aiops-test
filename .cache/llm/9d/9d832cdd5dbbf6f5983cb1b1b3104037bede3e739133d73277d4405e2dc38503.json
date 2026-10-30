@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Process the data access request per GDPR/CCPA and provide the user with a copy of their personal data"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "privacy_legal request"
+   ],
+   "rationale": "The user explicitly requests a copy of all personal data stored about them, which is a GDPR/CCPA data access request, falling under privacy_legal."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1940,
+  "out_tokens": 455,
+  "thinking_tokens": 308,
+  "latency_s": 5.697089310999672,
+  "api_latency_s": 5.696591146999708,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\": \"privacy_legal\", \"secondary_category\": null, \"priority\": \"P2\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"calm\", \"next_step\": {\"route_to\": \"Legal & Privacy\", \"action\": \"Process the data access request per GDPR/CCPA and provide the user with a copy of their personal data\"}, \"confidence\": 0.95, \"needs_human\": true, \"human_reasons\": [\"privacy_legal request\"], \"rationale\": \"The user explicitly requests a copy of all personal data stored about them, which is a GDPR/CCPA data access request, falling under privacy_legal.\"}"
+ },
+ "created_at": 1793401728.5841959
+}

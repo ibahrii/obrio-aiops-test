@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "The customer is asking how to cancel their Android subscription. The knowledge base article provides the steps via Google Play Store.",
+   "replies": {
+    "formal": "Hello. To cancel your Android subscription, please follow these steps: 1. Open the Google Play Store app. 2. Tap your profile icon, then Payments & subscriptions, then Subscriptions. 3. Select Nebula and tap Cancel subscription. Please note that deleting the app does not cancel your subscription. Nebula Support Team",
+    "empathetic": "It can sometimes be confusing to figure out how to manage app subscriptions, but we are here to help. To cancel your subscription on Android, open the Google Play Store app, tap your profile icon followed by Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription. Please keep in mind that deleting the app does not cancel your subscription. Nebula Support Team",
+    "short": "To cancel your Android subscription, open the Google Play Store app, tap your profile icon, go to Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription."
+   },
+   "citations": [
+    {
+     "article_id": "kb-002",
+     "quote": "Subscriptions bought on Android are managed by Google Play."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": false,
+   "reasons": []
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1210,
+  "out_tokens": 314,
+  "thinking_tokens": 0,
+  "latency_s": 1.7761044280000533,
+  "api_latency_s": 1.7755254339999738,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"The customer is asking how to cancel their Android subscription. The knowledge base article provides the steps via Google Play Store.\",\n  \"replies\": {\n    \"formal\": \"Hello. To cancel your Android subscription, please follow these steps: 1. Open the Google Play Store app. 2. Tap your profile icon, then Payments & subscriptions, then Subscriptions. 3. Select Nebula and tap Cancel subscription. Please note that deleting the app does not cancel your subscription. Nebula Support Team\",\n    \"empathetic\": \"It can sometimes be confusing to figure out how to manage app subscriptions, but we are here to help. To cancel your subscription on Android, open the Google Play Store app, tap your profile icon followed by Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription. Please keep in mind that deleting the app does not cancel your subscription. Nebula Support Team\",\n    \"short\": \"To cancel your Android subscription, open the Google Play Store app, tap your profile icon, go to Payments & subscriptions, then Subscriptions, select Nebula, and tap Cancel subscription.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-002\",\n      \"quote\": \"Subscriptions bought on Android are managed by Google Play.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": false\n}"
+ },
+ "created_at": 1793402041.0299401
+}

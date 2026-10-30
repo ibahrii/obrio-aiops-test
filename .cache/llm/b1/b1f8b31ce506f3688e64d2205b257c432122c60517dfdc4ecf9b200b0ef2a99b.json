@@ -1,0 +1,49 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Escalate to Legal team to review unauthorized charges and coordinate response to lawyer threat"
+   },
+   "confidence": 0.94,
+   "needs_human": true,
+   "human_reasons": [
+    "chargeback threat",
+    "legal threat"
+   ],
+   "rationale": "The customer explicitly mentions a lawyer and threatens legal action over continued charges, triggering privacy_legal with a P1 priority; the underlying billing issue is noted as a secondary category."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2287,
+  "out_tokens": 258,
+  "thinking_tokens": 80,
+  "latency_s": 3.398259275186774,
+  "api_latency_s": 0.9705833359998906,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Escalate to Legal team to review unauthorized charges and coordinate response to lawyer threat\"\n  },\n  \"confidence\": 0.94,\n  \"needs_human\": true,\n  \"human_reasons\": [\"chargeback threat\", \"legal threat\"],\n  \"rationale\": \"The customer explicitly mentions a lawyer and threatens legal action over continued charges, triggering privacy_legal with a P1 priority; the underlying billing issue is noted as a secondary category.\"\n}"
+ },
+ "created_at": 1793402154.4686136
+}

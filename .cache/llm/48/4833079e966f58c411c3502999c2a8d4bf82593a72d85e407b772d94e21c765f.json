@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Process refund for the unauthorized subscription charge to avoid chargeback."
+   },
+   "confidence": 1.0,
+   "needs_human": true,
+   "human_reasons": [
+    "Threat of bank chargeback requires immediate financial intervention"
+   ],
+   "rationale": "The user is demanding a refund for an unwanted subscription charge and threatening a chargeback within 48 hours, making this a high-priority refund request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 236,
+  "out_tokens": 144,
+  "thinking_tokens": 0,
+  "latency_s": 1.4655872622256538,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\"category\": \"refund_request\", \"secondary_category\": \"billing_subscription\", \"priority\": \"P1\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"angry\", \"next_step\": {\"route_to\": \"Billing\", \"action\": \"Process refund for the unauthorized subscription charge to avoid chargeback.\"}, \"confidence\": 1.0, \"needs_human\": true, \"human_reasons\": [\"Threat of bank chargeback requires immediate financial intervention\"], \"rationale\": \"The user is demanding a refund for an unwanted subscription charge and threatening a chargeback within 48 hours, making this a high-priority refund request.\"}"
+ },
+ "created_at": 1793400863.0916886
+}

@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash on daily horoscope tab for Android 14 and provide fix or workaround."
+   },
+   "confidence": 0.97,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports a crash on a specific feature, which is a technical issue. It's a bug affecting one tab, so it gets P3 priority and can be handled by the tech team without human escalation."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1369,
+  "out_tokens": 205,
+  "thinking_tokens": 33,
+  "latency_s": 1.1749764022515592,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate crash on daily horoscope tab for Android 14 and provide fix or workaround.\"\n  },\n  \"confidence\": 0.97,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports a crash on a specific feature, which is a technical issue. It's a bug affecting one tab, so it gets P3 priority and can be handled by the tech team without human escalation.\"\n}"
+ },
+ "created_at": 1793401083.9577923
+}

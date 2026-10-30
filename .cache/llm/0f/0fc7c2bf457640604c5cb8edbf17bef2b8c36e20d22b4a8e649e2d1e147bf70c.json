@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "The customer is asking if they can gift a subscription to a friend for her birthday. The provided knowledge base articles do not contain information about gifting subscriptions.",
+   "replies": {
+    "formal": "Hello. Thank you for contacting us regarding our subscription options. We have received your inquiry about gifting a subscription to your friend, and our team will check this information and come back to you shortly. Nebula Support Team",
+    "empathetic": "It is so kind of you to want to give your friend a birthday gift through Nebula. We have received your question about whether subscriptions can be gifted, and our team will check the details and get back to you as soon as possible. Nebula Support Team",
+    "short": "Thank you for your question. We have received your inquiry about gifting a subscription, and our team will check and come back to you shortly."
+   },
+   "citations": [],
+   "reply_language": "en",
+   "kb_has_answer": false,
+   "human_decision_required": true,
+   "reasons": [
+    "the KB does not answer"
+   ]
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1165,
+  "out_tokens": 247,
+  "thinking_tokens": 0,
+  "latency_s": 1.837136403479235,
+  "api_latency_s": 1.8363386650003122,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"The customer is asking if they can gift a subscription to a friend for her birthday. The provided knowledge base articles do not contain information about gifting subscriptions.\",\n  \"replies\": {\n    \"formal\": \"Hello. Thank you for contacting us regarding our subscription options. We have received your inquiry about gifting a subscription to your friend, and our team will check this information and come back to you shortly. Nebula Support Team\",\n    \"empathetic\": \"It is so kind of you to want to give your friend a birthday gift through Nebula. We have received your question about whether subscriptions can be gifted, and our team will check the details and get back to you as soon as possible. Nebula Support Team\",\n    \"short\": \"Thank you for your question. We have received your inquiry about gifting a subscription, and our team will check and come back to you shortly.\"\n  },\n  \"citations\": [],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": false,\n  \"human_decision_required\": true,\n  \"reasons\": [\n    \"the KB does not answer\"\n  ]\n}"
+ },
+ "created_at": 1793402072.592194
+}

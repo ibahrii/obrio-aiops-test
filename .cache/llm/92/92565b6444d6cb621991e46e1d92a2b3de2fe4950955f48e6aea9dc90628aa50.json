@@ -1,0 +1,44 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Review the account subscription history, halt active billing, and flag for legal team due to attorney threat."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "chargeback or lawyer/legal threat",
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The explicit lawyer threat triggers privacy_legal as the primary category, while ongoing unwanted charges constitute a billing dispute making it high priority P1."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1835,
+  "out_tokens": 199,
+  "thinking_tokens": 0,
+  "latency_s": 1.585583869765287,
+  "api_latency_s": 1.5848527929997545,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Review the account subscription history, halt active billing, and flag for legal team due to attorney threat.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"chargeback or lawyer/legal threat\",\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The explicit lawyer threat triggers privacy_legal as the primary category, while ongoing unwanted charges constitute a billing dispute making it high priority P1.\"\n}"
+ },
+ "created_at": 1793401552.1766703
+}

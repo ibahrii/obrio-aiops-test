@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate Error 503 on 'Start chat' across platforms; check chat service health and backend logs; verify if outage is widespread or user-specific"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer cannot start any expert chat (Error 503) despite reinstalling, making a core paid feature completely unavailable; this qualifies as a P1 technical outage."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1972,
+  "out_tokens": 574,
+  "thinking_tokens": 448,
+  "latency_s": 10.377727331548613,
+  "api_latency_s": 10.376823489999879,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\": \"technical_issue\", \"secondary_category\": null, \"priority\": \"P1\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"frustrated\", \"next_step\": {\"route_to\": \"Tech\", \"action\": \"Investigate Error 503 on 'Start chat' across platforms; check chat service health and backend logs; verify if outage is widespread or user-specific\"}, \"confidence\": 0.95, \"needs_human\": false, \"human_reasons\": [], \"rationale\": \"The customer cannot start any expert chat (Error 503) despite reinstalling, making a core paid feature completely unavailable; this qualifies as a P1 technical outage.\"}"
+ },
+ "created_at": 1793401685.592509
+}

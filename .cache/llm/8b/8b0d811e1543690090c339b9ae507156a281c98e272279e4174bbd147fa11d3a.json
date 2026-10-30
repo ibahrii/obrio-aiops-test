@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Check purchase history, process refund for accidental 1-month subscription, and assist with free trial setup."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "User is requesting a financial refund for an accidental purchase"
+   ],
+   "rationale": "The user explicitly states they made a mistake purchasing a subscription instead of selecting the free trial and is requesting a refund."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 221,
+  "out_tokens": 186,
+  "thinking_tokens": 0,
+  "latency_s": 1.286037492565356,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Check purchase history, process refund for accidental 1-month subscription, and assist with free trial setup.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User is requesting a financial refund for an accidental purchase\"\n  ],\n  \"rationale\": \"The user explicitly states they made a mistake purchasing a subscription instead of selecting the free trial and is requesting a refund.\"\n}"
+ },
+ "created_at": 1793400689.6457794
+}

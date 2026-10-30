@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Explain how credits work and whether they expire according to current policy"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Customer asks how credits work and if they expire; this is a product question."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1946,
+  "out_tokens": 292,
+  "thinking_tokens": 203,
+  "latency_s": 5.108429888000046,
+  "api_latency_s": 5.107684670999788,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\": \"product_question\", \"secondary_category\": null, \"priority\": \"P3\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"calm\", \"next_step\": {\"route_to\": \"General Support\", \"action\": \"Explain how credits work and whether they expire according to current policy\"}, \"confidence\": 0.95, \"needs_human\": false, \"human_reasons\": [], \"rationale\": \"Customer asks how credits work and if they expire; this is a product question.\"}"
+ },
+ "created_at": 1793401722.8848028
+}

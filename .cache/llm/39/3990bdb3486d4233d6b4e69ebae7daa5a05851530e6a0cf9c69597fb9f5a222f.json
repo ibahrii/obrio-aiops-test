@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide step-by-step instructions on how to cancel an iOS subscription via Apple ID settings"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is asking how to cancel their subscription on an iPhone, which is a standard billing/subscription how-to question."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1943,
+  "out_tokens": 114,
+  "thinking_tokens": 0,
+  "latency_s": 11.257904188000339,
+  "api_latency_s": 11.257446740999967,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Provide step-by-step instructions on how to cancel an iOS subscription via Apple ID settings\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The customer is asking how to cancel their subscription on an iPhone, which is a standard billing/subscription how-to question.\"}"
+ },
+ "created_at": 1793401661.0883431
+}

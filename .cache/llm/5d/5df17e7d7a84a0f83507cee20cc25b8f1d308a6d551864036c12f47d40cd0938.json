@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Process the GDPR/CCPA data export request and send the personal data package to the user"
+   },
+   "confidence": 1.0,
+   "needs_human": true,
+   "human_reasons": [
+    "privacy_legal"
+   ],
+   "rationale": "The customer is requesting a copy of their stored personal data, which falls under privacy and legal data export requests (GDPR/CCPA)."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1829,
+  "out_tokens": 180,
+  "thinking_tokens": 0,
+  "latency_s": 2.1910898109958907,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Process the GDPR/CCPA data export request and send the personal data package to the user\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"privacy_legal\"\n  ],\n  \"rationale\": \"The customer is requesting a copy of their stored personal data, which falls under privacy and legal data export requests (GDPR/CCPA).\"\n}"
+ },
+ "created_at": 1793401185.9870837
+}

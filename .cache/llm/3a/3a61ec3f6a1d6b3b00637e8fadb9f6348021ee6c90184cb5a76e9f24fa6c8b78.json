@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide information on credit validity and expiration policy"
+   },
+   "confidence": 0.98,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket asks for clarification on how credits work and whether they expire, which is a product usage question. It's not urgent, the user is calm, and the answer can be provided from existing policy documentation without human intervention."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 640,
+  "out_tokens": 257,
+  "thinking_tokens": 91,
+  "latency_s": 1.0531301739481478,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Provide information on credit validity and expiration policy\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The ticket asks for clarification on how credits work and whether they expire, which is a product usage question. It's not urgent, the user is calm, and the answer can be provided from existing policy documentation without human intervention.\"\n}"
+ },
+ "created_at": 1793400901.861675
+}

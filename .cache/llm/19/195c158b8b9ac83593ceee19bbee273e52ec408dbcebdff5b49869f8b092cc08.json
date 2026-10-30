@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate Error 503 on chat service start and verify active outages"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Core paid functionality (expert chat) is completely unavailable to the customer due to a server error, making this a P1 technical issue."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1977,
+  "out_tokens": 113,
+  "thinking_tokens": 0,
+  "latency_s": 2.2686592579998432,
+  "api_latency_s": 2.267881763999867,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"technical_issue\",\"secondary_category\":null,\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Investigate Error 503 on chat service start and verify active outages\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"Core paid functionality (expert chat) is completely unavailable to the customer due to a server error, making this a P1 technical issue.\"}"
+ },
+ "created_at": 1793401686.9056249
+}

@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash on launch after latest update; collect device model, OS version, app version, and crash logs; verify subscription status and provide workaround or hotfix"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "App crashes immediately on start after update, reinstall doesn't help, paid subscription but core service completely unavailable — technical_issue with P1 priority per outage rule."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1961,
+  "out_tokens": 389,
+  "thinking_tokens": 264,
+  "latency_s": 7.869694195000193,
+  "api_latency_s": 7.868745923999995,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\": \"technical_issue\", \"secondary_category\": null, \"priority\": \"P1\", \"requester_type\": \"user\", \"language\": \"de\", \"sentiment\": \"frustrated\", \"next_step\": {\"route_to\": \"Tech\", \"action\": \"Investigate crash on launch after latest update; collect device model, OS version, app version, and crash logs; verify subscription status and provide workaround or hotfix\"}, \"confidence\": 0.95, \"needs_human\": false, \"human_reasons\": [], \"rationale\": \"App crashes immediately on start after update, reinstall doesn't help, paid subscription but core service completely unavailable — technical_issue with P1 priority per outage rule.\"}"
+ },
+ "created_at": 1793401824.8925397
+}

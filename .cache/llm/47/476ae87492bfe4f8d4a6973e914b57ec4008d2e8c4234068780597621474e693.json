@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the $14.99 NEBULA*CREDITS charge, verify the transaction, and respond to the user with an explanation and possible refund."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "User is demanding immediate clarification on a financial charge and is using hostile language."
+   ],
+   "rationale": "The ticket concerns an unexpected charge on the user's bank statement, which falls under billing/subscription issues. The user is angry and requests an answer today, making it high priority and requiring a human to handle the financial inquiry and potential refund."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 651,
+  "out_tokens": 292,
+  "thinking_tokens": 82,
+  "latency_s": 1.2844454652640707,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the $14.99 NEBULA*CREDITS charge, verify the transaction, and respond to the user with an explanation and possible refund.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User is demanding immediate clarification on a financial charge and is using hostile language.\"\n  ],\n  \"rationale\": \"The ticket concerns an unexpected charge on the user's bank statement, which falls under billing/subscription issues. The user is angry and requests an answer today, making it high priority and requiring a human to handle the financial inquiry and potential refund.\"\n}"
+ },
+ "created_at": 1793400910.0938845
+}

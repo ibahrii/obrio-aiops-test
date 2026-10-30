@@ -1,0 +1,42 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": "billing_subscription",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash on app launch after recent update and provide troubleshooting steps or hotfix info to user."
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "User is experiencing app crashes preventing usage despite having an active subscription"
+   ],
+   "rationale": "The user is reporting a critical technical issue where the app crashes immediately on startup after an update, rendering their paid subscription unusable. Sentiment is frustrated."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 230,
+  "out_tokens": 193,
+  "thinking_tokens": 0,
+  "latency_s": 1.5659401219322717,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"de\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate crash on app launch after recent update and provide troubleshooting steps or hotfix info to user.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"User is experiencing app crashes preventing usage despite having an active subscription\"\n  ],\n  \"rationale\": \"The user is reporting a critical technical issue where the app crashes immediately on startup after an update, rendering their paid subscription unusable. Sentiment is frustrated.\"\n}"
+ },
+ "created_at": 1793400805.8841615
+}

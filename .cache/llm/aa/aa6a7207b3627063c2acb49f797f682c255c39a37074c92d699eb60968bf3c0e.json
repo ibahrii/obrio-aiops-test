@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "product_question",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate $34.99 charge on October 3rd, verify subscription status, and answer questions about new Tarot decks and 3 am push notifications."
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The user reports an unexpected duplicate charge (billing_subscription) and also asks about upcoming Tarot decks and push‑notification timing (product_question). The billing issue is a P2 error; mixed money and non‑money topics require human review."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2136,
+  "out_tokens": 1612,
+  "thinking_tokens": 1650,
+  "latency_s": 18.89560686499999,
+  "api_latency_s": 18.89506620400016,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"product_question\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate $34.99 charge on October 3rd, verify subscription status, and answer questions about new Tarot decks and 3 am push notifications.\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The user reports an unexpected duplicate charge (billing_subscription) and also asks about upcoming Tarot decks and push‑notification timing (product_question). The billing issue is a P2 error; mixed money and non‑money topics require human review.\"\n}"
+ },
+ "created_at": 1793401870.1566436
+}

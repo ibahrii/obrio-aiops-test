@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Verify subscription status and charges for the last 4 months; prepare documentation for potential legal inquiry; coordinate with Billing for any refunds"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "legal threat"
+   ],
+   "rationale": "The customer explicitly threatens legal action ('My lawyer will be in touch'), which triggers privacy_legal category and P1 priority; the underlying issue is recurring charges after app deletion."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1946,
+  "out_tokens": 578,
+  "thinking_tokens": 477,
+  "latency_s": 5.153833483999733,
+  "api_latency_s": 5.153281100000186,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Verify subscription status and charges for the last 4 months; prepare documentation for potential legal inquiry; coordinate with Billing for any refunds\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\"legal threat\"],\n  \"rationale\": \"The customer explicitly threatens legal action ('My lawyer will be in touch'), which triggers privacy_legal category and P1 priority; the underlying issue is recurring charges after app deletion.\"\n}"
+ },
+ "created_at": 1793401980.689927
+}

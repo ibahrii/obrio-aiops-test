@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Log the feature request for a moon calendar home screen widget and pass to product team"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Positive feedback with a feature suggestion for a home screen widget; no issue or complaint present."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1942,
+  "out_tokens": 265,
+  "thinking_tokens": 163,
+  "latency_s": 6.812768820999736,
+  "api_latency_s": 6.812264185000004,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\"category\": \"feedback_other\", \"secondary_category\": null, \"priority\": \"P4\", \"requester_type\": \"user\", \"language\": \"en\", \"sentiment\": \"calm\", \"next_step\": {\"route_to\": \"General Support\", \"action\": \"Log the feature request for a moon calendar home screen widget and pass to product team\"}, \"confidence\": 0.95, \"needs_human\": false, \"human_reasons\": [], \"rationale\": \"Positive feedback with a feature suggestion for a home screen widget; no issue or complaint present.\"}"
+ },
+ "created_at": 1793401735.3984363
+}

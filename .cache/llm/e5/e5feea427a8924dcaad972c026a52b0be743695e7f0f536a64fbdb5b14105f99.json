@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "uk",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Provide instructions on how to access the consultation history within the app"
+   },
+   "confidence": 0.96,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user asks how to view their consultation history, which is a feature usage question, fitting product_question. No urgency indicated."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2296,
+  "out_tokens": 228,
+  "thinking_tokens": 76,
+  "latency_s": 18.296816760167985,
+  "api_latency_s": 0.9342779300000075,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"uk\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Provide instructions on how to access the consultation history within the app\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user asks how to view their consultation history, which is a feature usage question, fitting product_question. No urgency indicated.\"\n}"
+ },
+ "created_at": 1793402108.2730708
+}

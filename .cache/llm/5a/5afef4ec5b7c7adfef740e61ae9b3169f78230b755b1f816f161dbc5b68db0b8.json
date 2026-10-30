@@ -1,0 +1,46 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "uk",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Provide guidance on selecting a tarot expert, including filters and criteria"
+   },
+   "confidence": 0.96,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user asks how to choose a tarot expert, which is a feature question; no urgency or other issues are present."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2297,
+  "out_tokens": 206,
+  "thinking_tokens": 55,
+  "latency_s": 2.541450912979144,
+  "api_latency_s": 1.1414670569997725,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"uk\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Provide guidance on selecting a tarot expert, including filters and criteria\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user asks how to choose a tarot expert, which is a feature question; no urgency or other issues are present.\"\n}"
+ },
+ "created_at": 1793401901.0186026
+}

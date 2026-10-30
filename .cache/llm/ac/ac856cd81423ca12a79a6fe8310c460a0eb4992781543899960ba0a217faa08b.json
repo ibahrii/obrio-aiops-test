@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Collect device/app version and reproduce the daily horoscope tab crash on Android 14"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Single-feature crash on Android 14 with other tabs working; a workaround exists, so it's a P3 technical issue."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1948,
+  "out_tokens": 347,
+  "thinking_tokens": 210,
+  "latency_s": 3.4238011709999228,
+  "api_latency_s": 3.423261982999975,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Collect device/app version and reproduce the daily horoscope tab crash on Android 14\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"Single-feature crash on Android 14 with other tabs working; a workaround exists, so it's a P3 technical issue.\"\n}"
+ },
+ "created_at": 1793401674.6385794
+}

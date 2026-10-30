@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Explain the credit system and expiration policy"
+   },
+   "confidence": 0.99,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is asking a straightforward feature and policy question about how credits work."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1949,
+  "out_tokens": 146,
+  "thinking_tokens": 0,
+  "latency_s": 1.455602595979144,
+  "api_latency_s": 1.4544153419997201,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Explain the credit system and expiration policy\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is asking a straightforward feature and policy question about how credits work.\"\n}"
+ },
+ "created_at": 1793401364.196926
+}

@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Mark as unclear/gibberish and close or request clarification"
+   },
+   "confidence": 0.96,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The message contains nonsensical text with no identifiable request, fitting the feedback_other category and low priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1358,
+  "out_tokens": 193,
+  "thinking_tokens": 45,
+  "latency_s": 1.0827220407236382,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"unknown\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Mark as unclear/gibberish and close or request clarification\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The message contains nonsensical text with no identifiable request, fitting the feedback_other category and low priority.\"\n}"
+ },
+ "created_at": 1793401228.417411
+}

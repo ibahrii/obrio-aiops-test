@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash on app launch for iOS/Android and provide troubleshooting steps for subscription holders."
+   },
+   "confidence": 0.98,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The primary issue is a technical crash preventing app access after an update, making the paid service completely unavailable and triggering a P1 priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 999,
+  "out_tokens": 170,
+  "thinking_tokens": 0,
+  "latency_s": 1.5782894872279485,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"de\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate crash on app launch for iOS/Android and provide troubleshooting steps for subscription holders.\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The primary issue is a technical crash preventing app access after an update, making the paid service completely unavailable and triggering a P1 priority.\"\n}"
+ },
+ "created_at": 1793401011.791862
+}

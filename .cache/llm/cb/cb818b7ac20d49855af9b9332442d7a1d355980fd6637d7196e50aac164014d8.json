@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Explain credit carry-over policy when switching plans and clarify pricing differences between app store and website"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Customer asks two product questions: credit carry-over on plan change and price discrepancy between app and website. No money request, threat, or bug — pure how-to/feature inquiry."
+  },
+  "model": "openrouter-nemotron-free",
+  "requested_model": "openrouter-nemotron-free",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1961,
+  "out_tokens": 293,
+  "thinking_tokens": 156,
+  "latency_s": 29.95444059800002,
+  "api_latency_s": 29.953893978999986,
+  "attempts": [
+   {
+    "model": "openrouter-nemotron-free",
+    "event": "ok",
+    "detail": "nvidia/nemotron-3-ultra-550b-a55b:free"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Explain credit carry-over policy when switching plans and clarify pricing differences between app store and website\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"Customer asks two product questions: credit carry-over on plan change and price discrepancy between app and website. No money request, threat, or bug — pure how-to/feature inquiry.\"\n}"
+ },
+ "created_at": 1793401802.727159
+}

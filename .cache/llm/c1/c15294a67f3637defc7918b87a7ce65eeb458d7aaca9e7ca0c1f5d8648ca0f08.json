@@ -1,0 +1,40 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "product_question",
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Clarify credit rollover policy for plan switches and explain the pricing discrepancy between app store and website."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is asking a product and billing question regarding credit rollover and subscription pricing differences between platforms."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 233,
+  "out_tokens": 110,
+  "thinking_tokens": 0,
+  "latency_s": 1.2463630659844966,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":\"product_question\",\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Clarify credit rollover policy for plan switches and explain the pricing discrepancy between app store and website.\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user is asking a product and billing question regarding credit rollover and subscription pricing differences between platforms.\"}"
+ },
+ "created_at": 1793400787.5638537
+}

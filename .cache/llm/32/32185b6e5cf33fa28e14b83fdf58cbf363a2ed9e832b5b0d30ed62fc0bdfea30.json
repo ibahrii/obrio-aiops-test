@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Escalate ticket to Trust & Safety for immediate review of expert behavior and initiate user outreach"
+   },
+   "confidence": 0.99,
+   "needs_human": true,
+   "human_reasons": [
+    "Potential harassment and policy violation requires human judgment",
+    "User safety and expert conduct need manual investigation"
+   ],
+   "rationale": "The user reports abusive and discriminatory remarks from an expert, which is a serious violation of community standards and warrants urgent human intervention."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 653,
+  "out_tokens": 259,
+  "thinking_tokens": 74,
+  "latency_s": 1.3082424020972212,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"expert_complaint\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Escalate ticket to Trust & Safety for immediate review of expert behavior and initiate user outreach\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Potential harassment and policy violation requires human judgment\",\n    \"User safety and expert conduct need manual investigation\"\n  ],\n  \"rationale\": \"The user reports abusive and discriminatory remarks from an expert, which is a serious violation of community standards and warrants urgent human intervention.\"\n}"
+ },
+ "created_at": 1793400900.1165397
+}

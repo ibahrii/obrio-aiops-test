@@ -1,0 +1,47 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "summary": "The customer states that their booked expert did not show up for a session yesterday and is asking about their credits.",
+   "replies": {
+    "formal": "Hello. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Please let us know if you need further assistance with your account. Nebula Support Team",
+    "empathetic": "We understand it is frustrating when an expert does not show up for your scheduled session. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Nebula Support Team",
+    "short": "If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log."
+   },
+   "citations": [
+    {
+     "article_id": "kb-011",
+     "quote": "If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours."
+    },
+    {
+     "article_id": "kb-011",
+     "quote": "If the credits were not returned after 24 hours, support can return them manually after checking the session log."
+    }
+   ],
+   "reply_language": "en",
+   "kb_has_answer": true,
+   "human_decision_required": false,
+   "reasons": []
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1153,
+  "out_tokens": 384,
+  "thinking_tokens": 0,
+  "latency_s": 1.6730990751884747,
+  "api_latency_s": 1.671724499999982,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"summary\": \"The customer states that their booked expert did not show up for a session yesterday and is asking about their credits.\",\n  \"replies\": {\n    \"formal\": \"Hello. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Please let us know if you need further assistance with your account. Nebula Support Team\",\n    \"empathetic\": \"We understand it is frustrating when an expert does not show up for your scheduled session. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Nebula Support Team\",\n    \"short\": \"If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log.\"\n  },\n  \"citations\": [\n    {\n      \"article_id\": \"kb-011\",\n      \"quote\": \"If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours.\"\n    },\n    {\n      \"article_id\": \"kb-011\",\n      \"quote\": \"If the credits were not returned after 24 hours, support can return them manually after checking the session log.\"\n    }\n  ],\n  \"reply_language\": \"en\",\n  \"kb_has_answer\": true,\n  \"human_decision_required\": false\n}"
+ },
+ "created_at": 1793402058.9275253
+}

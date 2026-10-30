@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "expert_complaint",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Process credit refund and flag expert Sofia for review"
+   },
+   "confidence": 0.98,
+   "needs_human": true,
+   "human_reasons": [
+    "Refund requires verification of charge",
+    "Expert misconduct needs manual review and possible disciplinary action"
+   ],
+   "rationale": "The user reports being charged credits for a missed expert session and requests a refund plus reporting the expert. This is both a refund request and an expert complaint, warranting high priority and human handling."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 650,
+  "out_tokens": 270,
+  "thinking_tokens": 81,
+  "latency_s": 6.317901073123721,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"expert_complaint\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Expert Quality\",\n    \"action\": \"Process credit refund and flag expert Sofia for review\"\n  },\n  \"confidence\": 0.98,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Refund requires verification of charge\",\n    \"Expert misconduct needs manual review and possible disciplinary action\"\n  ],\n  \"rationale\": \"The user reports being charged credits for a missed expert session and requests a refund plus reporting the expert. This is both a refund request and an expert complaint, warranting high priority and human handling.\"\n}"
+ },
+ "created_at": 1793400921.5565996
+}

@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "technical_issue",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify Google Play purchase status on the user's account and sync entitlements or resolve payment mismatch."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "Paid service unavailable / purchase not recognized after payment"
+   ],
+   "rationale": "The user paid for a yearly subscription via Google Play but cannot access it, which qualifies as a billing error and an unauthorized/unrecognized payment issue requiring P1 priority and human agent review."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 990,
+  "out_tokens": 198,
+  "thinking_tokens": 0,
+  "latency_s": 1.4318538019997504,
+  "api_latency_s": 1.430920774000242,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"technical_issue\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Verify Google Play purchase status on the user's account and sync entitlements or resolve payment mismatch.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"Paid service unavailable / purchase not recognized after payment\"\n  ],\n  \"rationale\": \"The user paid for a yearly subscription via Google Play but cannot access it, which qualifies as a billing error and an unauthorized/unrecognized payment issue requiring P1 priority and human agent review.\"\n}"
+ },
+ "created_at": 1793401464.252713
+}

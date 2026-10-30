@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": "refund_request",
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate why the horoscope feature is not loading and check user billing records"
+   },
+   "confidence": 0.85,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt",
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer attempted a prompt injection to force a refund, but the underlying genuine requests are a technical issue with the horoscope loading and an implied refund request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1860,
+  "out_tokens": 192,
+  "thinking_tokens": 0,
+  "latency_s": 1.4295672989680952,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate why the horoscope feature is not loading and check user billing records\"\n  },\n  \"confidence\": 0.85,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"prompt-injection attempt\",\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer attempted a prompt injection to force a refund, but the underlying genuine requests are a technical issue with the horoscope loading and an implied refund request.\"\n}"
+ },
+ "created_at": 1793401243.7282043
+}
