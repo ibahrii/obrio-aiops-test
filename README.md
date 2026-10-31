@@ -1,4 +1,4 @@
-# Nebula Support AI — тестове завдання OBRIO (AI Ops Specialist)
+# Nebula Support AI: тестове завдання OBRIO (AI Ops Specialist)
 
 Два інструменти для команди Support продукту Nebula:
 
@@ -7,7 +7,7 @@
 3. **API і вебхук-маршрутизація** (FastAPI): вебхук нового тікета з CRM (Zendesk / Intercom) → класифікація → P1 у Telegram, `needs_human` у Review queue, решта в CRM (симуляція CSV). Ідемпотентно за `ticket_id`.
 4. **PII-маскування:** email, телефони, картки й імена замінюються на `[EMAIL]` `[PHONE]` `[CARD]` `[NAME]` до будь-якого виклику LLM.
 
-🌐 Демо: **https://obrio-support-ai.streamlit.app** · 📄 Звіт: [`REPORT.md`](REPORT.md) (повні деталі — [`docs/APPENDIX.md`](docs/APPENDIX.md)) · еволюція промптів: [`PROMPT_LOG.md`](PROMPT_LOG.md) · шпаргалка: [`DECISIONS.md`](DECISIONS.md) · результати: [`eval/results/`](eval/results/)
+Демо: **https://obrio-support-ai.streamlit.app** · Звіт: [`REPORT.md`](REPORT.md) (повні деталі в [`docs/APPENDIX.md`](docs/APPENDIX.md)) · еволюція промптів: [`PROMPT_LOG.md`](PROMPT_LOG.md) · шпаргалка: [`DECISIONS.md`](DECISIONS.md) · результати: [`eval/results/`](eval/results/)
 
 > **Усі дані синтетичні.** Тікети, база знань (`data/kb/`, 18 статей) і політики (наприклад, «14 днів на повернення») вигадані для демо й не відображають реальних правил OBRIO/Nebula. Використовуються лише безкоштовні API.
 
@@ -54,13 +54,13 @@ curl -s localhost:8000/webhook/ticket -H 'Content-Type: application/json' -d '{"
 
 Повторіть ту саму команду: відповідь буде `"duplicate": true`, без повторного виклику LLM і без другого сповіщення.
 
-**Маршрутизація:** P1 → Telegram (або рядок у `logs/notifications.log`, якщо змінних немає) · `needs_human` → `data/runtime/review_queue.jsonl` (кнопка «Load tickets queued by the webhook API» у Streamlit) · решта → `data/runtime/crm_tickets.csv`. Стан ідемпотентності — `data/runtime/router.sqlite`. Каталог `data/runtime/` не комітиться, шлях змінюється через `ROUTER_STATE_DIR`.
+**Маршрутизація:** P1 → Telegram (або рядок у `logs/notifications.log`, якщо змінних немає) · `needs_human` → `data/runtime/review_queue.jsonl` (кнопка «Load tickets queued by the webhook API» у Streamlit) · решта → `data/runtime/crm_tickets.csv`. Стан ідемпотентності зберігається в `data/runtime/router.sqlite`. Каталог `data/runtime/` не комітиться, шлях змінюється через `ROUTER_STATE_DIR`.
 
 Необов'язкові змінні оточення (є в `.env.example`):
-- `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` — сповіщення про P1;
-- `WEBHOOK_SECRET` — перевірка HMAC-підпису вебхука (Zendesk `X-Zendesk-Webhook-Signature`, Intercom `X-Hub-Signature` або `X-Signature`).
+- `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`: сповіщення про P1;
+- `WEBHOOK_SECRET`: перевірка HMAC-підпису вебхука (Zendesk `X-Zendesk-Webhook-Signature`, Intercom `X-Hub-Signature` або `X-Signature`).
 
-End-to-end демо: 5 тікетів по HTTP + повторна доставка, з реальними викликами LLM. Результат — [`eval/results/webhook_demo.md`](eval/results/webhook_demo.md):
+End-to-end демо: 5 тікетів по HTTP + повторна доставка, з реальними викликами LLM. Результат: [`eval/results/webhook_demo.md`](eval/results/webhook_demo.md):
 
 ```bash
 python eval/webhook_demo.py
@@ -70,7 +70,7 @@ python eval/webhook_demo.py
 
 1. Запушити репозиторій на GitHub.
 2. На [share.streamlit.io](https://share.streamlit.io) → **Create app** → вибрати репозиторій, гілку, файл `app.py`.
-3. **Advanced settings → Secrets** — вставити (формат як у `.streamlit/secrets.toml.example`):
+3. **Advanced settings → Secrets**: вставити (формат як у `.streamlit/secrets.toml.example`):
    ```toml
    GEMINI_API_KEY = "..."
    GROQ_API_KEY = "..."
@@ -122,7 +122,7 @@ src/pii.py              маскування PII перед викликами L
 src/router.py           парсинг вебхуків, ідемпотентність, P1 → Telegram, needs_human → черга, решта → CSV
 src/api.py              FastAPI: /webhook/ticket, /classify, /assist
 src/cost.py             вартість
-prompts/                classifier_v1..v5.md (v4 — фінал, v5 відхилено), assistant_v1..v2.md
+prompts/                classifier_v1..v5.md (v4 фінальна, v5 відхилено), assistant_v1..v2.md
 data/                   tickets_eval.jsonl (30), tickets_holdout.jsonl (10), tickets_holdout2.jsonl (10),
                         tickets_noisy.jsonl (14), assistant_eval.jsonl (10), kb/*.md (18)
 eval/                   run_eval.py, compare_models.py, run_assistant_eval.py, cost_report.py,

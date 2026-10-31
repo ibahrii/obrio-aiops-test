@@ -1,4 +1,4 @@
-# Assistant eval — prompt `v2`, model `gemini-flash-lite`
+# Assistant eval: prompt `v2`, model `gemini-flash-lite`
 
 hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_expansion': 100.0}) · citation validity 100.0% · language 100.0% · length ok {'formal': 100.0, 'empathetic': 100.0, 'short': 90.0} · avg words {'formal': 61.5, 'empathetic': 73.5, 'short': 37.5} · human decision 80.0% (recall 100.0%) · kb_has_answer 100.0%
 
@@ -11,13 +11,13 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 | A05 | expert no-show | en | ['kb-011'] → ['kb-011', 'kb-010', 'kb-014'] | ✅ | 2/2 | ✅ | ✅✅✅ | True → True |
 | A06 | crisis | en | ['kb-016'] → ['kb-016', 'kb-018', 'kb-015'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
 | A07 | GDPR deletion, non-English | uk | ['kb-009'] → ['kb-009', 'kb-010', 'kb-004'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
-| A08 | no answer in KB | en | [] → ['kb-016', 'kb-018', 'kb-014'] | — | 0/0 | ✅ | ✅✅✅ | True → True |
+| A08 | no answer in KB | en | [] → ['kb-016', 'kb-018', 'kb-014'] | - | 0/0 | ✅ | ✅✅✅ | True → True |
 | A09 | repeat contact, angry | en | ['kb-007'] → ['kb-007', 'kb-008', 'kb-003'] | ✅ | 3/3 | ✅ | ✅✅❌ | True → True |
 | A10 | tech, non-English | de | ['kb-013'] → ['kb-013', 'kb-012', 'kb-006'] | ✅ | 3/3 | ✅ | ✅✅✅ | False → True |
 
 ## Drafts (for manual review)
 
-### A01 — routine how-to
+### A01: routine how-to
 
 **Ticket:** How do I cancel my subscription? I'm on Android.
 
@@ -31,7 +31,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** []
 
-### A02 — double charge
+### A02: double charge
 
 **Ticket:** I was charged twice for my monthly plan yesterday, $19.99 two times. What's goin
 
@@ -45,7 +45,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model (not supported by ticket text): chargeback or legal threat']
 
-### A03 — refund inside policy, non-English
+### A03: refund inside policy, non-English
 
 **Ticket:** Compré un paquete de créditos por error hace 3 días y todavía no lo he usado. ¿M
 
@@ -59,7 +59,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** []
 
-### A04 — refund outside policy
+### A04: refund outside policy
 
 **Ticket:** I bought credits 2 months ago and I want my money back, I just don't like the re
 
@@ -73,7 +73,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model: refund outside policy', 'classifier: model: refund clearly outside a 14-day window', 'classifier: refund possibly outside 14-day policy']
 
-### A05 — expert no-show
+### A05: expert no-show
 
 **Ticket:** The expert didn't show up to my booked session yesterday. Where are my credits?
 
@@ -87,7 +87,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['classifier: model: mixed topics where one is about money', 'classifier: mixed topics involving money']
 
-### A06 — crisis
+### A06: crisis
 
 **Ticket:** I feel like there's no reason to keep going anymore. Nothing in my life works, n
 
@@ -101,7 +101,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model: crisis or safety risk', 'classifier: model: safety_wellbeing', 'classifier: safety_wellbeing: possible vulnerable user']
 
-### A07 — GDPR deletion, non-English
+### A07: GDPR deletion, non-English
 
 **Ticket:** Хочу видалити свій акаунт і всі мої дані назавжди.
 
@@ -115,7 +115,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model: data deletion/export (GDPR)', 'classifier: model: privacy_legal', 'classifier: privacy_legal: legal/GDPR consequences']
 
-### A08 — no answer in KB
+### A08: no answer in KB
 
 **Ticket:** Can I gift a subscription to my friend for her birthday?
 
@@ -129,7 +129,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model: the KB does not answer', 'no source in the knowledge base for this answer']
 
-### A09 — repeat contact, angry
+### A09: repeat contact, angry
 
 **Ticket:** This is the THIRD time I'm writing!!! My password reset email never comes and no
 
@@ -143,7 +143,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Reasons:** ['model: repeated contact from an angry customer', 'repeated contact from an angry customer']
 
-### A10 — tech, non-English
+### A10: tech, non-English
 
 **Ticket:** Die App stürzt bei jedem Start ab, ich habe sie schon neu installiert.
 

@@ -113,11 +113,11 @@ def write_report(results) -> None:
           "|---|---|---|---|---|---|---|---|---|"]
     for i, (title, r, secs, sent) in enumerate(results, 1):
         if r["duplicate"]:
-            md.append(f"| {i} | {title} | {r['ticket_id']} | — | — | — | **duplicate: no side effects** | {len(sent)} | {secs} |")
+            md.append(f"| {i} | {title} | {r['ticket_id']} | - | - | - | **duplicate: no side effects** | {len(sent)} | {secs} |")
             continue
         c = r["classification"]
         acts = ", ".join(f"{a['type']} ({a.get('channel', a.get('status'))})" for a in r["actions"])
-        md.append(f"| {i} | {title} | {r['ticket_id']} | {r['pii_masked'] or '—'} | {c['category']}"
+        md.append(f"| {i} | {title} | {r['ticket_id']} | {r['pii_masked'] or '-'} | {c['category']}"
                   f"{' + ' + c['secondary_category'] if c['secondary_category'] else ''} / {c['priority']} | "
                   f"{c['needs_human']} | {acts} | {len(sent)} | {secs} |")
     md += ["", "## What the model actually received", "",

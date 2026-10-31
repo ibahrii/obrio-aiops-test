@@ -1,4 +1,4 @@
-# Classifier eval (eval) — prompt `v2`, model `groq-gpt-oss-120b`
+# Classifier eval (eval): prompt `v2`, model `groq-gpt-oss-120b`
 
 n=30 · category **96.7%** (lenient 96.7%) · priority **90.0%** · both **90.0%** · needs_human 83.3% (recall 90.0%, precision 69.2%)
 edge cases: category 94.4% / priority 83.3% · regular: category 100.0% / priority 100.0%

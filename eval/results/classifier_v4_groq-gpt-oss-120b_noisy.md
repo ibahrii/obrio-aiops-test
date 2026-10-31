@@ -1,4 +1,4 @@
-# Classifier eval (noisy) — prompt `v4`, model `groq-gpt-oss-120b`
+# Classifier eval (noisy): prompt `v4`, model `groq-gpt-oss-120b`
 
 n=14 · category **92.9%** (lenient 92.9%) · priority **78.6%** · both **71.4%** · needs_human 100.0% (recall 100.0%, precision 100.0%)
 edge cases: category 92.9% / priority 78.6% · regular: category 0.0% / priority 0.0%

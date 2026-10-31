@@ -89,8 +89,8 @@ def evaluate(model: str, prompt: str, classifier_model: str | None = None) -> di
 
 
 def to_markdown(s: dict, rows: list[dict]) -> str:
-    yn = lambda b: "—" if b is None else ("✅" if b else "❌")  # noqa: E731
-    out = [f"# Assistant eval — prompt `{s['prompt']}`, model `{s['model']}`", "",
+    yn = lambda b: "-" if b is None else ("✅" if b else "❌")  # noqa: E731
+    out = [f"# Assistant eval: prompt `{s['prompt']}`, model `{s['model']}`", "",
            f"hit@3 {s['hit3']}% (ablation: {s['ablation_hit3']}) · citation validity {s['citation_validity']}% · "
            f"language {s['language_acc']}% · length ok {s['length_ok']} · avg words {s['avg_words']} · "
            f"human decision {s['human_acc']}% (recall {s['human_recall']}%) · kb_has_answer {s['kb_has_answer_acc']}%", "",
@@ -103,7 +103,7 @@ def to_markdown(s: dict, rows: list[dict]) -> str:
                    f"{yn(lo.get('formal'))}{yn(lo.get('empathetic'))}{yn(lo.get('short'))} | {r['exp_human']} → {r['act_human']} |")
     out += ["", "## Drafts (for manual review)", ""]
     for r in rows:
-        out.append(f"### {r['id']} — {r['scenario']}\n\n**Ticket:** {r['input']}\n\n**Summary:** {r['summary']}\n")
+        out.append(f"### {r['id']}: {r['scenario']}\n\n**Ticket:** {r['input']}\n\n**Summary:** {r['summary']}\n")
         for t, txt in r["replies"].items():
             out.append(f"- **{t}** ({r['words'].get(t)} words): {txt}")
         out.append(f"\n**Citations:** " + "; ".join(f"`{c['article_id']}` {'✅' if c['valid'] else '❌'} “{c['quote']}”" for c in r["citations"]))

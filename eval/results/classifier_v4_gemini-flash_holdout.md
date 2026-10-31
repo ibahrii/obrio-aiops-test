@@ -1,4 +1,4 @@
-# Classifier eval (holdout) — prompt `v4`, model `gemini-flash`
+# Classifier eval (holdout): prompt `v4`, model `gemini-flash`
 
 **Not measured: 10 of 10 tickets** (free-tier daily quota exhausted); metrics below use the measured 0.
 n=0 · category **0.0%** (lenient 0.0%) · priority **0.0%** · both **0.0%** · needs_human 0.0% (recall 0.0%, precision 0.0%)

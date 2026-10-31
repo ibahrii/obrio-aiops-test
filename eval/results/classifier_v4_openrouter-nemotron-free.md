@@ -1,4 +1,4 @@
-# Classifier eval (eval) — prompt `v4`, model `openrouter-nemotron-free`
+# Classifier eval (eval): prompt `v4`, model `openrouter-nemotron-free`
 
 n=30 · category **96.7%** (lenient 96.7%) · priority **96.7%** · both **93.3%** · needs_human 96.7% (recall 90.0%, precision 100.0%)
 edge cases: category 100.0% / priority 94.4% · regular: category 91.7% / priority 100.0%

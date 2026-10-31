@@ -1,4 +1,4 @@
-# Classifier eval (holdout) — prompt `v2`, model `gemini-flash-lite`
+# Classifier eval (holdout): prompt `v2`, model `gemini-flash-lite`
 
 n=10 · category **90.0%** (lenient 100.0%) · priority **90.0%** · both **80.0%** · needs_human 90.0% (recall 100.0%, precision 83.3%)
 edge cases: category 83.3% / priority 100.0% · regular: category 100.0% / priority 75.0%

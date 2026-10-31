@@ -4,7 +4,7 @@ Masks emails, card numbers, phone numbers and customer names with fixed
 placeholders: [EMAIL], [CARD], [PHONE], [NAME].
 
 Names are found three ways:
-  * names the caller already knows (requester name from the CRM webhook) — the most reliable source;
+  * names the caller already knows (requester name from the CRM webhook), the most reliable source;
   * self-introductions ("my name is ...", "мене звати ...", "me llamo ...");
   * a sign-off at the very end of the ticket ("Regards,\\nAnna Kovalenko").
 Expert profile names inside complaints ("expert Luna Starr") are deliberately NOT masked: they are public

@@ -149,7 +149,7 @@ def evaluate(model: str, prompt: str, fallback: bool = False, verbose: bool = Tr
 
 def to_markdown(s: dict, rows: list[dict]) -> str:
     yn = lambda b: "✅" if b else "❌"  # noqa: E731
-    out = [f"# Classifier eval ({s.get('dataset', 'eval')}) — prompt `{s['prompt']}`, model `{s['model']}`{' (fallback on)' if s['fallback'] else ''}", ""]
+    out = [f"# Classifier eval ({s.get('dataset', 'eval')}): prompt `{s['prompt']}`, model `{s['model']}`{' (fallback on)' if s['fallback'] else ''}", ""]
     if s.get("not_measured"):
         out.append(f"**Not measured: {s['not_measured']} of {s['n_total']} tickets** (free-tier daily quota exhausted); metrics below use the measured {s['n']}.")
     out.append(f"n={s['n']} · category **{s['category_acc']}%** (lenient {s['category_lenient_acc']}%) · "

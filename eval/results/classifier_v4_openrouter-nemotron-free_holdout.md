@@ -1,4 +1,4 @@
-# Classifier eval (holdout) — prompt `v4`, model `openrouter-nemotron-free`
+# Classifier eval (holdout): prompt `v4`, model `openrouter-nemotron-free`
 
 n=10 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 100.0% (recall 100.0%, precision 100.0%)
 edge cases: category 100.0% / priority 100.0% · regular: category 100.0% / priority 100.0%

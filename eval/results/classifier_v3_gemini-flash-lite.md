@@ -1,4 +1,4 @@
-# Classifier eval (eval) — prompt `v3`, model `gemini-flash-lite`
+# Classifier eval (eval): prompt `v3`, model `gemini-flash-lite`
 
 n=30 · category **96.7%** (lenient 96.7%) · priority **93.3%** · both **90.0%** · needs_human 90.0% (recall 100.0%, precision 76.9%)
 edge cases: category 94.4% / priority 88.9% · regular: category 100.0% / priority 100.0%

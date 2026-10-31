@@ -161,7 +161,7 @@ def notify_telegram(message: str) -> dict:
 
 
 def _p1_message(t: Ticket, c, masked_text: str) -> str:
-    reasons = "; ".join(c.human_reasons) or "—"
+    reasons = "; ".join(c.human_reasons) or "-"
     return (f"🚨 P1 ticket {t.ticket_id} ({t.source})\n{c.category}"
             f"{' + ' + c.secondary_category if c.secondary_category else ''} → {c.next_step.route_to}\n"
             f"Action: {c.next_step.action}\nHuman review: {'yes' if c.needs_human else 'no'} ({reasons})\n\n"

@@ -1,4 +1,4 @@
-# Classifier eval (holdout) — prompt `v4`, model `groq-gpt-oss-120b`
+# Classifier eval (holdout): prompt `v4`, model `groq-gpt-oss-120b`
 
 n=10 · category **100.0%** (lenient 100.0%) · priority **80.0%** · both **80.0%** · needs_human 90.0% (recall 80.0%, precision 100.0%)
 edge cases: category 100.0% / priority 100.0% · regular: category 100.0% / priority 50.0%

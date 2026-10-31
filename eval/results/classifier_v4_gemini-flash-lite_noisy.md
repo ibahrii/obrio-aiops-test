@@ -1,4 +1,4 @@
-# Classifier eval (noisy) — prompt `v4`, model `gemini-flash-lite`
+# Classifier eval (noisy): prompt `v4`, model `gemini-flash-lite`
 
 n=14 · category **92.9%** (lenient 92.9%) · priority **100.0%** · both **92.9%** · needs_human 71.4% (recall 100.0%, precision 50.0%)
 edge cases: category 92.9% / priority 100.0% · regular: category 0.0% / priority 0.0%

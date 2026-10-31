@@ -1,4 +1,4 @@
-"""Nebula Support AI — Streamlit demo: Classifier (+ Review queue), Agent Assistant, Evaluation."""
+"""Nebula Support AI, Streamlit demo: Classifier (+ Review queue), Agent Assistant, Evaluation."""
 from __future__ import annotations
 
 import datetime as dt
@@ -39,7 +39,7 @@ with st.sidebar:
     cls_prompt = st.selectbox("Classifier prompt", prompt_versions, index=prompt_versions.index(config.CLASSIFIER_PROMPT_VERSION))
     use_fallback = st.toggle("Fallback chain", value=True, help=" → ".join([model] + config.FALLBACK_CHAIN.get(model, [])))
     st.caption("API keys: " + " · ".join(
-        f"{p} {'✅' if config.get_api_key(p) else '❌'}" for p in ("gemini", "groq", "openrouter")))
+        f"{p} {'ok' if config.get_api_key(p) else 'missing'}" for p in ("gemini", "groq", "openrouter")))
     st.caption("All data in this demo is synthetic. Free-tier APIs only.")
 
 
@@ -82,7 +82,7 @@ def load_corrections() -> list[dict]:
 
 
 st.session_state.setdefault("queue", [])
-tab_cls, tab_asst, tab_eval = st.tabs(["🏷️ Classifier", "💬 Agent Assistant", "📊 Evaluation"])
+tab_cls, tab_asst, tab_eval = st.tabs(["Classifier", "Agent Assistant", "Evaluation"])
 
 # ------------------------------------------------------------------ Task 1
 with tab_cls:
@@ -111,7 +111,7 @@ with tab_cls:
         if r.meta.get("pii_masked"):
             st.caption(f"PII masked before the LLM call: {r.meta['pii_masked']}")
         if r.needs_human:
-            st.error("**Needs human review** — added to the Review queue below.\n\n" + "\n".join(f"- {x}" for x in r.human_reasons))
+            st.error("**Needs human review.** Added to the Review queue below.\n\n" + "\n".join(f"- {x}" for x in r.human_reasons))
         else:
             st.success("Can be handled by the normal queue.")
         if r.guard_overrides:
@@ -141,7 +141,7 @@ with tab_cls:
                                               "prompt": q.get("prompt"), "model": q.get("model")})
     cats = ["unclassified"] + CATEGORIES
     for i, item in enumerate(list(st.session_state["queue"])):
-        with st.expander(f"{item['priority']} · {item['category']} — {item['text'][:80]}", expanded=i == 0):
+        with st.expander(f"{item['priority']} · {item['category']} · {item['text'][:80]}", expanded=i == 0):
             st.write(item["text"])
             st.markdown("**Why a human:** " + "; ".join(item["reasons"]))
             a, b, c = st.columns([2, 1, 3])
@@ -149,11 +149,11 @@ with tab_cls:
             new_pri = b.selectbox("Priority", ["P1", "P2", "P3", "P4"], index=["P1", "P2", "P3", "P4"].index(item["priority"]), key=f"qp{i}")
             note = c.text_input("Note (optional)", key=f"qn{i}")
             x, y, _ = st.columns([1, 1, 4])
-            if x.button("✅ Confirm", key=f"ok{i}"):
+            if x.button("Confirm", key=f"ok{i}"):
                 save_correction(item, item["category"], item["priority"], "confirmed", note)
                 st.session_state["queue"].pop(i)
                 st.rerun()
-            if y.button("✏️ Save correction", key=f"fix{i}", disabled=(new_cat, new_pri) == (item["category"], item["priority"])):
+            if y.button("Save correction", key=f"fix{i}", disabled=(new_cat, new_pri) == (item["category"], item["priority"])):
                 save_correction(item, new_cat, new_pri, "corrected", note)
                 st.session_state["queue"].pop(i)
                 st.rerun()
@@ -188,9 +188,9 @@ with tab_asst:
                         f"{conf_badge(cls.confidence)} :violet-badge[reply language: {r.reply_language}]")
         locked = r.human_decision_required
         if locked:
-            st.error("🛑 **Потрібне рішення агента** — перевірте перед відправкою:\n\n" + "\n".join(f"- {x}" for x in r.reasons))
+            st.error("**Потрібне рішення агента.** Перевірте перед відправкою:\n\n" + "\n".join(f"- {x}" for x in r.reasons))
         if not r.kb_has_answer or not any(c["valid"] for c in r.citations):
-            st.warning("⚠️ **Немає джерела в базі знань** — не вигадуйте політику; уточніть у тімліда.")
+            st.warning("**Немає джерела в базі знань.** Не вигадуйте політику, уточніть у тімліда.")
         reviewed = st.checkbox("Я перевірив(-ла) відповідь і причини вище", key="reviewed", disabled=not locked) if locked else True
 
         cols = st.columns(3)
@@ -200,17 +200,17 @@ with tab_asst:
                 lc = r.checks.get("lengths", {}).get(tone, {})
                 lang_ok = r.checks.get("language", {}).get(tone, True)
                 st.markdown(f"**{tone.capitalize()}** · {lc.get('words', '?')}/{lc.get('limit', '?')} words "
-                            f"{'✅' if lc.get('ok') else '⚠️ over limit'} {'' if lang_ok else '· ⚠️ language?'}")
+                            f"{'ok' if lc.get('ok') else 'over limit'} {'' if lang_ok else '· check language'}")
                 if reviewed:
                     st.code(txt, language=None, wrap_lines=True)  # code block has a copy button
                 else:
                     st.text_area(tone, txt, height=220, disabled=True, label_visibility="collapsed", key=f"locked_{tone}")
-                    st.button("📋 Copy (locked)", disabled=True, key=f"copy_{tone}", width="stretch")
+                    st.button("Copy (locked)", disabled=True, key=f"copy_{tone}", width="stretch")
         st.markdown("**Citations**")
         kb = retrieval.load_kb()
         for c in r.citations:
-            mark = "✅ verified verbatim" if c["valid"] else "❌ NOT found in article"
-            with st.expander(f"`{c['article_id']}` — {kb[c['article_id']].title if c['article_id'] in kb else '?'} · {mark}"):
+            mark = "verified verbatim" if c["valid"] else "NOT found in article"
+            with st.expander(f"`{c['article_id']}`: {kb[c['article_id']].title if c['article_id'] in kb else '?'} · {mark}"):
                 st.markdown(f"> {c['quote']}")
                 if c["article_id"] in kb:
                     st.caption(kb[c["article_id"]].body)
@@ -242,7 +242,7 @@ with tab_eval:
 
     final = R / f"classifier_{config.CLASSIFIER_PROMPT_VERSION}_{config.DEFAULT_MODEL}.json"
     if final.exists():
-        st.subheader(f"Per-ticket results — {config.CLASSIFIER_PROMPT_VERSION} on {config.DEFAULT_MODEL}")
+        st.subheader(f"Per-ticket results: {config.CLASSIFIER_PROMPT_VERSION} on {config.DEFAULT_MODEL}")
         rows = json.loads(final.read_text())["rows"]
         df = pd.DataFrame([{k: r[k] for k in ("id", "edge_case_type", "input", "exp_category", "act_category", "category_pass",
                                               "exp_priority", "act_priority", "priority_pass", "exp_needs_human",

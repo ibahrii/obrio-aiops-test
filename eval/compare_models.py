@@ -62,13 +62,13 @@ def aggregate(prompt: str) -> list[dict]:
 
 def holdout_cell(r: dict) -> str:
     if r["holdout_both_acc"] is None or not r["holdout_n"]:
-        return "—"
+        return "-"
     partial = f" ({r['holdout_n']}/{r['holdout_n_total']})" if r["holdout_n"] < r["holdout_n_total"] else ""
     return f"{r['holdout_both_acc']}%{partial}"
 
 
 def to_markdown(rows: list[dict], prompt: str) -> str:
-    out = [f"# Model comparison — classifier prompt `{prompt}` (fallback off)", "",
+    out = [f"# Model comparison: classifier prompt `{prompt}` (fallback off)", "",
            "| model | measured | category | priority | both | holdout both | needs_human | valid JSON 1st try | API p50 / p95, s | wall p50 / p95, s | tokens in / out | $/ticket | $/10k |",
            "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
