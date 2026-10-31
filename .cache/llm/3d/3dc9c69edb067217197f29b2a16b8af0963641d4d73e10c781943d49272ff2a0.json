@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Review legal threat regarding recurring charges after app deletion and coordinate with Billing"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "lawyer/legal threat"
+   ],
+   "rationale": "The customer explicitly mentions that their lawyer will be in touch, which triggers rule 2 (privacy_legal). Because this involves a legal threat regarding charges, it is classified as P1 and flagged for human review."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1949,
+  "out_tokens": 135,
+  "thinking_tokens": 0,
+  "latency_s": 3.0165653700000092,
+  "api_latency_s": 3.015454434999995,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"privacy_legal\",\"secondary_category\":\"billing_subscription\",\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"angry\",\"next_step\":{\"route_to\":\"Legal & Privacy\",\"action\":\"Review legal threat regarding recurring charges after app deletion and coordinate with Billing\"},\"confidence\":0.95,\"needs_human\":true,\"human_reasons\":[\"lawyer/legal threat\"],\"rationale\":\"The customer explicitly mentions that their lawyer will be in touch, which triggers rule 2 (privacy_legal). Because this involves a legal threat regarding charges, it is classified as P1 and flagged for human review.\"}"
+ },
+ "created_at": 1793430754.316141
+}
