@@ -427,10 +427,13 @@
     "empathetic": 59,
     "short": 40
    },
-   "exp_human": false,
-   "act_human": false,
+   "exp_human": true,
+   "act_human": true,
    "human_pass": true,
-   "reasons": [],
+   "reasons": [
+    "classifier: model: mixed topics where one is about money",
+    "classifier: mixed topics involving money"
+   ],
    "summary": "The customer states that their booked expert did not show up for a session yesterday and is asking about their credits.",
    "replies": {
     "formal": "Hello. If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours. If the credits were not returned after 24 hours, support can return them manually after checking the session log. Please let us know if you need further assistance with your account. Nebula Support Team",

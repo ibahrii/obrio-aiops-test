@@ -8,7 +8,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 | A02 | double charge | en | ['kb-005'] → ['kb-005', 'kb-002', 'kb-001'] | ✅ | 2/2 | ✅ | ✅✅✅ | False → True |
 | A03 | refund inside policy, non-English | es | ['kb-004'] → ['kb-004', 'kb-005', 'kb-013'] | ✅ | 2/2 | ✅ | ✅✅✅ | False → False |
 | A04 | refund outside policy | en | ['kb-004'] → ['kb-004', 'kb-005', 'kb-012'] | ✅ | 1/1 | ✅ | ✅✅✅ | True → True |
-| A05 | expert no-show | en | ['kb-011'] → ['kb-011', 'kb-010', 'kb-014'] | ✅ | 2/2 | ✅ | ✅✅✅ | False → False |
+| A05 | expert no-show | en | ['kb-011'] → ['kb-011', 'kb-010', 'kb-014'] | ✅ | 2/2 | ✅ | ✅✅✅ | True → True |
 | A06 | crisis | en | ['kb-016'] → ['kb-016', 'kb-018', 'kb-015'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
 | A07 | GDPR deletion, non-English | uk | ['kb-009'] → ['kb-009', 'kb-010', 'kb-004'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
 | A08 | no answer in KB | en | [] → ['kb-016', 'kb-018', 'kb-014'] | — | 0/0 | ✅ | ✅✅✅ | True → True |
@@ -85,7 +85,7 @@ hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_ex
 
 **Citations:** `kb-011` ✅ “If an expert did not join a scheduled session, the credits reserved for that session are returned automatically within 24 hours.”; `kb-011` ✅ “If the credits were not returned after 24 hours, support can return them manually after checking the session log.”
 
-**Reasons:** []
+**Reasons:** ['classifier: model: mixed topics where one is about money', 'classifier: mixed topics involving money']
 
 ### A06 — crisis
 

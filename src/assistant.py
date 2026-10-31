@@ -60,9 +60,9 @@ def assist(text: str, model_key: str | None = None, prompt_version: str | None =
             # Discernment: a model claim of a chargeback/legal threat is checked against the ticket text.
             unsupported = re.search(r"chargeback|legal", r, re.I) and not guards.detect_chargeback_or_legal(text)
             reasons.append(f"model (not supported by ticket text): {r}" if unsupported else f"model: {r}")
-    # Task 2 keeps the classifier's HITL reasons except "mixed topics with money": that is a triage-queue rule,
-    # not one of the agent-decision scenarios (REPORT.md section 9).
-    reasons += [f"classifier: {r}" for r in cls.human_reasons if "mixed topics" not in r]
+    # Every classifier HITL reason is shown to the agent too, including "mixed topics with money"
+    # (Ihor's decision, REPORT.md section 17): a money topic next to another one is the agent's call.
+    reasons += [f"classifier: {r}" for r in cls.human_reasons]
 
     citations, invalid = [], 0
     for c in out.get("citations", []):
