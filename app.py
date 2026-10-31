@@ -108,6 +108,8 @@ with tab_cls:
                     + (f" :gray-badge[secondary: {r.secondary_category}]" if r.secondary_category else ""))
         st.write(f"**Next step:** {r.next_step.action}")
         st.caption(f"Rationale: {r.rationale}")
+        if r.meta.get("pii_masked"):
+            st.caption(f"PII masked before the LLM call: {r.meta['pii_masked']}")
         if r.needs_human:
             st.error("**Needs human review** — added to the Review queue below.\n\n" + "\n".join(f"- {x}" for x in r.human_reasons))
         else:
@@ -130,6 +132,13 @@ with tab_cls:
                     st.session_state["queue"].append({"text": tickets[row["id"]], "category": row["act_category"],
                                                       "priority": row["act_priority"], "reasons": row["human_reasons"],
                                                       "prompt": config.CLASSIFIER_PROMPT_VERSION, "model": row["model_used"]})
+    wq = config.DATA_DIR / "runtime" / "review_queue.jsonl"
+    if wq.exists() and st.button("Load tickets queued by the webhook API (src/api.py)"):
+        for line in wq.read_text(encoding="utf-8").splitlines():
+            q = json.loads(line)
+            st.session_state["queue"].append({"text": f"[{q['ticket_id']}] {q['text']}", "category": q["category"],
+                                              "priority": q["priority"], "reasons": q["reasons"],
+                                              "prompt": q.get("prompt"), "model": q.get("model")})
     cats = ["unclassified"] + CATEGORIES
     for i, item in enumerate(list(st.session_state["queue"])):
         with st.expander(f"{item['priority']} · {item['category']} — {item['text'][:80]}", expanded=i == 0):

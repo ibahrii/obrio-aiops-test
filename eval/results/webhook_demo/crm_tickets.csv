@@ -1,0 +1,4 @@
+ticket_id,source,received_at,category,secondary_category,priority,route_to,action,confidence,language,requester_type
+zendesk:48213,zendesk,2026-10-31T00:10:17+00:00,billing_subscription,,P1,Billing,Check transaction logs for the duplicate $29.99 charges on October 28 and issue a refund for the extra charge.,0.95,en,user
+zendesk:48215,zendesk,2026-10-31T00:10:25+00:00,billing_subscription,,P3,Billing,Provide instructions on how to cancel the subscription on Android,0.95,en,user
+zendesk:48217,zendesk,2026-10-31T00:10:34+00:00,feedback_other,,P4,General Support,Log customer praise regarding the new moon calendar,1.0,en,user

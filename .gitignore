@@ -13,3 +13,6 @@ logs/
 
 # corrections collected via the Review queue at runtime
 data/corrections.jsonl
+
+# webhook router runtime state (idempotency DB, review queue, CRM CSV simulation)
+data/runtime/

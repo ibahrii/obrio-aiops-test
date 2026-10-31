@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Log customer praise regarding the new moon calendar"
+   },
+   "confidence": 1.0,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is sharing positive feedback and thanks for a feature, making it feedback_other with a P4 no-rush priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1951,
+  "out_tokens": 157,
+  "thinking_tokens": 0,
+  "latency_s": 1.3816093593438836,
+  "api_latency_s": 1.3809219759999678,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Log customer praise regarding the new moon calendar\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is sharing positive feedback and thanks for a feature, making it feedback_other with a P4 no-rush priority.\"\n}"
+ },
+ "created_at": 1793405434.635922
+}

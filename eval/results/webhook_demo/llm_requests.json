@@ -1,0 +1,22 @@
+[
+ {
+  "model": "gemini-flash-lite",
+  "user_message": "<ticket>\nCharged twice!\nHello, I see two identical charges of $29.99 on my card [CARD] from Oct 28. I only have one subscription. You can call me on [PHONE].\nRegards,\n[NAME]\n</ticket>"
+ },
+ {
+  "model": "gemini-flash-lite",
+  "user_message": "<ticket>\nHi, it's [NAME]. Lately I feel like nothing matters and maybe everyone would be better off without me.\nAlso how do I turn off the daily notifications?\n</ticket>"
+ },
+ {
+  "model": "gemini-flash-lite",
+  "user_message": "<ticket>\nCancel\nHow do I cancel my subscription on Android? My account email is [EMAIL].\n</ticket>"
+ },
+ {
+  "model": "gemini-flash-lite",
+  "user_message": "<ticket>\nДобрий день! Мене звати [NAME]. Прошу видалити мій акаунт і всі мої дані. Мій телефон [PHONE].\n</ticket>"
+ },
+ {
+  "model": "gemini-flash-lite",
+  "user_message": "<ticket>\nThank you\nThe new moon calendar is lovely, thank you for adding it!\nCheers,\n[NAME]\n</ticket>"
+ }
+]

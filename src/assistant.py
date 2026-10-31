@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import re
 
-from . import classifier, config, guards, llm, retrieval
+from . import classifier, config, guards, llm, pii, retrieval
 from .schemas import AssistantOutput, AssistantResult, Replies
 
 USER_SPLIT = "---USER---"
@@ -24,13 +24,14 @@ def _articles_block(hits: list[dict]) -> str:
 
 def assist(text: str, model_key: str | None = None, prompt_version: str | None = None,
            classifier_model: str | None = None, use_fallback: bool = True, expand_query: bool = True,
-           use_cache: bool = True) -> AssistantResult:
+           use_cache: bool = True, known_names: tuple[str, ...] = ()) -> AssistantResult:
     model_key = model_key or config.DEFAULT_MODEL
     prompt_version = prompt_version or config.ASSISTANT_PROMPT_VERSION
     cls = classifier.classify(text, model_key=classifier_model or model_key, use_fallback=use_fallback,
-                              use_cache=use_cache)
+                              use_cache=use_cache, known_names=known_names)
+    masked = pii.mask(text, known_names)  # the LLM only ever sees this; local checks use the original
     cats = tuple(c for c in (cls.category, cls.secondary_category) if c)
-    hits = retrieval.search(retrieval.build_query(text, cls, expand=expand_query), categories=cats, k=3)
+    hits = retrieval.search(retrieval.build_query(masked.text, cls, expand=expand_query), categories=cats, k=3)
 
     kb = retrieval.load_kb()
     system, user_tpl = load_prompt(prompt_version)
@@ -39,8 +40,8 @@ def assist(text: str, model_key: str | None = None, prompt_version: str | None =
             "{priority}": cls.priority, "{articles}": _articles_block(hits)}
     for k, v in fill.items():  # placeholders may sit in the system part as well as in the user part
         system, user_tpl = system.replace(k, v), user_tpl.replace(k, v)
-    user = user_tpl.replace("{ticket}", text)
-    res = llm.call_structured(model_key, system, user, AssistantOutput, cache_text=text,
+    user = user_tpl.replace("{ticket}", masked.text)
+    res = llm.call_structured(model_key, system, user, AssistantOutput, cache_text=masked.text,
                               prompt_version=f"assistant_{prompt_version}", kb_version=config.KB_VERSION,
                               use_fallback=use_fallback, use_cache=use_cache)
 
