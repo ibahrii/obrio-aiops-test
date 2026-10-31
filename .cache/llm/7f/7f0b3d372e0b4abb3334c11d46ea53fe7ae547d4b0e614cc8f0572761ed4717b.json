@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "refund_request",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Review the account's subscription history and escalate to Legal regarding the lawyer threat and recurring charges"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "lawyer or legal action threat"
+   ],
+   "rationale": "The customer explicitly threatens legal action, categorizing this under privacy_legal, with a secondary request for a refund due to unwanted charges; the legal threat makes it a P1."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2105,
+  "out_tokens": 195,
+  "thinking_tokens": 0,
+  "latency_s": 1.708205856947984,
+  "api_latency_s": 1.7072726890000354,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Review the account's subscription history and escalate to Legal regarding the lawyer threat and recurring charges\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"lawyer or legal action threat\"\n  ],\n  \"rationale\": \"The customer explicitly threatens legal action, categorizing this under privacy_legal, with a secondary request for a refund due to unwanted charges; the legal threat makes it a P1.\"\n}"
+ },
+ "created_at": 1793460877.656295
+}

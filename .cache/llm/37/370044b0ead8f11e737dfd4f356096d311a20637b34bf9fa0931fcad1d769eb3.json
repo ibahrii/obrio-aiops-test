@@ -1,0 +1,44 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "privacy_legal",
+   "secondary_category": "refund_request",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Legal & Privacy",
+    "action": "Review the customer's account for recent charges and coordinate with Billing to address the refund demand before a chargeback is filed"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "chargeback threat",
+    "mixed topics where one is about money"
+   ],
+   "rationale": "Explicit threat of a bank chargeback makes this privacy_legal, with the refund request as a secondary money-related category."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2099,
+  "out_tokens": 197,
+  "thinking_tokens": 0,
+  "latency_s": 1.6816737879604489,
+  "api_latency_s": 1.680891488000043,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"privacy_legal\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Legal & Privacy\",\n    \"action\": \"Review the customer's account for recent charges and coordinate with Billing to address the refund demand before a chargeback is filed\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"chargeback threat\",\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"Explicit threat of a bank chargeback makes this privacy_legal, with the refund request as a secondary money-related category.\"\n}"
+ },
+ "created_at": 1793460937.945795
+}

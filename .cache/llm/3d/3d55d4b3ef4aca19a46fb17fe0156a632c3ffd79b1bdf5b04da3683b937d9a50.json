@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Provide step-by-step instructions on how to cancel an Android subscription via Google Play."
+   },
+   "confidence": 1.0,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is asking a straightforward how-to question regarding subscription cancellation."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1937,
+  "out_tokens": 153,
+  "thinking_tokens": 0,
+  "latency_s": 1.5642198580644617,
+  "api_latency_s": 1.563423919999991,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Provide step-by-step instructions on how to cancel an Android subscription via Google Play.\"\n  },\n  \"confidence\": 1.0,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is asking a straightforward how-to question regarding subscription cancellation.\"\n}"
+ },
+ "created_at": 1793460664.7996213
+}

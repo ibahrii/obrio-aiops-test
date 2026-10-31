@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "uk",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Provide instructions on how to browse and choose a tarot expert for career consultation"
+   },
+   "confidence": 0.99,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is asking for guidance on how to choose a tarot expert for a career reading, which fits the product_question category."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2113,
+  "out_tokens": 164,
+  "thinking_tokens": 0,
+  "latency_s": 1.4872944290546002,
+  "api_latency_s": 1.4863030729999878,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"uk\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Provide instructions on how to browse and choose a tarot expert for career consultation\"\n  },\n  \"confidence\": 0.99,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is asking for guidance on how to choose a tarot expert for a career reading, which fits the product_question category.\"\n}"
+ },
+ "created_at": 1793460799.0352716
+}

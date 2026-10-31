@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Handle crisis indicators immediately, provide help resources, and process cancellation"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The customer expresses feelings of hopelessness and self-harm ideation, which triggers the safety_wellbeing category (rule 1) regardless of the secondary request to cancel a subscription."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2128,
+  "out_tokens": 188,
+  "thinking_tokens": 0,
+  "latency_s": 1.6108316247793368,
+  "api_latency_s": 1.6074438769999801,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Handle crisis indicators immediately, provide help resources, and process cancellation\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"safety_wellbeing\"\n  ],\n  \"rationale\": \"The customer expresses feelings of hopelessness and self-harm ideation, which triggers the safety_wellbeing category (rule 1) regardless of the secondary request to cancel a subscription.\"\n}"
+ },
+ "created_at": 1793460817.1595764
+}

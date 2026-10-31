@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "technical_issue",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the unauthorized $29.99 charge and check user account status regarding session drops"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer reports an unauthorized charge, which triggers P1 billing priority, alongside a technical issue with being logged out."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1956,
+  "out_tokens": 181,
+  "thinking_tokens": 0,
+  "latency_s": 1.5111695262020248,
+  "api_latency_s": 1.5102923779999742,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"technical_issue\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the unauthorized $29.99 charge and check user account status regarding session drops\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer reports an unauthorized charge, which triggers P1 billing priority, alongside a technical issue with being logged out.\"\n}"
+ },
+ "created_at": 1793460646.7457006
+}

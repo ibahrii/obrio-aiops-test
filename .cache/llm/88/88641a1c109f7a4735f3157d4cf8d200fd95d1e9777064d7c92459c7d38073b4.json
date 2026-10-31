@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Secure the account immediately, investigate unauthorized access, and help the user restore their credentials and original email."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer's account was compromised and email changed without authorization, which is classified as an account_access issue and prioritized as P1."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2114,
+  "out_tokens": 170,
+  "thinking_tokens": 0,
+  "latency_s": 2.027481938242545,
+  "api_latency_s": 2.026683687000002,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Secure the account immediately, investigate unauthorized access, and help the user restore their credentials and original email.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer's account was compromised and email changed without authorization, which is classified as an account_access issue and prioritized as P1.\"\n}"
+ },
+ "created_at": 1793460736.5721056
+}

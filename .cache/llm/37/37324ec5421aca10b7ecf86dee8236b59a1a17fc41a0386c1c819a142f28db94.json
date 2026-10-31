@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate $49.99 charges from Oct 12 and process a refund for the extra charge."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer is reporting a duplicated charge which is classified as billing_subscription and assigned P1 priority since it involves an explicit double charge."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2122,
+  "out_tokens": 174,
+  "thinking_tokens": 0,
+  "latency_s": 2.1594866034556617,
+  "api_latency_s": 2.158298202000026,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate $49.99 charges from Oct 12 and process a refund for the extra charge.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer is reporting a duplicated charge which is classified as billing_subscription and assigned P1 priority since it involves an explicit double charge.\"\n}"
+ },
+ "created_at": 1793460714.2025874
+}

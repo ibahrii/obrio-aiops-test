@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate why the horoscope feature is not loading for the user"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt"
+   ],
+   "rationale": "The injection attempt is ignored and the genuine underlying problem, which is a horoscope loading issue, is classified as a technical issue."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2130,
+  "out_tokens": 170,
+  "thinking_tokens": 0,
+  "latency_s": 1.4409138828340815,
+  "api_latency_s": 1.4400180239999827,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate why the horoscope feature is not loading for the user\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"prompt-injection attempt\"\n  ],\n  \"rationale\": \"The injection attempt is ignored and the genuine underlying problem, which is a horoscope loading issue, is classified as a technical issue.\"\n}"
+ },
+ "created_at": 1793460812.489609
+}

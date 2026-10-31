@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Close or ignore the gibberish ticket"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The message consists of random characters and gibberish with no discernible request or problem."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2096,
+  "out_tokens": 149,
+  "thinking_tokens": 0,
+  "latency_s": 1.825436697954217,
+  "api_latency_s": 1.8244318920000069,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"feedback_other\",\n  \"secondary_category\": null,\n  \"priority\": \"P4\",\n  \"requester_type\": \"unknown\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Close or ignore the gibberish ticket\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The message consists of random characters and gibberish with no discernible request or problem.\"\n}"
+ },
+ "created_at": 1793460808.373829
+}

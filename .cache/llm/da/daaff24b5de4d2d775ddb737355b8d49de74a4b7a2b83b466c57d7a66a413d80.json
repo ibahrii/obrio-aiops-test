@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash-on-start bug for the latest app version and provide troubleshooting for paid user"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The core app is completely down on startup for a paying customer, making this a P1 technical issue. Mention of payment is part of the context and does not trigger billing or secondary categories since the primary problem is a crash."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2117,
+  "out_tokens": 187,
+  "thinking_tokens": 0,
+  "latency_s": 1.694931061293346,
+  "api_latency_s": 1.693951367000011,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"de\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate crash-on-start bug for the latest app version and provide troubleshooting for paid user\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The core app is completely down on startup for a paying customer, making this a P1 technical issue. Mention of payment is part of the context and does not trigger billing or secondary categories since the primary problem is a crash.\"\n}"
+ },
+ "created_at": 1793460803.743113
+}

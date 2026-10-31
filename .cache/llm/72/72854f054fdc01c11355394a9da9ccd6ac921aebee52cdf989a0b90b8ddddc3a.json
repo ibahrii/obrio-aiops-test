@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "uk",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Assist the user with password reset and account access troubleshooting"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer cannot log in despite using the correct password, which falls under account access issues."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2115,
+  "out_tokens": 151,
+  "thinking_tokens": 0,
+  "latency_s": 1.5588720784712677,
+  "api_latency_s": 1.5577799899999718,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"uk\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Assist the user with password reset and account access troubleshooting\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer cannot log in despite using the correct password, which falls under account access issues.\"\n}"
+ },
+ "created_at": 1793460897.3202987
+}

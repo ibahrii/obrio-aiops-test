@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": "billing_subscription",
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Clarify credit rollover policy for subscription plan changes and explain the pricing difference between app and website"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer is asking product and pricing rules about plans and credits, combining plan transition rules with billing discrepancies."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2120,
+  "out_tokens": 179,
+  "thinking_tokens": 0,
+  "latency_s": 1.8549038578012755,
+  "api_latency_s": 1.8541271020000067,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"product_question\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P3\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"General Support\",\n    \"action\": \"Clarify credit rollover policy for subscription plan changes and explain the pricing difference between app and website\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer is asking product and pricing rules about plans and credits, combining plan transition rules with billing discrepancies.\"\n}"
+ },
+ "created_at": 1793460785.902374
+}

@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate charge for this month and process a refund if verified"
+   },
+   "confidence": 0.9,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The customer explicitly reports being charged twice and asks to check what happened, which constitutes a request to return duplicate funds (rule 3) combined with a billing investigation."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2101,
+  "out_tokens": 186,
+  "thinking_tokens": 0,
+  "latency_s": 2.092983576999984,
+  "api_latency_s": 2.092354238999974,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate charge for this month and process a refund if verified\"\n  },\n  \"confidence\": 0.9,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The customer explicitly reports being charged twice and asks to check what happened, which constitutes a request to return duplicate funds (rule 3) combined with a billing investigation.\"\n}"
+ },
+ "created_at": 1793460884.3537953
+}

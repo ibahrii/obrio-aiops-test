@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "refund_request",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "angry",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Check the status of the customer's previous refund request and provide an update"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "refund clearly outside a 14-day window"
+   ],
+   "rationale": "The customer is following up on a pending refund request made two weeks ago, which triggers a refund category and requires human review due to the elapsed timeframe."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2107,
+  "out_tokens": 184,
+  "thinking_tokens": 0,
+  "latency_s": 1.506087699511795,
+  "api_latency_s": 1.5052052309999908,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"refund_request\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"angry\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Check the status of the customer's previous refund request and provide an update\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"refund clearly outside a 14-day window\"\n  ],\n  \"rationale\": \"The customer is following up on a pending refund request made two weeks ago, which triggers a refund category and requires human review due to the elapsed timeframe.\"\n}"
+ },
+ "created_at": 1793460919.769312
+}

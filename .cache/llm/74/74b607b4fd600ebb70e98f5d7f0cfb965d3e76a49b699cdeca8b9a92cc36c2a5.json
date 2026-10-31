@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "account_access",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Verify user email status in the database and manually trigger a password reset link."
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer cannot log in and the standard password reset email is failing to deliver."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2100,
+  "out_tokens": 153,
+  "thinking_tokens": 0,
+  "latency_s": 1.5533007886838845,
+  "api_latency_s": 1.5525623500000165,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"account_access\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Verify user email status in the database and manually trigger a password reset link.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer cannot log in and the standard password reset email is failing to deliver.\"\n}"
+ },
+ "created_at": 1793460731.5977044
+}

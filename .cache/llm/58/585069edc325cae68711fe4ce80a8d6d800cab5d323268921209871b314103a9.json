@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the unauthorized $59.99 charge and process a refund or cancellation."
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "prompt-injection attempt"
+   ],
+   "rationale": "The embedded prompt injection is ignored. The genuine customer request is an unauthorized charge, which is classified as billing_subscription and set to P1 priority."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2118,
+  "out_tokens": 181,
+  "thinking_tokens": 0,
+  "latency_s": 1.5716374159726456,
+  "api_latency_s": 1.570813434999991,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the unauthorized $59.99 charge and process a refund or cancellation.\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"prompt-injection attempt\"\n  ],\n  \"rationale\": \"The embedded prompt injection is ignored. The genuine customer request is an unauthorized charge, which is classified as billing_subscription and set to P1 priority.\"\n}"
+ },
+ "created_at": 1793460873.0194654
+}
