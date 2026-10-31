@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 119
 | E02 | aggressive | You people are thieves. What is this $14.99 charge 'NEBULA*CREDITS' on my bank statement?? | billing_subscription / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | unclassified / P2 / True | ❌ | ✅ | ✅ | 0.00 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | unclassified / P2 / True | ❌ | ✅ | ✅ | 0.00 |
-| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | unclassified / P2 / True | ❌ | ✅ | ✅ | 0.00 |
+| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
 | E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | unclassified / P2 / True | ❌ | ❌ | ✅ | 0.00 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
@@ -51,7 +51,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 119
 - **E02** (aggressive): expected billing_subscription/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E03** (aggressive): expected expert_complaint/P2/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E04** (mixed_topics): expected refund_request/P2/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **E05** (mixed_topics): expected billing_subscription/P2/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
+- **E05** (mixed_topics): expected billing_subscription/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E06** (mixed_topics): expected product_question/P3/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E07** (non_english): expected refund_request/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E08** (non_english): expected account_access/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']

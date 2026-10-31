@@ -1,6 +1,6 @@
 # Classifier eval (eval) — prompt `v4`, model `openrouter-nemotron-free`
 
-n=30 · category **96.7%** (lenient 96.7%) · priority **96.7%** · both **93.3%** · needs_human 93.3% (recall 81.8%, precision 100.0%)
+n=30 · category **96.7%** (lenient 96.7%) · priority **96.7%** · both **93.3%** · needs_human 96.7% (recall 90.0%, precision 100.0%)
 edge cases: category 100.0% / priority 94.4% · regular: category 91.7% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 6.611s / p95 15.791s · tokens in 1961.7 / out 447.6
 
@@ -22,7 +22,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 6.6
 | E02 | aggressive | You people are thieves. What is this $14.99 charge 'NEBULA*CREDITS' on my bank statement?? | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.90 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.90 |
-| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P2 / False | ✅ | ✅ | ❌ | 0.95 |
+| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question / P3 / False | ✅ | ✅ | ❌ | 0.95 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
@@ -40,6 +40,5 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 6.6
 ## Errors
 
 - **T01** (none): expected billing_subscription/P3/human=False, got product_question/P3/human=False. Model rationale: _The user is asking for instructions on how to cancel their subscription on iPhone, which is a product question about a feature._ Reasons: []
-- **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P2/human=False. Model rationale: _Payment succeeded but Premium plan not applied; this is a billing error requiring same-day resolution._ Reasons: []
 - **E06** (mixed_topics): expected product_question/P3/human=True, got product_question/P3/human=False. Model rationale: _Customer asks two product questions: credit carry-over on plan change and price discrepancy between app and website. No money request, threat, or bug — pure how-to/feature inquiry._ Reasons: []
 - **E15** (long_chaotic): expected billing_subscription/P1/human=True, got billing_subscription/P2/human=True. Model rationale: _The user reports an unexpected duplicate charge (billing_subscription) and also asks about upcoming Tarot decks and push‑notification timing (product_question). The billing issue is a P2 error; mixed money and non‑money topics require human review._ Reasons: ['model: mixed topics where one is about money', 'mixed topics involving money']

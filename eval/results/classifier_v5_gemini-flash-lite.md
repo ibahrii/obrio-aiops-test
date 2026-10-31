@@ -1,6 +1,6 @@
 # Classifier eval (eval) — prompt `v5`, model `gemini-flash-lite`
 
-n=30 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 96.7% (recall 90.9%, precision 100.0%)
+n=30 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 100.0% (recall 100.0%, precision 100.0%)
 edge cases: category 100.0% / priority 100.0% · regular: category 100.0% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.618s / p95 2.1s · tokens in 2119.5 / out 168.3
 
@@ -22,7 +22,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.6
 | E02 | aggressive | You people are thieves. What is this $14.99 charge 'NEBULA*CREDITS' on my bank statement?? | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
-| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P2 / False | ✅ | ✅ | ❌ | 0.95 |
+| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question+billing_subscription / P3 / True | ✅ | ✅ | ✅ | 0.90 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
@@ -39,4 +39,3 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.6
 
 ## Errors
 
-- **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P2/human=False. Model rationale: _Payment was processed successfully, but the subscription or premium status is not reflected in the app. This is a standard billing error/sync issue._ Reasons: []

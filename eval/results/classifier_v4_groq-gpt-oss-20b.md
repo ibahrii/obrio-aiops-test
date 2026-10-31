@@ -1,6 +1,6 @@
 # Classifier eval (eval) — prompt `v4`, model `groq-gpt-oss-20b`
 
-n=30 · category **96.7%** (lenient 96.7%) · priority **80.0%** · both **80.0%** · needs_human 80.0% (recall 81.8%, precision 69.2%)
+n=30 · category **96.7%** (lenient 96.7%) · priority **80.0%** · both **80.0%** · needs_human 83.3% (recall 90.0%, precision 69.2%)
 edge cases: category 100.0% / priority 83.3% · regular: category 91.7% / priority 75.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.338s / p95 18.831s · tokens in 2299.9 / out 197.9
 
@@ -22,7 +22,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.
 | E02 | aggressive | You people are thieves. What is this $14.99 charge 'NEBULA*CREDITS' on my bank statement?? | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P3 / True | ✅ | ❌ | ✅ | 0.90 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
-| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P2 / False | ✅ | ✅ | ❌ | 0.95 |
+| E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription / P2 / False | billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question / P3 / False | ✅ | ✅ | ❌ | 0.95 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / True | ✅ | ✅ | ❌ | 0.90 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
@@ -45,7 +45,6 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.
 - **T07** (none): expected account_access/P1/human=False, got account_access/P1/human=True. Model rationale: _The user reports an unauthorized email change, indicating a compromised account, which triggers an account_access issue with P1 priority and requires immediate human intervention._ Reasons: ['model: hacked account']
 - **T12** (none): expected feedback_other/P4/human=False, got product_question/P3/human=False. Model rationale: _User is asking about adding a home screen widget for the new moon calendar feature, which is a product question._ Reasons: []
 - **E03** (aggressive): expected expert_complaint/P2/human=True, got expert_complaint/P3/human=True. Model rationale: _The user complains about the expert’s performance and lack of value, fitting the expert_complaint category with a P3 priority for a non‑urgent quality issue._ Reasons: ['expert_complaint with fraud/insult accusation (two-sided marketplace)']
-- **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P2/human=False. Model rationale: _The user reports a payment succeeded but the subscription status is not updated, which is a billing_subscription error. No other separate issue is present, so no secondary category. The situation warrants a P2 response._ Reasons: []
 - **E06** (mixed_topics): expected product_question/P3/human=True, got product_question/P3/human=False. Model rationale: _The user asks about credit carry‑over and pricing differences, a feature question. No urgency or money dispute, so P3._ Reasons: []
 - **E07** (non_english): expected refund_request/P2/human=False, got refund_request/P2/human=True. Model rationale: _The customer explicitly asks for a refund for a mistakenly purchased credit package, fitting the refund_request category with P2 priority._ Reasons: ['model: explicit request to return money']
 - **E10** (non_english): expected technical_issue/P1/human=False, got technical_issue/P3/human=False. Model rationale: _The user reports a crash that prevents app use, fitting the technical_issue category; no direct billing or refund request._ Reasons: []
