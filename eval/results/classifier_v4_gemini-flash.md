@@ -1,22 +1,22 @@
 # Classifier eval (eval) — prompt `v4`, model `gemini-flash`
 
-**Not measured: 30 of 30 tickets** (free-tier daily quota exhausted); metrics below use the measured 0.
-n=0 · category **0.0%** (lenient 0.0%) · priority **0.0%** · both **0.0%** · needs_human 0.0% (recall 0.0%, precision 0.0%)
-edge cases: category 0.0% / priority 0.0% · regular: category 0.0% / priority 0.0%
-valid JSON first try 0.0% · fallbacks 0 · safe defaults 0 · latency p50 0.0s / p95 0.0s · tokens in 0 / out 0
+**Not measured: 25 of 30 tickets** (free-tier daily quota exhausted); metrics below use the measured 5.
+n=5 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 100.0% (recall 100.0%, precision 100.0%)
+edge cases: category 0.0% / priority 0.0% · regular: category 100.0% / priority 100.0%
+valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 119.455s / p95 166.548s · tokens in 1955.8 / out 129.2
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
 |---|---|---|---|---|---|---|---|---|
 | T01 | none | How do I cancel my subscription? I use the app on my iPhone. | billing_subscription / P3 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
-| T02 | none | I was charged twice for the same 3-month plan on Oct 12 - two identical charges of $49.99  | billing_subscription / P1 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
+| T02 | none | I was charged twice for the same 3-month plan on Oct 12 - two identical charges of $49.99  | billing_subscription / P1 / False | billing_subscription / P1 / False | ✅ | ✅ | ✅ | 0.95 |
 | T03 | none | I bought a 1-month subscription yesterday by mistake, I meant to choose the free trial. Pl | refund_request / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
-| T04 | none | The app crashes every time I open the daily horoscope tab on Android 14. Other tabs work f | technical_issue / P3 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
+| T04 | none | The app crashes every time I open the daily horoscope tab on Android 14. Other tabs work f | technical_issue / P3 / False | technical_issue / P3 / False | ✅ | ✅ | ✅ | 0.95 |
 | T05 | none | I can't open any chat with experts - every time I tap 'Start chat' I get 'Error 503'. I ha | technical_issue / P1 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
 | T06 | none | I forgot my password and the reset email never arrives. I checked spam too. | account_access / P2 / False | unclassified / P2 / True | ❌ | ✅ | ❌ | 0.00 |
 | T07 | none | Someone logged into my account and changed my email address, I got a notification from you | account_access / P1 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
-| T08 | none | My reading with expert Luna Starr was very generic, she basically copied text I could find | expert_complaint / P3 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
-| T09 | none | Expert 'Mystic Oleg' was rude to me, called me stupid and said my marriage will fail becau | expert_complaint / P2 / True | unclassified / P2 / True | ❌ | ✅ | ✅ | 0.00 |
-| T10 | none | How do credits work? If I buy 100 credits, do they expire at some point? | product_question / P3 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
+| T08 | none | My reading with expert Luna Starr was very generic, she basically copied text I could find | expert_complaint / P3 / False | expert_complaint / P3 / False | ✅ | ✅ | ✅ | 0.95 |
+| T09 | none | Expert 'Mystic Oleg' was rude to me, called me stupid and said my marriage will fail becau | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
+| T10 | none | How do credits work? If I buy 100 credits, do they expire at some point? | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 0.95 |
 | T11 | none | Please send me a copy of all the personal data you store about me. | privacy_legal / P2 / True | unclassified / P2 / True | ❌ | ✅ | ✅ | 0.00 |
 | T12 | none | Love the new moon calendar feature! Could you add a home screen widget for it? | feedback_other / P4 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
 | E01 | aggressive | THIS IS RIDICULOUS!!! Your stupid app logs me out EVERY SINGLE TIME I close it. Fix your g | technical_issue / P3 / False | unclassified / P2 / True | ❌ | ❌ | ❌ | 0.00 |
@@ -41,15 +41,10 @@ valid JSON first try 0.0% · fallbacks 0 · safe defaults 0 · latency p50 0.0s 
 ## Errors
 
 - **T01** (none): expected billing_subscription/P3/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **T02** (none): expected billing_subscription/P1/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T03** (none): expected refund_request/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **T04** (none): expected technical_issue/P3/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T05** (none): expected technical_issue/P1/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T06** (none): expected account_access/P2/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T07** (none): expected account_access/P1/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **T08** (none): expected expert_complaint/P3/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **T09** (none): expected expert_complaint/P2/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
-- **T10** (none): expected product_question/P3/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T11** (none): expected privacy_legal/P2/human=True, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **T12** (none): expected feedback_other/P4/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']
 - **E01** (aggressive): expected technical_issue/P3/human=False, got unclassified/P2/human=True. Model rationale: _Safe default applied by code._ Reasons: ['invalid model output after all fallbacks: not_measured']

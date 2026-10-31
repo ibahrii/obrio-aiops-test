@@ -43,16 +43,32 @@
  },
  "rows": [
   {
+   "model": "gemini-flash",
+   "label": "Gemini 3.8 Flash",
+   "task1_per_ticket": 0.00195135,
+   "task2_call_per_ticket": 0.002226504211469534,
+   "task2_measured": false,
+   "task1_10k": 19.5135,
+   "task1_2_10k": 41.778542114695334,
+   "task1_cached_per_ticket": 0.0006560249999999999,
+   "task1_cached_10k": 6.560249999999999,
+   "both_acc": 100.0,
+   "n": 5,
+   "n_total": 30
+  },
+  {
    "model": "gemini-flash-3.6",
    "label": "Gemini 3.6 Flash",
-   "task1_per_ticket": 0.0021986999999999996,
-   "task2_call_per_ticket": 0.0029032000000000003,
+   "task1_per_ticket": 0.002107125,
+   "task2_call_per_ticket": 0.0026360024193548388,
    "task2_measured": false,
-   "task1_10k": 21.986999999999995,
-   "task1_2_10k": 51.019,
-   "task1_cached_per_ticket": 0.0009033749999999999,
-   "task1_cached_10k": 9.03375,
-   "both_acc": 100.0
+   "task1_10k": 21.07125,
+   "task1_2_10k": 47.43127419354839,
+   "task1_cached_per_ticket": 0.0008118,
+   "task1_cached_10k": 8.118,
+   "both_acc": 96.7,
+   "n": 30,
+   "n_total": 30
   },
   {
    "model": "gemini-flash-lite",
@@ -64,7 +80,9 @@
    "task1_2_10k": 25.115799999999997,
    "task1_cached_per_ticket": 0.0004894200000000001,
    "task1_cached_10k": 4.8942000000000005,
-   "both_acc": 96.7
+   "both_acc": 96.7,
+   "n": 30,
+   "n_total": 30
   },
   {
    "model": "groq-gpt-oss-120b",
@@ -76,7 +94,9 @@
    "task1_2_10k": 10.890527956989247,
    "task1_cached_per_ticket": 0.00035208,
    "task1_cached_10k": 3.5208,
-   "both_acc": 86.7
+   "both_acc": 86.7,
+   "n": 30,
+   "n_total": 30
   },
   {
    "model": "groq-gpt-oss-20b",
@@ -88,7 +108,9 @@
    "task1_2_10k": 4.843243906810035,
    "task1_cached_per_ticket": 0.0001599,
    "task1_cached_10k": 1.5990000000000002,
-   "both_acc": 76.7
+   "both_acc": 76.7,
+   "n": 30,
+   "n_total": 30
   },
   {
    "model": "openrouter-nemotron-free",
@@ -100,7 +122,9 @@
    "task1_2_10k": 52.563938351254485,
    "task1_cached_per_ticket": 0.0011979700000000002,
    "task1_cached_10k": 11.979700000000003,
-   "both_acc": 90.0
+   "both_acc": 90.0,
+   "n": 30,
+   "n_total": 30
   }
  ],
  "cascade": {

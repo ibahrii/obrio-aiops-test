@@ -44,6 +44,7 @@ def aggregate(prompt: str) -> list[dict]:
         rows.append({
             "model": m, "label": config.MODELS[m].label, "api_id": config.MODELS[m].api_id, "n": s["n"],
             "n_total": s.get("n_total", s["n"]), "holdout_n": h["n"] if h else 0,
+            "holdout_n_total": h.get("n_total", h["n"]) if h else 0,
             "category_acc": s["category_acc"], "priority_acc": s["priority_acc"], "both_acc": s["both_acc"],
             "needs_human_acc": s["needs_human_acc"], "needs_human_recall": s["needs_human_recall"],
             "edge_both": None, "holdout_both_acc": h["both_acc"] if h else None,
@@ -59,6 +60,13 @@ def aggregate(prompt: str) -> list[dict]:
     return rows
 
 
+def holdout_cell(r: dict) -> str:
+    if r["holdout_both_acc"] is None or not r["holdout_n"]:
+        return "—"
+    partial = f" ({r['holdout_n']}/{r['holdout_n_total']})" if r["holdout_n"] < r["holdout_n_total"] else ""
+    return f"{r['holdout_both_acc']}%{partial}"
+
+
 def to_markdown(rows: list[dict], prompt: str) -> str:
     out = [f"# Model comparison — classifier prompt `{prompt}` (fallback off)", "",
            "| model | measured | category | priority | both | holdout both | needs_human | valid JSON 1st try | API p50 / p95, s | wall p50 / p95, s | tokens in / out | $/ticket | $/10k |",
@@ -69,7 +77,7 @@ def to_markdown(rows: list[dict], prompt: str) -> str:
             continue
         out.append(
             f"| {r['label']} | {r['n']}/{r['n_total']} | {r['category_acc']}% | {r['priority_acc']}% | {r['both_acc']}% | "
-            f"{str(r['holdout_both_acc']) + '%' if r['holdout_both_acc'] is not None and r['holdout_n'] else '—'} | {r['needs_human_acc']}% | "
+            f"{holdout_cell(r)} | {r['needs_human_acc']}% | "
             f"{r['valid_json_first_try']}% | {r['api_latency_p50']} / {r['api_latency_p95']} | "
             f"{r['wall_latency_p50']} / {r['wall_latency_p95']} | {r['avg_in_tokens']:.0f} / {r['avg_out_tokens']:.0f} | "
             f"{r['cost_per_ticket_usd']:.6f} | {r['cost_10k_usd']:.2f} |")
@@ -77,7 +85,10 @@ def to_markdown(rows: list[dict], prompt: str) -> str:
     for r in rows:
         out.append(f"- {r['label']} (`{r['api_id']}`): ${r['price_in_per_1m']} / ${r['price_out_per_1m']}")
     out += ["", "API latency = HTTP time of the successful call. Wall latency also includes retries and Retry-After waits "
-            "caused by free-tier limits (e.g. Groq 8000 TPM), so it reflects the free tier, not the model."]
+            "caused by free-tier limits (e.g. Groq 8000 TPM), so it reflects the free tier, not the model.",
+            "", "Gemini 3.8 / 3.6 Flash were measured with a 60 s request timeout (LLM_TIMEOUT_S=60) from two free-tier Google "
+            "projects (20 requests/day/model each); all other models with the default 20 s. A row with measured < total covers "
+            "only the tickets that got an answer, so its accuracy is not directly comparable with fully measured rows."]
     return "\n".join(out) + "\n"
 
 

@@ -49,7 +49,7 @@ def main() -> None:
         rows.append({"model": m, "label": r["label"], "task1_per_ticket": t1, "task2_call_per_ticket": t2,
                      "task2_measured": m == PRIMARY, "task1_10k": t1 * MONTH, "task1_2_10k": (t1 + t2) * MONTH,
                      "task1_cached_per_ticket": t1_cached, "task1_cached_10k": t1_cached * MONTH,
-                     "both_acc": r["both_acc"]})
+                     "both_acc": r["both_acc"], "n": r["n"], "n_total": r["n_total"]})
 
     # Cascade simulated on real answers: Flash-Lite everywhere, ticket re-asked to the strong model when confidence < threshold.
     cheap = load(f"classifier_{v}_{PRIMARY}")["rows"]
@@ -78,7 +78,8 @@ def main() -> None:
           "|---|---|---|---|---|---|---|"]
     for x in rows:
         est = "" if x["task2_measured"] else " (оцінка)"
-        md.append(f"| {x['label']} | {x['both_acc']}% | {x['task1_per_ticket']:.6f} | {x['task1_10k']:.2f} | "
+        partial = f" (лише {x['n']}/{x['n_total']})" if x["n"] < x["n_total"] else ""
+        md.append(f"| {x['label']} | {x['both_acc']}%{partial} | {x['task1_per_ticket']:.6f} | {x['task1_10k']:.2f} | "
                   f"{x['task2_call_per_ticket']:.6f}{est} | {x['task1_2_10k']:.2f}{est} | {x['task1_cached_10k']:.2f} |")
     md += ["", f"**Cascade** (Flash-Lite → GPT-OSS-120B when confidence < {th}): escalated {cascade['escalated']}/{cascade['n']} tickets, "
            f"both accuracy {cascade['both_acc']}%, ${cascade['cost_per_ticket']:.6f}/ticket, ${cascade['cost_10k']:.2f}/10k.",
