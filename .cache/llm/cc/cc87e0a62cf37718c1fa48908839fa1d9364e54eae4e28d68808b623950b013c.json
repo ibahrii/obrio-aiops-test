@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "expert_complaint",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Quality",
+    "action": "Review session transcript for expert Luna Starr and follow up with the user regarding reading quality"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Customer is complaining about the low quality and generic nature of a specific reading without explicitly requesting a refund."
+  },
+  "model": "gemini-flash",
+  "requested_model": "gemini-flash",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1955,
+  "out_tokens": 109,
+  "thinking_tokens": 0,
+  "latency_s": 48.060875704537466,
+  "api_latency_s": 48.060101485999894,
+  "attempts": [
+   {
+    "model": "gemini-flash",
+    "event": "ok",
+    "detail": "gemini-3.8-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"expert_complaint\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Expert Quality\",\"action\":\"Review session transcript for expert Luna Starr and follow up with the user regarding reading quality\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"Customer is complaining about the low quality and generic nature of a specific reading without explicitly requesting a refund.\"}"
+ },
+ "created_at": 1793408751.6790745
+}

@@ -1,0 +1,51 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "product_question",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Explain credit mechanics and policy regarding expiration"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user is asking how credits work and whether they expire, which is a standard product/feature question."
+  },
+  "model": "gemini-flash",
+  "requested_model": "gemini-flash",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1949,
+  "out_tokens": 100,
+  "thinking_tokens": 0,
+  "latency_s": 144.55815323699994,
+  "api_latency_s": 51.70033454400004,
+  "attempts": [
+   {
+    "model": "gemini-flash",
+    "event": "retry_rate_limit",
+    "detail": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this e"
+   },
+   {
+    "model": "gemini-flash",
+    "event": "retry_timeout",
+    "detail": "timeout after 60.0s"
+   },
+   {
+    "model": "gemini-flash",
+    "event": "ok",
+    "detail": "gemini-3.8-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"product_question\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"General Support\",\"action\":\"Explain credit mechanics and policy regarding expiration\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user is asking how credits work and whether they expire, which is a standard product/feature question.\"}"
+ },
+ "created_at": 1793409015.6994264
+}
