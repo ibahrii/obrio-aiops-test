@@ -9,7 +9,7 @@
 | GPT-OSS-20B (Groq) | 80.0% | 0.000232 | 2.32 | 0.000252 (оцінка) | 4.84 (оцінка) | 1.60 |
 | Nemotron 3 Ultra 550B (OpenRouter :free) | 93.3% | 0.001966 | 19.66 | 0.003291 (оцінка) | 52.56 (оцінка) | 11.98 |
 
-**Cascade** (Flash-Lite → GPT-OSS-120B when confidence < 0.9): escalated 1/30 tickets, both accuracy 100.0%, $0.001024/ticket, $10.24/10k.
+**Cascade** (Flash-Lite -> GPT-OSS-120B when confidence < 0.9): escalated 1/30 tickets, both accuracy 100.0%, $0.001024/ticket, $10.24/10k.
 **Batch API** (50% off) for Task 2 drafts of P3/P4 tickets (33% of tickets): saves ≈ $2.51 per 10k.
 Prompt cache column: static system prompt (1919 tokens) billed at the cached-input price; storage fees and minimum cacheable size not included (оцінка).
 Task 2 tokens measured on Flash-Lite only (in 1205.1, out 457.0); other models are estimates.

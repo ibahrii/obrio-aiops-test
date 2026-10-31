@@ -37,7 +37,7 @@ with st.sidebar:
                          format_func=lambda k: config.MODELS[k].label)
     prompt_versions = sorted(p.stem.split("_")[1] for p in config.PROMPTS_DIR.glob("classifier_v*.md"))
     cls_prompt = st.selectbox("Classifier prompt", prompt_versions, index=prompt_versions.index(config.CLASSIFIER_PROMPT_VERSION))
-    use_fallback = st.toggle("Fallback chain", value=True, help=" → ".join([model] + config.FALLBACK_CHAIN.get(model, [])))
+    use_fallback = st.toggle("Fallback chain", value=True, help=" -> ".join([model] + config.FALLBACK_CHAIN.get(model, [])))
     st.caption("API keys: " + " · ".join(
         f"{p} {'ok' if config.get_api_key(p) else 'missing'}" for p in ("gemini", "groq", "openrouter")))
     st.caption("All data in this demo is synthetic. Free-tier APIs only.")
@@ -160,7 +160,7 @@ with tab_cls:
     corr = load_corrections()
     if corr:
         st.caption(f"{len(corr)} decisions logged ({sum(c['action'] == 'corrected' for c in corr)} corrections).")
-        if st.button("Export corrections as eval cases → data/tickets_corrections.jsonl"):
+        if st.button("Export corrections as eval cases -> data/tickets_corrections.jsonl"):
             with open(config.DATA_DIR / "tickets_corrections.jsonl", "w", encoding="utf-8") as f:
                 for n, c in enumerate(corr, 1):
                     f.write(json.dumps({"id": f"C{n:03d}", "text": c["text"], "expected_category": c["final_category"],

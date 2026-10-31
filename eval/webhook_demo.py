@@ -125,7 +125,7 @@ def write_report(results) -> None:
     for i, (title, r, secs, sent) in enumerate(results, 1):
         for s in sent:
             ticket = s["user_message"].split("<ticket>")[-1].split("</ticket>")[0].strip()
-            md.append(f"**#{i} {title}** → `{s['model']}`\n```\n{ticket}\n```")
+            md.append(f"**#{i} {title}** -> `{s['model']}`\n```\n{ticket}\n```")
     md += ["", "## Routing outputs", ""]
     for name in ("notifications.log", "review_queue.jsonl", "crm_tickets.csv"):
         p = OUT_DIR / name

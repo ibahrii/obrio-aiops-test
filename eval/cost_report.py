@@ -81,7 +81,7 @@ def main() -> None:
         partial = f" (лише {x['n']}/{x['n_total']})" if x["n"] < x["n_total"] else ""
         md.append(f"| {x['label']} | {x['both_acc']}%{partial} | {x['task1_per_ticket']:.6f} | {x['task1_10k']:.2f} | "
                   f"{x['task2_call_per_ticket']:.6f}{est} | {x['task1_2_10k']:.2f}{est} | {x['task1_cached_10k']:.2f} |")
-    md += ["", f"**Cascade** (Flash-Lite → GPT-OSS-120B when confidence < {th}): escalated {cascade['escalated']}/{cascade['n']} tickets, "
+    md += ["", f"**Cascade** (Flash-Lite -> GPT-OSS-120B when confidence < {th}): escalated {cascade['escalated']}/{cascade['n']} tickets, "
            f"both accuracy {cascade['both_acc']}%, ${cascade['cost_per_ticket']:.6f}/ticket, ${cascade['cost_10k']:.2f}/10k.",
            f"**Batch API** (50% off) for Task 2 drafts of P3/P4 tickets ({p34:.0%} of tickets): saves ≈ ${batch_saving_10k:.2f} per 10k.",
            f"Prompt cache column: static system prompt ({STATIC_TOKENS['classifier_v4_system']} tokens) billed at the cached-input price; "

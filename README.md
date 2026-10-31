@@ -2,9 +2,9 @@
 
 Два інструменти для команди Support продукту Nebula:
 
-1. **Ticket classifier** (Task 1): текст тікета → категорія, пріоритет, наступний крок, `needs_human` + черга Review queue для людини.
-2. **Agent assistant** (Task 2): тікет → summary, три чернетки відповіді (formal / empathetic / short), цитати з бази знань, позначка «потрібне рішення агента».
-3. **API і вебхук-маршрутизація** (FastAPI): вебхук нового тікета з CRM (Zendesk / Intercom) → класифікація → P1 у Telegram, `needs_human` у Review queue, решта в CRM (симуляція CSV). Ідемпотентно за `ticket_id`.
+1. **Ticket classifier** (Task 1): текст тікета -> категорія, пріоритет, наступний крок, `needs_human` + черга Review queue для людини.
+2. **Agent assistant** (Task 2): тікет -> summary, три чернетки відповіді (formal / empathetic / short), цитати з бази знань, позначка «потрібне рішення агента».
+3. **API і вебхук-маршрутизація** (FastAPI): вебхук нового тікета з CRM (Zendesk / Intercom) -> класифікація -> P1 у Telegram, `needs_human` у Review queue, решта в CRM (симуляція CSV). Ідемпотентно за `ticket_id`.
 4. **PII-маскування:** email, телефони, картки й імена замінюються на `[EMAIL]` `[PHONE]` `[CARD]` `[NAME]` до будь-якого виклику LLM.
 
 Демо: **https://obrio-support-ai.streamlit.app** · Звіт: [`REPORT.md`](REPORT.md) (повні деталі в [`docs/APPENDIX.md`](docs/APPENDIX.md)) · еволюція промптів: [`PROMPT_LOG.md`](PROMPT_LOG.md) · шпаргалка: [`DECISIONS.md`](DECISIONS.md) · результати: [`eval/results/`](eval/results/)
@@ -42,8 +42,8 @@ set -a && source .env && set +a && uvicorn src.api:app --port 8000
 | ендпоінт | тіло |
 |---|---|
 | `POST /webhook/ticket` | вебхук Zendesk `{"ticket": {"id", "subject", "description", "requester": {"name", "email"}}}`, Intercom `{"type": "notification_event", "data": {"item": {"id", "source": {"body", "author"}}}}` або `{"ticket_id", "text"}` |
-| `POST /classify` | `{"text": "...", "requester_name": "необов'язково"}` → класифікація + `masked_text` (що реально пішло в модель) |
-| `POST /assist` | `{"text": "..."}` → summary, три чернетки, цитати |
+| `POST /classify` | `{"text": "...", "requester_name": "необов'язково"}` -> класифікація + `masked_text` (що реально пішло в модель) |
+| `POST /assist` | `{"text": "..."}` -> summary, три чернетки, цитати |
 | `GET /health` | стан сервісу |
 
 Приклад вебхука у форматі Zendesk:
@@ -54,7 +54,7 @@ curl -s localhost:8000/webhook/ticket -H 'Content-Type: application/json' -d '{"
 
 Повторіть ту саму команду: відповідь буде `"duplicate": true`, без повторного виклику LLM і без другого сповіщення.
 
-**Маршрутизація:** P1 → Telegram (або рядок у `logs/notifications.log`, якщо змінних немає) · `needs_human` → `data/runtime/review_queue.jsonl` (кнопка «Load tickets queued by the webhook API» у Streamlit) · решта → `data/runtime/crm_tickets.csv`. Стан ідемпотентності зберігається в `data/runtime/router.sqlite`. Каталог `data/runtime/` не комітиться, шлях змінюється через `ROUTER_STATE_DIR`.
+**Маршрутизація:** P1 -> Telegram (або рядок у `logs/notifications.log`, якщо змінних немає) · `needs_human` -> `data/runtime/review_queue.jsonl` (кнопка «Load tickets queued by the webhook API» у Streamlit) · решта -> `data/runtime/crm_tickets.csv`. Стан ідемпотентності зберігається в `data/runtime/router.sqlite`. Каталог `data/runtime/` не комітиться, шлях змінюється через `ROUTER_STATE_DIR`.
 
 Необов'язкові змінні оточення (є в `.env.example`):
 - `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`: сповіщення про P1;
@@ -69,8 +69,8 @@ python eval/webhook_demo.py
 ## Деплой на Streamlit Community Cloud
 
 1. Запушити репозиторій на GitHub.
-2. На [share.streamlit.io](https://share.streamlit.io) → **Create app** → вибрати репозиторій, гілку, файл `app.py`.
-3. **Advanced settings → Secrets**: вставити (формат як у `.streamlit/secrets.toml.example`):
+2. На [share.streamlit.io](https://share.streamlit.io) -> **Create app** -> вибрати репозиторій, гілку, файл `app.py`.
+3. **Advanced settings -> Secrets**: вставити (формат як у `.streamlit/secrets.toml.example`):
    ```toml
    GEMINI_API_KEY = "..."
    GROQ_API_KEY = "..."
@@ -119,7 +119,7 @@ src/guards.py           HITL-правила, маршрутизація, injecti
 src/retrieval.py        BM25 + буст за категорією + розширення запиту
 src/assistant.py        Task 2
 src/pii.py              маскування PII перед викликами LLM
-src/router.py           парсинг вебхуків, ідемпотентність, P1 → Telegram, needs_human → черга, решта → CSV
+src/router.py           парсинг вебхуків, ідемпотентність, P1 -> Telegram, needs_human -> черга, решта -> CSV
 src/api.py              FastAPI: /webhook/ticket, /classify, /assist
 src/cost.py             вартість
 prompts/                classifier_v1..v5.md (v4 фінальна, v5 відхилено), assistant_v1..v2.md

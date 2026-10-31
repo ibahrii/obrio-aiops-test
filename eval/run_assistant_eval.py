@@ -94,13 +94,13 @@ def to_markdown(s: dict, rows: list[dict]) -> str:
            f"hit@3 {s['hit3']}% (ablation: {s['ablation_hit3']}) · citation validity {s['citation_validity']}% · "
            f"language {s['language_acc']}% · length ok {s['length_ok']} · avg words {s['avg_words']} · "
            f"human decision {s['human_acc']}% (recall {s['human_recall']}%) · kb_has_answer {s['kb_has_answer_acc']}%", "",
-           "| id | scenario | lang | expected → retrieved | hit@3 | citations valid | language | length f/e/s | human exp → act |",
+           "| id | scenario | lang | expected -> retrieved | hit@3 | citations valid | language | length f/e/s | human exp -> act |",
            "|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         lo = r["length_ok"]
-        out.append(f"| {r['id']} | {r['scenario']} | {r['language']} | {r['expected_articles']} → {r['retrieved']} | {yn(r['hit3'])} | "
+        out.append(f"| {r['id']} | {r['scenario']} | {r['language']} | {r['expected_articles']} -> {r['retrieved']} | {yn(r['hit3'])} | "
                    f"{r['citations_valid']}/{r['citations_total']} | {yn(r['language_ok'])} | "
-                   f"{yn(lo.get('formal'))}{yn(lo.get('empathetic'))}{yn(lo.get('short'))} | {r['exp_human']} → {r['act_human']} |")
+                   f"{yn(lo.get('formal'))}{yn(lo.get('empathetic'))}{yn(lo.get('short'))} | {r['exp_human']} -> {r['act_human']} |")
     out += ["", "## Drafts (for manual review)", ""]
     for r in rows:
         out.append(f"### {r['id']}: {r['scenario']}\n\n**Ticket:** {r['input']}\n\n**Summary:** {r['summary']}\n")

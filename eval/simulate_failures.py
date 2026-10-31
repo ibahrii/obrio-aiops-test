@@ -117,7 +117,7 @@ def main() -> int:
         res, calls, sleeps, logged = run_scenario(plan)
         problems = check(res, sleeps, expect)
         failed += bool(problems)
-        lines.append(f"| {name} | {' → '.join(calls)} | {sleeps or '-'} | {res.meta.get('model')} | {res.meta.get('fallback_used')} | "
+        lines.append(f"| {name} | {' -> '.join(calls)} | {sleeps or '-'} | {res.meta.get('model')} | {res.meta.get('fallback_used')} | "
                      f"{res.category}/{res.priority}/human={res.needs_human} | {', '.join(sorted(set(logged))) or '-'} | "
                      f"{'✅' if not problems else '❌ ' + '; '.join(problems)} |")
     # cache: second identical call must not hit the transport
@@ -134,7 +134,7 @@ def main() -> int:
     ok = r2.meta.get("from_cache") and not r3.meta.get("from_cache") and len(script.calls) == 2
     failed += not ok
     lines.append(f"| cache: same ticket (normalised case/spaces) served from disk; new prompt version = new key | "
-                 f"{' → '.join(script.calls)} | - | - | - | 2nd from_cache={r2.meta.get('from_cache')}, other version from_cache={r3.meta.get('from_cache')} | — | {'✅' if ok else '❌'} |")
+                 f"{' -> '.join(script.calls)} | - | - | - | 2nd from_cache={r2.meta.get('from_cache')}, other version from_cache={r3.meta.get('from_cache')} | — | {'✅' if ok else '❌'} |")
     out = "\n".join(lines) + "\n"
     (config.RESULTS_DIR / "failure_simulation.md").write_text(out, encoding="utf-8")
     print(out)

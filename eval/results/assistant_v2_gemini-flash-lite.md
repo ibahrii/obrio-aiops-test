@@ -2,18 +2,18 @@
 
 hit@3 100.0% (ablation: {'ticket_only': 55.6, 'plus_boost': 88.9, 'plus_boost_expansion': 100.0}) · citation validity 100.0% · language 100.0% · length ok {'formal': 100.0, 'empathetic': 100.0, 'short': 90.0} · avg words {'formal': 61.5, 'empathetic': 73.5, 'short': 37.5} · human decision 80.0% (recall 100.0%) · kb_has_answer 100.0%
 
-| id | scenario | lang | expected → retrieved | hit@3 | citations valid | language | length f/e/s | human exp → act |
+| id | scenario | lang | expected -> retrieved | hit@3 | citations valid | language | length f/e/s | human exp -> act |
 |---|---|---|---|---|---|---|---|---|
-| A01 | routine how-to | en | ['kb-002'] → ['kb-002', 'kb-001', 'kb-003'] | ✅ | 1/1 | ✅ | ✅✅✅ | False → False |
-| A02 | double charge | en | ['kb-005'] → ['kb-005', 'kb-002', 'kb-001'] | ✅ | 2/2 | ✅ | ✅✅✅ | False → True |
-| A03 | refund inside policy, non-English | es | ['kb-004'] → ['kb-004', 'kb-005', 'kb-013'] | ✅ | 2/2 | ✅ | ✅✅✅ | False → False |
-| A04 | refund outside policy | en | ['kb-004'] → ['kb-004', 'kb-005', 'kb-012'] | ✅ | 1/1 | ✅ | ✅✅✅ | True → True |
-| A05 | expert no-show | en | ['kb-011'] → ['kb-011', 'kb-010', 'kb-014'] | ✅ | 2/2 | ✅ | ✅✅✅ | True → True |
-| A06 | crisis | en | ['kb-016'] → ['kb-016', 'kb-018', 'kb-015'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
-| A07 | GDPR deletion, non-English | uk | ['kb-009'] → ['kb-009', 'kb-010', 'kb-004'] | ✅ | 3/3 | ✅ | ✅✅✅ | True → True |
-| A08 | no answer in KB | en | [] → ['kb-016', 'kb-018', 'kb-014'] | - | 0/0 | ✅ | ✅✅✅ | True → True |
-| A09 | repeat contact, angry | en | ['kb-007'] → ['kb-007', 'kb-008', 'kb-003'] | ✅ | 3/3 | ✅ | ✅✅❌ | True → True |
-| A10 | tech, non-English | de | ['kb-013'] → ['kb-013', 'kb-012', 'kb-006'] | ✅ | 3/3 | ✅ | ✅✅✅ | False → True |
+| A01 | routine how-to | en | ['kb-002'] -> ['kb-002', 'kb-001', 'kb-003'] | ✅ | 1/1 | ✅ | ✅✅✅ | False -> False |
+| A02 | double charge | en | ['kb-005'] -> ['kb-005', 'kb-002', 'kb-001'] | ✅ | 2/2 | ✅ | ✅✅✅ | False -> True |
+| A03 | refund inside policy, non-English | es | ['kb-004'] -> ['kb-004', 'kb-005', 'kb-013'] | ✅ | 2/2 | ✅ | ✅✅✅ | False -> False |
+| A04 | refund outside policy | en | ['kb-004'] -> ['kb-004', 'kb-005', 'kb-012'] | ✅ | 1/1 | ✅ | ✅✅✅ | True -> True |
+| A05 | expert no-show | en | ['kb-011'] -> ['kb-011', 'kb-010', 'kb-014'] | ✅ | 2/2 | ✅ | ✅✅✅ | True -> True |
+| A06 | crisis | en | ['kb-016'] -> ['kb-016', 'kb-018', 'kb-015'] | ✅ | 3/3 | ✅ | ✅✅✅ | True -> True |
+| A07 | GDPR deletion, non-English | uk | ['kb-009'] -> ['kb-009', 'kb-010', 'kb-004'] | ✅ | 3/3 | ✅ | ✅✅✅ | True -> True |
+| A08 | no answer in KB | en | [] -> ['kb-016', 'kb-018', 'kb-014'] | - | 0/0 | ✅ | ✅✅✅ | True -> True |
+| A09 | repeat contact, angry | en | ['kb-007'] -> ['kb-007', 'kb-008', 'kb-003'] | ✅ | 3/3 | ✅ | ✅✅❌ | True -> True |
+| A10 | tech, non-English | de | ['kb-013'] -> ['kb-013', 'kb-012', 'kb-006'] | ✅ | 3/3 | ✅ | ✅✅✅ | False -> True |
 
 ## Drafts (for manual review)
 
