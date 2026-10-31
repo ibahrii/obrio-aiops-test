@@ -122,8 +122,9 @@ src/pii.py              маскування PII перед викликами L
 src/router.py           парсинг вебхуків, ідемпотентність, P1 → Telegram, needs_human → черга, решта → CSV
 src/api.py              FastAPI: /webhook/ticket, /classify, /assist
 src/cost.py             вартість
-prompts/                classifier_v1..v4.md, assistant_v1..v2.md
-data/                   tickets_eval.jsonl (30), tickets_holdout.jsonl (10), assistant_eval.jsonl (10), kb/*.md (18)
+prompts/                classifier_v1..v5.md (v4 — фінал, v5 відхилено), assistant_v1..v2.md
+data/                   tickets_eval.jsonl (30), tickets_holdout.jsonl (10), tickets_holdout2.jsonl (10),
+                        tickets_noisy.jsonl (14), assistant_eval.jsonl (10), kb/*.md (18)
 eval/                   run_eval.py, compare_models.py, run_assistant_eval.py, cost_report.py,
                         simulate_failures.py, fetch_prices.py, webhook_demo.py, results/
 tests/                  pytest: сценарії збоїв, guards, PII, API
