@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v4`, model `gemini-flash-3.6`
 
-n=30 · category **96.7%** (lenient 100.0%) · priority **100.0%** · both **96.7%** · needs_human 96.7% (recall 90.9%, precision 100.0%)
-edge cases: category 94.4% / priority 100.0% · regular: category 100.0% / priority 100.0%
+n=30 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 96.7% (recall 90.9%, precision 100.0%)
+edge cases: category 100.0% / priority 100.0% · regular: category 100.0% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 4.921s / p95 41.764s · tokens in 1963.5 / out 169.2
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 4.9
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.90 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P2 / False | ✅ | ✅ | ❌ | 0.95 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | product_question+billing_subscription / P3 / True | ❌ | ✅ | ✅ | 0.90 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question+billing_subscription / P3 / True | ✅ | ✅ | ✅ | 0.90 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 0.95 |
@@ -40,4 +40,3 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 4.9
 ## Errors
 
 - **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P2/human=False. Model rationale: _Payment was processed but the Premium subscription benefits/status were not applied to the user's account, which falls under billing errors (P2)._ Reasons: []
-- **E06** (mixed_topics): expected billing_subscription/P3/human=True, got product_question/P3/human=True. Model rationale: _The user is asking two product/billing questions about how credits work during a plan change and pricing differences across platforms. This is a standard product/billing inquiry._ Reasons: ['mixed topics involving money']

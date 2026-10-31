@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Collect device and OS details, verify crash logs, and provide steps to reinstall or rollback the update for premium users"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports the app crashes immediately after an update, preventing any use of the paid premium service, which is a core functionality outage (P1). No safety, legal, or refund request is present."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2292,
+  "out_tokens": 367,
+  "thinking_tokens": 192,
+  "latency_s": 1.5039142767878388,
+  "api_latency_s": 1.5031266410000228,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Collect device and OS details, verify crash logs, and provide steps to reinstall or rollback the update for premium users\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports the app crashes immediately after an update, preventing any use of the paid premium service, which is a core functionality outage (P1). No safety, legal, or refund request is present.\"\n}"
+ },
+ "created_at": 1793453311.6968825
+}

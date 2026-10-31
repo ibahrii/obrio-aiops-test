@@ -1,0 +1,48 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Escalate to crisis response team and provide immediate support resources"
+   },
+   "confidence": 0.96,
+   "needs_human": true,
+   "human_reasons": [
+    "customer shows signs of crisis, self-harm, hopelessness"
+   ],
+   "rationale": "The user expresses hopelessness and extreme fatigue, indicating a mental health crisis, which maps to safety_wellbeing and requires urgent (P1) handling."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2290,
+  "out_tokens": 220,
+  "thinking_tokens": 48,
+  "latency_s": 18.611459983070063,
+  "api_latency_s": 1.2324522829999864,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "retry_rate_limit",
+    "detail": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m67dz6mtej1vgcc2c1qxh6fc` service tier `on_demand` on tokens"
+   },
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Escalate to crisis response team and provide immediate support resources\"\n  },\n  \"confidence\": 0.96,\n  \"needs_human\": true,\n  \"human_reasons\": [\"customer shows signs of crisis, self-harm, hopelessness\"],\n  \"rationale\": \"The user expresses hopelessness and extreme fatigue, indicating a mental health crisis, which maps to safety_wellbeing and requires urgent (P1) handling.\"\n}"
+ },
+ "created_at": 1793453386.077139
+}

@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v1`, model `gemini-flash-lite`
 
-n=30 · category **86.7%** (lenient 86.7%) · priority **63.3%** · both **56.7%** · needs_human 50.0% (recall 100.0%, precision 42.3%)
-edge cases: category 88.9% / priority 66.7% · regular: category 83.3% / priority 58.3%
+n=30 · category **83.3%** (lenient 86.7%) · priority **63.3%** · both **53.3%** · needs_human 50.0% (recall 100.0%, precision 42.3%)
+edge cases: category 83.3% / priority 66.7% · regular: category 83.3% / priority 58.3%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.459s / p95 13.551s · tokens in 232.6 / out 171.5
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.4
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint+refund_request / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription+technical_issue / P2 / True | ✅ | ✅ | ✅ | 0.95 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | billing_subscription+product_question / P3 / True | ✅ | ✅ | ✅ | 0.95 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | billing_subscription+product_question / P3 / True | ❌ | ✅ | ✅ | 0.95 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request+billing_subscription / P2 / True | ✅ | ✅ | ❌ | 0.98 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / True | ✅ | ✅ | ❌ | 0.99 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P4 / False | ✅ | ❌ | ✅ | 0.99 |
@@ -50,6 +50,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.4
 - **T10** (none): expected product_question/P3/human=False, got product_question/P4/human=True. Model rationale: _The user is asking a standard informational question about how credits work and if they expire, which can be answered with a standard knowledge base article._ Reasons: ['mixed topics involving money']
 - **E01** (aggressive): expected technical_issue/P3/human=False, got technical_issue/P2/human=True. Model rationale: _The user is expressing extreme anger over a technical bug where the app logs them out every time it is closed, which falls under technical issues and requires immediate technical support to prevent app abandonment._ Reasons: ['model: Angry user threatening a 1-star review due to a frustrating recurring bug.']
 - **E02** (aggressive): expected billing_subscription/P2/human=False, got billing_subscription/P1/human=True. Model rationale: _The user is expressing extreme anger over an unexpected credit card charge and demanding immediate answers regarding a transaction named NEBULA*CREDITS._ Reasons: ['model: Customer is extremely angry and accusing the company of theft', 'model: Requires manual billing lookup and potential financial adjustment']
+- **E06** (mixed_topics): expected product_question/P3/human=True, got billing_subscription/P3/human=True. Model rationale: _The user is asking a product and billing question regarding credit rollover and subscription pricing differences between platforms._ Reasons: ['mixed topics involving money']
 - **E07** (non_english): expected refund_request/P2/human=False, got refund_request/P2/human=True. Model rationale: _The user is asking for a refund because they accidentally purchased the wrong credit package. This falls under refund requests and requires billing team intervention._ Reasons: ['model: Requires manual processing of a refund for the purchased credit package.']
 - **E08** (non_english): expected account_access/P2/human=False, got account_access/P2/human=True. Model rationale: _The user is experiencing issues logging into their account due to a password error, which falls under account_access. Priority is P2 because login issues block core app usage. A human support agent is needed to assist with account recovery._ Reasons: ['model: User is locked out of their account and needs assistance with credentials.']
 - **E09** (non_english): expected product_question/P3/human=False, got product_question/P4/human=False. Model rationale: _The user is politely asking for guidance on how to choose a tarot expert for a career consultation, which is a standard product usage question._ Reasons: []

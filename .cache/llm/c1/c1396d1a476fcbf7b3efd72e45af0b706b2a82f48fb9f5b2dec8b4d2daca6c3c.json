@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": "billing_subscription",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash on launch after latest update and provide troubleshooting steps for paid user"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The app is completely down for this paying customer due to a crash on launch, which makes it a P1 technical issue with a billing component."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1953,
+  "out_tokens": 184,
+  "thinking_tokens": 0,
+  "latency_s": 1.5486443116511168,
+  "api_latency_s": 1.5474606239999957,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"technical_issue\",\n  \"secondary_category\": \"billing_subscription\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Tech\",\n    \"action\": \"Investigate crash on launch after latest update and provide troubleshooting steps for paid user\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The app is completely down for this paying customer due to a crash on launch, which makes it a P1 technical issue with a billing component.\"\n}"
+ },
+ "created_at": 1793453253.473695
+}

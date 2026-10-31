@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v4`, model `gemini-flash-lite`
 
-n=30 · category **96.7%** (lenient 100.0%) · priority **100.0%** · both **96.7%** · needs_human 90.0% (recall 100.0%, precision 78.6%)
-edge cases: category 94.4% / priority 100.0% · regular: category 100.0% / priority 100.0%
+n=30 · category **100.0%** (lenient 100.0%) · priority **100.0%** · both **100.0%** · needs_human 90.0% (recall 100.0%, precision 78.6%)
+edge cases: category 100.0% / priority 100.0% · regular: category 100.0% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.422s / p95 1.585s · tokens in 1963.5 / out 167.4
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.4
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription+technical_issue / P2 / True | ✅ | ✅ | ✅ | 0.95 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | product_question+billing_subscription / P3 / True | ❌ | ✅ | ✅ | 0.90 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question+billing_subscription / P3 / True | ✅ | ✅ | ✅ | 0.90 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request+billing_subscription / P2 / True | ✅ | ✅ | ❌ | 0.95 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 1.00 |
@@ -40,6 +40,5 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.4
 ## Errors
 
 - **T05** (none): expected technical_issue/P1/human=False, got technical_issue/P1/human=True. Model rationale: _A paid core service (expert chat) is completely down for this customer with an Error 503, making it a P1 technical issue, with credits involved as a secondary billing concern._ Reasons: ['model: mixed topics where one is about money', 'mixed topics involving money']
-- **E06** (mixed_topics): expected billing_subscription/P3/human=True, got product_question/P3/human=True. Model rationale: _The customer is asking how feature and plan rules work regarding credit rollovers and pricing differences._ Reasons: ['mixed topics involving money']
 - **E07** (non_english): expected refund_request/P2/human=False, got refund_request/P2/human=True. Model rationale: _The customer is explicitly asking for a refund after buying the wrong credit package._ Reasons: ['model: mixed topics where one is about money']
 - **E10** (non_english): expected technical_issue/P1/human=False, got technical_issue/P1/human=True. Model rationale: _The core paid service is completely down due to an app crash on startup, making it a P1 technical issue with a billing context._ Reasons: ['model: mixed topics where one is about money', 'mixed topics involving money']

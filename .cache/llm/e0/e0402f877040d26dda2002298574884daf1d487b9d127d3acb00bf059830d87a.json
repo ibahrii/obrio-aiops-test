@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": "refund_request",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "uk",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate charge and process a refund for the extra payment"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "mixed topics where one is about money"
+   ],
+   "rationale": "The user reports a duplicate charge and asks to return the extra money, which combines a billing issue with an explicit refund request."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1952,
+  "out_tokens": 178,
+  "thinking_tokens": 0,
+  "latency_s": 1.8482727719261476,
+  "api_latency_s": 1.8475114080000026,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": \"refund_request\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"uk\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate charge and process a refund for the extra payment\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"mixed topics where one is about money\"\n  ],\n  \"rationale\": \"The user reports a duplicate charge and asks to return the extra money, which combines a billing issue with an explicit refund request.\"\n}"
+ },
+ "created_at": 1793453267.27392
+}

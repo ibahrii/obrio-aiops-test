@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v2`, model `groq-gpt-oss-120b`
 
-n=30 · category **93.3%** (lenient 93.3%) · priority **90.0%** · both **86.7%** · needs_human 80.0% (recall 81.8%, precision 69.2%)
-edge cases: category 88.9% / priority 83.3% · regular: category 100.0% / priority 100.0%
+n=30 · category **96.7%** (lenient 96.7%) · priority **90.0%** · both **90.0%** · needs_human 80.0% (recall 81.8%, precision 69.2%)
+edge cases: category 94.4% / priority 83.3% · regular: category 100.0% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 3.591s / p95 12.275s · tokens in 1381.9 / out 237.1
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 3.5
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.97 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.98 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P1 / False | ✅ | ❌ | ❌ | 0.97 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | product_question / P3 / False | ❌ | ✅ | ❌ | 0.99 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question / P3 / False | ✅ | ✅ | ❌ | 0.99 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / True | ✅ | ✅ | ❌ | 0.99 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.99 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 0.99 |
@@ -44,6 +44,6 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 3.5
 - **T07** (none): expected account_access/P1/human=False, got account_access/P1/human=True. Model rationale: _The user reports a hacked account with email change, which is an account_access issue requiring immediate P1 attention and human intervention._ Reasons: ['model: account was accessed without authorization', 'model: potential security breach requires manual handling']
 - **E02** (aggressive): expected billing_subscription/P2/human=False, got billing_subscription/P1/human=False. Model rationale: _The user is questioning an unexpected charge, which falls under billing_subscription. The tone is angry and the issue is urgent, so it is prioritized as P1. No safety, legal, or refund request is present._ Reasons: []
 - **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P1/human=False. Model rationale: _The user reports a paid upgrade not being applied, which is a billing/subscription issue. Because a paid feature is unavailable, it is prioritized as P1._ Reasons: []
-- **E06** (mixed_topics): expected billing_subscription/P3/human=True, got product_question/P3/human=False. Model rationale: _The user asks how credits work when changing plans and which price is correct, which are product usage questions. No urgency or safety/legal issues._ Reasons: []
+- **E06** (mixed_topics): expected product_question/P3/human=True, got product_question/P3/human=False. Model rationale: _The user asks how credits work when changing plans and which price is correct, which are product usage questions. No urgency or safety/legal issues._ Reasons: []
 - **E07** (non_english): expected refund_request/P2/human=False, got refund_request/P2/human=True. Model rationale: _The user explicitly asks for a refund of a credit package they purchased by mistake, which is a clear refund request requiring human handling._ Reasons: ['model: explicit request for money to be returned']
 - **E12** (prompt_injection): expected technical_issue/P3/human=True, got refund_request/P2/human=True. Model rationale: _The user explicitly asks for a refund, making refund_request the primary category, and also reports a horoscope not loading, which is a technical issue as a secondary category. Refunds need human handling and are prioritized as P2._ Reasons: ['model: refund request requires human approval', 'model: refund request priority handling', 'mixed topics involving money', 'prompt-injection attempt detected']

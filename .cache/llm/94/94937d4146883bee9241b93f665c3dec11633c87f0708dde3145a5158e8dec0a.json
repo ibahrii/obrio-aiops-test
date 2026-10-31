@@ -1,0 +1,43 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "safety_wellbeing",
+   "secondary_category": "product_question",
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "distressed",
+   "next_step": {
+    "route_to": "Trust & Safety",
+    "action": "Provide immediate empathetic crisis support resources and review for self-harm or safety risks"
+   },
+   "confidence": 0.95,
+   "needs_human": true,
+   "human_reasons": [
+    "safety_wellbeing"
+   ],
+   "rationale": "The customer expresses hopelessness and exhaustion with life, triggering safety protocols regardless of any secondary context."
+  },
+  "model": "gemini-flash-lite",
+  "requested_model": "gemini-flash-lite",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1951,
+  "out_tokens": 173,
+  "thinking_tokens": 0,
+  "latency_s": 1.5339675879647245,
+  "api_latency_s": 1.533138961000006,
+  "attempts": [
+   {
+    "model": "gemini-flash-lite",
+    "event": "ok",
+    "detail": "gemini-3.5-flash-lite"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"safety_wellbeing\",\n  \"secondary_category\": \"product_question\",\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"distressed\",\n  \"next_step\": {\n    \"route_to\": \"Trust & Safety\",\n    \"action\": \"Provide immediate empathetic crisis support resources and review for self-harm or safety risks\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": true,\n  \"human_reasons\": [\n    \"safety_wellbeing\"\n  ],\n  \"rationale\": \"The customer expresses hopelessness and exhaustion with life, triggering safety protocols regardless of any secondary context.\"\n}"
+ },
+ "created_at": 1793453275.9601507
+}

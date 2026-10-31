@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v4`, model `groq-gpt-oss-120b`
 
-n=30 · category **96.7%** (lenient 96.7%) · priority **90.0%** · both **86.7%** · needs_human 90.0% (recall 81.8%, precision 90.0%)
-edge cases: category 94.4% / priority 94.4% · regular: category 100.0% / priority 83.3%
+n=30 · category **100.0%** (lenient 100.0%) · priority **90.0%** · both **90.0%** · needs_human 90.0% (recall 81.8%, precision 90.0%)
+edge cases: category 100.0% / priority 94.4% · regular: category 100.0% / priority 83.3%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.39s / p95 19.519s · tokens in 2299.9 / out 251.7
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | refund_request+expert_complaint / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription / P2 / False | ✅ | ✅ | ❌ | 0.95 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | product_question / P3 / False | ❌ | ✅ | ❌ | 0.96 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | product_question / P3 / False | ✅ | ✅ | ❌ | 0.96 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.95 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 0.96 |
@@ -42,6 +42,6 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 17.
 - **T02** (none): expected billing_subscription/P1/human=False, got billing_subscription/P2/human=False. Model rationale: _The user reports duplicate charges and asks for investigation, which fits billing_subscription; no threat or legal language, so priority is P2._ Reasons: []
 - **T05** (none): expected technical_issue/P1/human=False, got technical_issue/P2/human=False. Model rationale: _The user reports a consistent error (Error 503) when trying to start chats, which is a technical issue; no safety, legal, or refund request is present._ Reasons: []
 - **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P2/human=False. Model rationale: _The user reports a paid premium upgrade that hasn't been applied, which is a billing subscription issue; it is a billing error requiring verification, classified as P2._ Reasons: []
-- **E06** (mixed_topics): expected billing_subscription/P3/human=True, got product_question/P3/human=False. Model rationale: _The ticket asks how credits work when switching plans and which price is correct, fitting product_question. No safety, legal, billing, or refund issues are present._ Reasons: []
+- **E06** (mixed_topics): expected product_question/P3/human=True, got product_question/P3/human=False. Model rationale: _The ticket asks how credits work when switching plans and which price is correct, fitting product_question. No safety, legal, billing, or refund issues are present._ Reasons: []
 - **E11** (empty_nonsense): expected feedback_other/P4/human=False, got feedback_other/P4/human=True. Model rationale: _The ticket contains nonsensical text with no identifiable issue, so it is classified as feedback_other and routed to General Support for clarification._ Reasons: ['model: low confidence due to unreadable content', 'low confidence 0.55 < 0.9']
 - **E15** (long_chaotic): expected billing_subscription/P1/human=True, got billing_subscription/P2/human=True. Model rationale: _The ticket reports a duplicate subscription charge (billing issue) and asks about new Tarot decks (product question), making billing the primary category with a product question secondary; no threats or safety concerns, so standard billing priority P2._ Reasons: ['mixed topics involving money']

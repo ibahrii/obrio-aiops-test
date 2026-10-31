@@ -66,7 +66,7 @@
    "task1_2_10k": 47.43127419354839,
    "task1_cached_per_ticket": 0.0008118,
    "task1_cached_10k": 8.118,
-   "both_acc": 96.7,
+   "both_acc": 100.0,
    "n": 30,
    "n_total": 30
   },
@@ -80,7 +80,7 @@
    "task1_2_10k": 25.115799999999997,
    "task1_cached_per_ticket": 0.0004894200000000001,
    "task1_cached_10k": 4.8942000000000005,
-   "both_acc": 96.7,
+   "both_acc": 100.0,
    "n": 30,
    "n_total": 30
   },
@@ -94,7 +94,7 @@
    "task1_2_10k": 10.890527956989247,
    "task1_cached_per_ticket": 0.00035208,
    "task1_cached_10k": 3.5208,
-   "both_acc": 86.7,
+   "both_acc": 90.0,
    "n": 30,
    "n_total": 30
   },
@@ -108,7 +108,7 @@
    "task1_2_10k": 4.843243906810035,
    "task1_cached_per_ticket": 0.0001599,
    "task1_cached_10k": 1.5990000000000002,
-   "both_acc": 76.7,
+   "both_acc": 80.0,
    "n": 30,
    "n_total": 30
   },
@@ -122,7 +122,7 @@
    "task1_2_10k": 52.563938351254485,
    "task1_cached_per_ticket": 0.0011979700000000002,
    "task1_cached_10k": 11.979700000000003,
-   "both_acc": 90.0,
+   "both_acc": 93.3,
    "n": 30,
    "n_total": 30
   }
@@ -132,7 +132,7 @@
   "escalated": 1,
   "n": 30,
   "escalation_rate": 0.03333333333333333,
-  "both_acc": 96.7,
+  "both_acc": 100.0,
   "cost_per_ticket": 0.0010240834999999998,
   "cost_10k": 10.240834999999999
  },

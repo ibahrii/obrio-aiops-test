@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate the duplicate subscription charge for this month and correct the billing, issuing a refund if appropriate"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports being charged twice for their subscription, which is a billing issue without any chargeback threat, so it falls under billing_subscription with P2 priority."
+  },
+  "model": "groq-gpt-oss-120b",
+  "requested_model": "groq-gpt-oss-120b",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 2284,
+  "out_tokens": 247,
+  "thinking_tokens": 81,
+  "latency_s": 1.1300343469999916,
+  "api_latency_s": 1.1291948970000192,
+  "attempts": [
+   {
+    "model": "groq-gpt-oss-120b",
+    "event": "ok",
+    "detail": "openai/gpt-oss-120b"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P2\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"frustrated\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate the duplicate subscription charge for this month and correct the billing, issuing a refund if appropriate\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The user reports being charged twice for their subscription, which is a billing issue without any chargeback threat, so it falls under billing_subscription with P2 priority.\"\n}"
+ },
+ "created_at": 1793453309.323156
+}

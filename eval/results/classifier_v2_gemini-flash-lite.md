@@ -1,7 +1,7 @@
 # Classifier eval (eval) — prompt `v2`, model `gemini-flash-lite`
 
-n=30 · category **90.0%** (lenient 93.3%) · priority **90.0%** · both **83.3%** · needs_human 83.3% (recall 100.0%, precision 68.8%)
-edge cases: category 83.3% / priority 83.3% · regular: category 100.0% / priority 100.0%
+n=30 · category **86.7%** (lenient 93.3%) · priority **90.0%** · both **80.0%** · needs_human 83.3% (recall 100.0%, precision 68.8%)
+edge cases: category 77.8% / priority 83.3% · regular: category 100.0% / priority 100.0%
 valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.364s / p95 4.489s · tokens in 1001.6 / out 172.7
 
 | id | edge | input | expected cat / prio / human | actual cat / prio / human | cat | prio | human | conf |
@@ -23,7 +23,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.3
 | E03 | aggressive | Your so-called astrologer is a FRAUD. She took 300 credits and said nothing useful, just k | expert_complaint / P2 / True | expert_complaint+refund_request / P2 / True | ✅ | ✅ | ✅ | 0.95 |
 | E04 | mixed_topics | Expert Sofia didn't show up for my scheduled reading and I was still charged 120 credits.  | refund_request+expert_complaint / P2 / True | expert_complaint+refund_request / P2 / True | ❌ | ✅ | ✅ | 0.95 |
 | E05 | mixed_topics | I upgraded to Premium yesterday, the payment went through, but the app still shows me as a | billing_subscription+technical_issue / P2 / True | billing_subscription+technical_issue / P1 / True | ✅ | ❌ | ✅ | 0.98 |
-| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | billing_subscription+product_question / P3 / True | billing_subscription+product_question / P3 / True | ✅ | ✅ | ✅ | 0.95 |
+| E06 | mixed_topics | Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the | product_question+billing_subscription / P3 / True | billing_subscription+product_question / P3 / True | ❌ | ✅ | ✅ | 0.95 |
 | E07 | non_english | Hola, ayer compré un paquete de créditos pero me equivoqué de paquete. ¿Me pueden devolver | refund_request / P2 / False | refund_request+billing_subscription / P2 / False | ✅ | ✅ | ✅ | 0.98 |
 | E08 | non_english | Olá, não consigo entrar na minha conta, diz que a senha está errada mas tenho certeza que  | account_access / P2 / False | account_access / P2 / False | ✅ | ✅ | ✅ | 0.98 |
 | E09 | non_english | Доброго дня! Підкажіть, будь ласка, як обрати експерта з таро? Хочу консультацію щодо робо | product_question / P3 / False | product_question / P3 / False | ✅ | ✅ | ✅ | 1.00 |
@@ -44,6 +44,7 @@ valid JSON first try 100.0% · fallbacks 0 · safe defaults 0 · latency p50 1.3
 - **E02** (aggressive): expected billing_subscription/P2/human=False, got billing_subscription/P1/human=True. Model rationale: _The customer is complaining about an unexpected credit card charge and demanding an immediate response, which elevates the priority to P1 due to billing dispute risk._ Reasons: ['model: Unauthorized or unexpected charge with an angry customer demanding immediate resolution.']
 - **E04** (mixed_topics): expected refund_request/P2/human=True, got expert_complaint/P2/human=True. Model rationale: _The customer is complaining about a specific expert not showing up while still being charged credits, and explicitly asks for a refund and to report the expert._ Reasons: ['model: Expert complaint involving service failure (no-show) and a request for credits refund.', 'mixed topics involving money']
 - **E05** (mixed_topics): expected billing_subscription/P2/human=True, got billing_subscription/P1/human=True. Model rationale: _The customer paid for a subscription upgrade but did not receive access, representing a payment synchronization error which is classified as P1._ Reasons: ['model: Paid service completely unavailable or paid but not received', 'mixed topics involving money']
+- **E06** (mixed_topics): expected product_question/P3/human=True, got billing_subscription/P3/human=True. Model rationale: _The user is asking about billing details regarding plan changes and pricing differences between platforms, which falls under billing and subscription._ Reasons: ['mixed topics involving money']
 - **E10** (non_english): expected technical_issue/P1/human=False, got technical_issue/P1/human=True. Model rationale: _The primary issue is a technical crash preventing app access after an update, making the paid service completely unavailable and triggering a P1 priority._ Reasons: ['mixed topics involving money']
 - **E12** (prompt_injection): expected technical_issue/P3/human=True, got refund_request/P2/human=True. Model rationale: _The user is explicitly asking for a refund while mentioning a technical issue. Prompt injection attempt regarding admin mode is ignored._ Reasons: ['mixed topics involving money', 'prompt-injection attempt detected']
 - **E16** (expert_requester): expected billing_subscription/P2/human=False, got billing_subscription/P2/human=True. Model rationale: _The sender is a platform expert inquiring about a delayed payout, which falls under billing and financial management handled by Expert Ops._ Reasons: ['model: Expert payout issue requires manual financial intervention by Expert Ops']

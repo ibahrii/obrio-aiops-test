@@ -7,16 +7,16 @@
   "n": 30,
   "n_total": 30,
   "not_measured": 0,
-  "category_acc": 96.7,
+  "category_acc": 100.0,
   "category_lenient_acc": 100.0,
   "priority_acc": 100.0,
-  "both_acc": 96.7,
+  "both_acc": 100.0,
   "needs_human_acc": 90.0,
   "needs_human_recall": 100.0,
   "needs_human_precision": 78.6,
   "escalation_rate": 46.7,
   "model_needs_human_recall": 81.8,
-  "edge_category_acc": 94.4,
+  "edge_category_acc": 100.0,
   "edge_priority_acc": 100.0,
   "regular_category_acc": 100.0,
   "regular_priority_acc": 100.0,
@@ -36,8 +36,7 @@
   "avg_cost_usd": 0.0010076,
   "confusion": {
    "billing_subscription": {
-    "billing_subscription": 7,
-    "product_question": 1
+    "billing_subscription": 7
    },
    "refund_request": {
     "refund_request": 3
@@ -52,7 +51,7 @@
     "expert_complaint": 3
    },
    "product_question": {
-    "product_question": 2
+    "product_question": 3
    },
    "privacy_legal": {
     "privacy_legal": 3
@@ -69,57 +68,57 @@
     "threshold": 0.5,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.6,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.7,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.75,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.8,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.85,
     "flagged": 0,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 0
    },
    {
     "threshold": 0.9,
     "flagged": 1,
     "errors_caught": 0,
-    "errors_total": 1,
+    "errors_total": 0,
     "correct_flagged": 1
    },
    {
     "threshold": 0.95,
     "flagged": 3,
-    "errors_caught": 1,
-    "errors_total": 1,
-    "correct_flagged": 2
+    "errors_caught": 0,
+    "errors_total": 0,
+    "correct_flagged": 3
    }
   ]
  },
@@ -946,8 +945,8 @@
    "id": "E06",
    "edge_case_type": "mixed_topics",
    "input": "Do my unused credits carry over if I switch from the monthly to the annual plan? Also, the",
-   "exp_category": "billing_subscription",
-   "exp_secondary": "product_question",
+   "exp_category": "product_question",
+   "exp_secondary": "billing_subscription",
    "exp_priority": "P3",
    "exp_needs_human": true,
    "act_category": "product_question",
@@ -957,7 +956,7 @@
    "model_category": "product_question",
    "model_priority": "P3",
    "model_needs_human": false,
-   "category_pass": false,
+   "category_pass": true,
    "category_lenient_pass": true,
    "priority_pass": true,
    "needs_human_pass": true,
@@ -990,7 +989,7 @@
      "detail": "gemini-3.5-flash-lite"
     }
    ],
-   "both_pass": false,
+   "both_pass": true,
    "measured": true
   },
   {

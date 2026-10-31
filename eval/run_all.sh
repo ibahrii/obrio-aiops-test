@@ -17,6 +17,9 @@ for m in gemini-flash gemini-flash-3.6 groq-gpt-oss-120b groq-gpt-oss-20b openro
   python eval/run_eval.py --model "$m" --prompt v4 --cache-only >/dev/null
   python eval/run_eval.py --model "$m" --prompt v4 --dataset holdout --cache-only >/dev/null
 done
+for m in gemini-flash-lite groq-gpt-oss-120b; do  # noisy-text robustness set (data/tickets_noisy.jsonl)
+  python eval/run_eval.py --model "$m" --prompt v4 --dataset noisy --cache-only >/dev/null
+done
 python eval/compare_models.py >/dev/null
 python eval/run_assistant_eval.py --model gemini-flash-lite --prompt v2 --cache-only >/dev/null
 python eval/cost_report.py >/dev/null
