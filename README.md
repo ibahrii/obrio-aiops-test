@@ -7,7 +7,7 @@
 3. **API і вебхук-маршрутизація** (FastAPI): вебхук нового тікета з CRM (Zendesk / Intercom) → класифікація → P1 у Telegram, `needs_human` у Review queue, решта в CRM (симуляція CSV). Ідемпотентно за `ticket_id`.
 4. **PII-маскування:** email, телефони, картки й імена замінюються на `[EMAIL]` `[PHONE]` `[CARD]` `[NAME]` до будь-якого виклику LLM.
 
-🌐 Демо: **https://obrio-support-ai.streamlit.app** · 📄 Звіт: [`REPORT.md`](REPORT.md) · еволюція промптів: [`PROMPT_LOG.md`](PROMPT_LOG.md) · шпаргалка: [`DECISIONS.md`](DECISIONS.md) · результати: [`eval/results/`](eval/results/)
+🌐 Демо: **https://obrio-support-ai.streamlit.app** · 📄 Звіт: [`REPORT.md`](REPORT.md) (повні деталі — [`docs/APPENDIX.md`](docs/APPENDIX.md)) · еволюція промптів: [`PROMPT_LOG.md`](PROMPT_LOG.md) · шпаргалка: [`DECISIONS.md`](DECISIONS.md) · результати: [`eval/results/`](eval/results/)
 
 > **Усі дані синтетичні.** Тікети, база знань (`data/kb/`, 18 статей) і політики (наприклад, «14 днів на повернення») вигадані для демо й не відображають реальних правил OBRIO/Nebula. Використовуються лише безкоштовні API.
 
