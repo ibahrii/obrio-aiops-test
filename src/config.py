@@ -26,7 +26,7 @@ ASSISTANT_PROMPT_VERSION = os.getenv("ASSISTANT_PROMPT_VERSION", "v2")
 TAXONOMY_VERSION = "2026-10-30"
 KB_VERSION = "kb-2026-10-30"
 
-REQUEST_TIMEOUT_S = 20.0
+REQUEST_TIMEOUT_S = float(os.getenv("LLM_TIMEOUT_S", "20"))  # longer for slow-model comparison runs
 TIMEOUT_RETRIES = 2          # extra attempts after a timeout / 5xx, exponential backoff
 RATE_LIMIT_RETRIES = 2       # extra attempts after 429, honouring Retry-After
 MAX_RETRY_AFTER_S = 30.0     # never sleep longer than this on a single 429
