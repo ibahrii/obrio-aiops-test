@@ -31,7 +31,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True, choices=list(config.MODELS))
     ap.add_argument("--prompt", default=config.CLASSIFIER_PROMPT_VERSION)
-    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout", "noisy"])
+    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout", "noisy", "holdout2"])
     a = ap.parse_args()
     print(f"timeout {config.REQUEST_TIMEOUT_S}s")
     answered = failed = 0

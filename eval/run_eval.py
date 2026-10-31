@@ -181,7 +181,7 @@ if __name__ == "__main__":
     ap.add_argument("--model", default=config.DEFAULT_MODEL, choices=list(config.MODELS))
     ap.add_argument("--prompt", default=config.CLASSIFIER_PROMPT_VERSION)
     ap.add_argument("--fallback", action="store_true")
-    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout", "noisy", "corrections"])
+    ap.add_argument("--dataset", default="eval", choices=["eval", "holdout", "noisy", "holdout2", "corrections"])
     ap.add_argument("--cache-only", action="store_true", help="no API calls; cache misses reported as not measured")
     a = ap.parse_args()
     llm.CACHE_ONLY = a.cache_only
