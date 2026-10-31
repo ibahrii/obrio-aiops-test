@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "de",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate startup crash after latest app update and contact user for device/OS details"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The app crashes immediately on launch and is completely unusable, which meets P1 criteria for a complete outage for this user."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1961,
+  "out_tokens": 251,
+  "thinking_tokens": 140,
+  "latency_s": 2.8193268950105903,
+  "api_latency_s": 2.8183652369999663,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"technical_issue\",\"secondary_category\":null,\"priority\":\"P1\",\"requester_type\":\"user\",\"language\":\"de\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Investigate startup crash after latest app update and contact user for device/OS details\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The app crashes immediately on launch and is completely unusable, which meets P1 criteria for a complete outage for this user.\"}"
+ },
+ "created_at": 1793407648.9731307
+}

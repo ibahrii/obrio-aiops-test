@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "feedback_other",
+   "secondary_category": null,
+   "priority": "P4",
+   "requester_type": "unknown",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "General Support",
+    "action": "Close ticket as gibberish/unclear input"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket content consists of random characters and numbers (gibberish/unclear), fitting the feedback_other category at P4 priority."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1940,
+  "out_tokens": 110,
+  "thinking_tokens": 0,
+  "latency_s": 6.104316671025913,
+  "api_latency_s": 6.10346580099997,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"feedback_other\",\"secondary_category\":null,\"priority\":\"P4\",\"requester_type\":\"unknown\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"General Support\",\"action\":\"Close ticket as gibberish/unclear input\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The ticket content consists of random characters and numbers (gibberish/unclear), fitting the feedback_other category at P4 priority.\"}"
+ },
+ "created_at": 1793407659.2583013
+}

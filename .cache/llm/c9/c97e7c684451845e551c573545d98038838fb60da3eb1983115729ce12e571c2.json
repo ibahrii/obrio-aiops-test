@@ -1,0 +1,51 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Verify payment status and manually sync/activate the Premium subscription for the user account"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "Payment was processed but the Premium subscription benefits/status were not applied to the user's account, which falls under billing errors (P2)."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1955,
+  "out_tokens": 115,
+  "thinking_tokens": 0,
+  "latency_s": 44.07302631593015,
+  "api_latency_s": 30.214593931999985,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_server_error",
+    "detail": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again "
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "retry_server_error",
+    "detail": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again "
+   },
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Billing\",\"action\":\"Verify payment status and manually sync/activate the Premium subscription for the user account\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"Payment was processed but the Premium subscription benefits/status were not applied to the user's account, which falls under billing errors (P2).\"}"
+ },
+ "created_at": 1793407618.1505873
+}

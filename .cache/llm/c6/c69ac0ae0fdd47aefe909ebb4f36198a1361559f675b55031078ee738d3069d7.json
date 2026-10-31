@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P2",
+   "requester_type": "expert",
+   "language": "en",
+   "sentiment": "frustrated",
+   "next_step": {
+    "route_to": "Expert Ops",
+    "action": "Investigate delayed September payout for expert Venus Ray and update payout status"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The ticket is from a platform expert regarding a delayed payout, which falls under billing_subscription for marketplace experts. The request routes to Expert Ops at P2 priority per the decision guidelines."
+  },
+  "model": "gemini-flash-3.6",
+  "requested_model": "gemini-flash-3.6",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1969,
+  "out_tokens": 122,
+  "thinking_tokens": 0,
+  "latency_s": 3.359587191181163,
+  "api_latency_s": 3.3588626970000064,
+  "attempts": [
+   {
+    "model": "gemini-flash-3.6",
+    "event": "ok",
+    "detail": "gemini-3.6-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"billing_subscription\",\"secondary_category\":null,\"priority\":\"P2\",\"requester_type\":\"expert\",\"language\":\"en\",\"sentiment\":\"frustrated\",\"next_step\":{\"route_to\":\"Expert Ops\",\"action\":\"Investigate delayed September payout for expert Venus Ray and update payout status\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The ticket is from a platform expert regarding a delayed payout, which falls under billing_subscription for marketplace experts. The request routes to Expert Ops at P2 priority per the decision guidelines.\"}"
+ },
+ "created_at": 1793407707.078758
+}

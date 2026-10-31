@@ -1,0 +1,41 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "technical_issue",
+   "secondary_category": null,
+   "priority": "P3",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Tech",
+    "action": "Investigate crash logs on Android 14 specifically when opening the daily horoscope tab"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The user reports a bug/crash isolated to a single feature (daily horoscope tab) while the rest of the app works normally, which qualifies as P3 technical_issue."
+  },
+  "model": "gemini-flash",
+  "requested_model": "gemini-flash",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1950,
+  "out_tokens": 122,
+  "thinking_tokens": 0,
+  "latency_s": 58.64789589600002,
+  "api_latency_s": 58.647236121000105,
+  "attempts": [
+   {
+    "model": "gemini-flash",
+    "event": "ok",
+    "detail": "gemini-3.8-flash"
+   }
+  ],
+  "raw_text": "{\"category\":\"technical_issue\",\"secondary_category\":null,\"priority\":\"P3\",\"requester_type\":\"user\",\"language\":\"en\",\"sentiment\":\"calm\",\"next_step\":{\"route_to\":\"Tech\",\"action\":\"Investigate crash logs on Android 14 specifically when opening the daily horoscope tab\"},\"confidence\":0.95,\"needs_human\":false,\"human_reasons\":[],\"rationale\":\"The user reports a bug/crash isolated to a single feature (daily horoscope tab) while the rest of the app works normally, which qualifies as P3 technical_issue.\"}"
+ },
+ "created_at": 1793408368.9103587
+}

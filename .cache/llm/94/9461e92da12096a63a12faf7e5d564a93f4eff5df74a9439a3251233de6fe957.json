@@ -1,0 +1,51 @@
+{
+ "result": {
+  "ok": true,
+  "data": {
+   "category": "billing_subscription",
+   "secondary_category": null,
+   "priority": "P1",
+   "requester_type": "user",
+   "language": "en",
+   "sentiment": "calm",
+   "next_step": {
+    "route_to": "Billing",
+    "action": "Investigate duplicate charge on Oct 12 and initiate refund for the second $49.99 transaction"
+   },
+   "confidence": 0.95,
+   "needs_human": false,
+   "human_reasons": [],
+   "rationale": "The customer reports a duplicate charge for their 3-month plan, which falls under billing_subscription. According to the priority rules, charges reported as duplicated are classified as P1."
+  },
+  "model": "gemini-flash",
+  "requested_model": "gemini-flash",
+  "from_cache": false,
+  "fallback_used": false,
+  "valid_first_try": true,
+  "strict_json_first_try": true,
+  "in_tokens": 1966,
+  "out_tokens": 182,
+  "thinking_tokens": 0,
+  "latency_s": 172.04588769299994,
+  "api_latency_s": 48.327677096,
+  "attempts": [
+   {
+    "model": "gemini-flash",
+    "event": "retry_timeout",
+    "detail": "timeout after 60.0s"
+   },
+   {
+    "model": "gemini-flash",
+    "event": "retry_timeout",
+    "detail": "timeout after 60.0s"
+   },
+   {
+    "model": "gemini-flash",
+    "event": "ok",
+    "detail": "gemini-3.8-flash"
+   }
+  ],
+  "raw_text": "{\n  \"category\": \"billing_subscription\",\n  \"secondary_category\": null,\n  \"priority\": \"P1\",\n  \"requester_type\": \"user\",\n  \"language\": \"en\",\n  \"sentiment\": \"calm\",\n  \"next_step\": {\n    \"route_to\": \"Billing\",\n    \"action\": \"Investigate duplicate charge on Oct 12 and initiate refund for the second $49.99 transaction\"\n  },\n  \"confidence\": 0.95,\n  \"needs_human\": false,\n  \"human_reasons\": [],\n  \"rationale\": \"The customer reports a duplicate charge for their 3-month plan, which falls under billing_subscription. According to the priority rules, charges reported as duplicated are classified as P1.\"\n}"
+ },
+ "created_at": 1793408126.2624729
+}
