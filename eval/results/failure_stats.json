@@ -3,7 +3,7 @@
   "gemini-flash-lite": 1,
   "groq-gpt-oss-120b": 70,
   "gemini-flash-3.6": 27,
-  "gemini-flash": 32,
+  "gemini-flash": 37,
   "groq-gpt-oss-20b": 33
  },
  "timeout": {
@@ -12,12 +12,12 @@
   "gemini-flash-3.6": 2
  },
  "server_error": {
-  "gemini-flash": 25,
+  "gemini-flash": 43,
   "gemini-flash-3.6": 8,
   "openrouter-nemotron-free": 1
  },
  "chain_exhausted": {
-  "gemini-flash": 26,
+  "gemini-flash": 45,
   "gemini-flash-3.6": 7
  }
 }
