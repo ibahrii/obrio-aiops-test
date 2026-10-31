@@ -97,6 +97,8 @@ if __name__ == "__main__":
     ap.add_argument("--prompt", default=config.CLASSIFIER_PROMPT_VERSION)
     ap.add_argument("--run", nargs="*", default=[], choices=MODELS)
     ap.add_argument("--holdout", action="store_true", help="also run the holdout set")
+    ap.add_argument("--export-failures", action="store_true",
+                    help="overwrite eval/results/failure_stats.json from this machine's logs/ (only after live runs)")
     a = ap.parse_args()
     for m in a.run:
         evaluate(m, a.prompt, fallback=False)
@@ -104,7 +106,9 @@ if __name__ == "__main__":
             evaluate(m, a.prompt, fallback=False, dataset="holdout")
     rows = aggregate(a.prompt)
     (config.RESULTS_DIR / "model_comparison.json").write_text(json.dumps(rows, indent=1))
-    # snapshot of real provider failures seen during the eval runs (logs/ is not committed)
-    (config.RESULTS_DIR / "failure_stats.json").write_text(json.dumps(llm.failure_stats(), indent=1))
+    if a.export_failures or a.run:
+        # snapshot of real provider failures seen during live runs; logs/ is local and not committed,
+        # so a cache-only regeneration must not overwrite the committed snapshot
+        (config.RESULTS_DIR / "failure_stats.json").write_text(json.dumps(llm.failure_stats(), indent=1))
     (config.RESULTS_DIR / "model_comparison.md").write_text(to_markdown(rows, a.prompt), encoding="utf-8")
     print(to_markdown(rows, a.prompt))
